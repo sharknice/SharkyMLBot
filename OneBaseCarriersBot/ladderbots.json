@@ -1,0 +1,10 @@
+{
+  "Bots": {
+    "OneBaseCarriersBot": {
+      "Race": "Protoss",
+      "Type": "dotnetcore",
+      "RootPath": "./",
+      "FileName": "OneBaseCarriersBot.dll"
+    }
+  }
+}

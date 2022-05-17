@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32414.318
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharkyMLBot", "SharkyMLBot\SharkyMLBot.csproj", "{9DD8853B-36E5-468F-86B8-0E2478ECFB8E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependencies", "Dependencies", "{0D61FCD6-8D0F-4CF8-B6FD-AD5716E35AC1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sharky", "..\Sharky\Sharky\Sharky.csproj", "{9CBCD4F2-9C1E-4923-8DBC-CC411DEFE83F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "S2ClientProtocol", "..\Sharky\S2ClientProtocol\S2ClientProtocol.csproj", "{CD4DFF82-C2B6-4BCC-AAB4-3F89C944104D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestBots", "TestBots", "{719AF4E5-15EF-47F6-AA76-53E91245C4B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoBaseVoidRaysBot", "TwoBaseVoidRaysBot\TwoBaseVoidRaysBot.csproj", "{4E467284-1D45-4BAE-80A4-EF91C8E5D73C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourGateBot", "FourGateBot\FourGateBot.csproj", "{BA9DFD00-9E44-4745-8804-2DE3B6232765}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneBaseCarriersBot", "OneBaseCarriersBot\OneBaseCarriersBot.csproj", "{F412158B-5262-4895-9978-E5FA635FF9AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9DD8853B-36E5-468F-86B8-0E2478ECFB8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DD8853B-36E5-468F-86B8-0E2478ECFB8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DD8853B-36E5-468F-86B8-0E2478ECFB8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DD8853B-36E5-468F-86B8-0E2478ECFB8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CBCD4F2-9C1E-4923-8DBC-CC411DEFE83F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CBCD4F2-9C1E-4923-8DBC-CC411DEFE83F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CBCD4F2-9C1E-4923-8DBC-CC411DEFE83F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CBCD4F2-9C1E-4923-8DBC-CC411DEFE83F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD4DFF82-C2B6-4BCC-AAB4-3F89C944104D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD4DFF82-C2B6-4BCC-AAB4-3F89C944104D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD4DFF82-C2B6-4BCC-AAB4-3F89C944104D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD4DFF82-C2B6-4BCC-AAB4-3F89C944104D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E467284-1D45-4BAE-80A4-EF91C8E5D73C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E467284-1D45-4BAE-80A4-EF91C8E5D73C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E467284-1D45-4BAE-80A4-EF91C8E5D73C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E467284-1D45-4BAE-80A4-EF91C8E5D73C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA9DFD00-9E44-4745-8804-2DE3B6232765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA9DFD00-9E44-4745-8804-2DE3B6232765}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA9DFD00-9E44-4745-8804-2DE3B6232765}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA9DFD00-9E44-4745-8804-2DE3B6232765}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F412158B-5262-4895-9978-E5FA635FF9AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F412158B-5262-4895-9978-E5FA635FF9AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F412158B-5262-4895-9978-E5FA635FF9AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F412158B-5262-4895-9978-E5FA635FF9AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9CBCD4F2-9C1E-4923-8DBC-CC411DEFE83F} = {0D61FCD6-8D0F-4CF8-B6FD-AD5716E35AC1}
+		{CD4DFF82-C2B6-4BCC-AAB4-3F89C944104D} = {0D61FCD6-8D0F-4CF8-B6FD-AD5716E35AC1}
+		{4E467284-1D45-4BAE-80A4-EF91C8E5D73C} = {719AF4E5-15EF-47F6-AA76-53E91245C4B5}
+		{BA9DFD00-9E44-4745-8804-2DE3B6232765} = {719AF4E5-15EF-47F6-AA76-53E91245C4B5}
+		{F412158B-5262-4895-9978-E5FA635FF9AF} = {719AF4E5-15EF-47F6-AA76-53E91245C4B5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7A90880-94B0-4436-9B31-0FD8A29E65F1}
+	EndGlobalSection
+EndGlobal

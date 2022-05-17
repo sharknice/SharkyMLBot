@@ -1,0 +1,10 @@
+{
+  "Bots": {
+    "FourGateBot": {
+      "Race": "Protoss",
+      "Type": "dotnetcore",
+      "RootPath": "./",
+      "FileName": "FourGateBot.dll"
+    }
+  }
+}

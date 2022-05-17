@@ -1,0 +1,10 @@
+{
+  "Bots": {
+    "SharkyMLBot": {
+      "Race": "Protoss",
+      "Type": "dotnetcore",
+      "RootPath": "./",
+      "FileName": "SharkyMLBot.dll"
+    }
+  }
+}

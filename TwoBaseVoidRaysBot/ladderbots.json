@@ -1,0 +1,10 @@
+{
+  "Bots": {
+    "TwoBaseVoidRaysBot": {
+      "Race": "Protoss",
+      "Type": "dotnetcore",
+      "RootPath": "./",
+      "FileName": "TwoBaseVoidRaysBot.dll"
+    }
+  }
+}
