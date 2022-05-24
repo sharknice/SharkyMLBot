@@ -25,21 +25,12 @@ namespace SharkyMLBot
             var fourGate = new FourGate(defaultSharkyBot, counterTransitioner);
             var oneBaseCarriers = new OneBaseCarriers(defaultSharkyBot, counterTransitioner);
 
-            // TODO: put this on a private github repo
-            // TODO: first test to make sure there is the rock paper scissors affect
-            // then save some sort of game data to be used by the learning
-            // play a bunch of games between the bots saving this data
             // have the ML bot use this data and compare the last game played to determine the chance of victory each build has against it
 
 
-            // TODO: test builds, need some sort of rock paper scissors openers
-            // openers, 1 base rush, 2 base macro, cannon and shield defense (into carriers?)
             // maybe just start out with those 3 bulids to test the best strategy to start with prediction
 
             // TODO: maybe predict chance of winning with this build, chance of winning with other builds
-
-            // train it against itself
-            // one version doing same builds over and over to train against
 
             // multiple checks
             // analyze last game played, find best strategies against it and start with that
