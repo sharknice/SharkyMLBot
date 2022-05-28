@@ -1,6 +1,7 @@
 ﻿using BuildPrediction;
 using LINQtoCSV;
 using Microsoft.ML;
+using Sharky.Builds.BuildChoosing;
 using SharkyMLDataManager;
 using System.Diagnostics;
 
@@ -14,14 +15,25 @@ Console.WriteLine("Loading JSON Data");
 var mlDataFileService = new MLDataFileService();
 Console.WriteLine($"{stopwatch.Elapsed}");
 
-Console.WriteLine("Converting JSON Data to Flat Data");
-var flatFrameDataConverter = new FlatFrameDataConverter();
-var convertedData = flatFrameDataConverter.GetFlatFrameData(mlDataFileService.MLGameData);
-Console.WriteLine($"{stopwatch.Elapsed}");
+// TODO: group data by build
+var buildMatcher = new BuildMatcher();
+var groups = mlDataFileService.MLGameData.GroupBy(g => string.Join(" ", g.Game.Builds.Select(g => g.Value)));
 
-Console.WriteLine("Saving Flat Data");
-var cc = new CsvContext();
-cc.Write(convertedData, "flatdata.csv");
+foreach (var group in groups)
+{
+    Console.WriteLine(group.Key);
+
+    Console.WriteLine("Converting JSON Data to Flat Data");
+    var flatFrameDataConverter = new FlatFrameDataConverter();
+    var convertedData = flatFrameDataConverter.GetFlatFrameData(group);
+    Console.WriteLine($"{stopwatch.Elapsed}");
+
+    Console.WriteLine("Saving Flat Data");
+    var cc = new CsvContext();
+    cc.Write(convertedData, $"{group.Key}.csv");
+}
+
+
 stopwatch.Stop();
 Console.WriteLine($"Done in {stopwatch.Elapsed}");
 

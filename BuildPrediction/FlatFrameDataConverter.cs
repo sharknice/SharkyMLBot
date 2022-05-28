@@ -6,7 +6,7 @@ namespace BuildPrediction
 {
     public class FlatFrameDataConverter
     {
-        public List<FlatFrameData> GetFlatFrameData(List<MLGameData> mLGameDatas)
+        public List<FlatFrameData> GetFlatFrameData(IEnumerable<MLGameData> mLGameDatas)
         {
             var flatFrames = new List<FlatFrameData>();
             foreach (var mLGameData in mLGameDatas)
