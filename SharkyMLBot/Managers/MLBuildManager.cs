@@ -1,7 +1,7 @@
 ﻿using SC2APIProtocol;
 using Sharky.DefaultBot;
 using Sharky.Managers;
-using SharkyMLBot.ML;
+using SharkyMLDataManager;
 
 namespace SharkyMLBot.Managers
 {

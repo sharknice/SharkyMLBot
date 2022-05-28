@@ -4,7 +4,7 @@ using Sharky.DefaultBot;
 using Sharky.Managers;
 using SharkyMLBot;
 using SharkyMLBot.Managers;
-using SharkyMLBot.ML;
+using SharkyMLDataManager;
 
 Console.WriteLine("Starting OneBaseCarriers SharkyMLBot");
 

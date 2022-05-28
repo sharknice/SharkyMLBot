@@ -2,15 +2,16 @@
 {
     public class FlatFrameData
     {
-        public bool Win;
+        public int Result;
 
-        public int EnemyId;
-        public int Map;
+        public string? EnemyId;
+        public string? MapName;
+        public string? Build;
+
         public int EnemySelectedRace;
         public int EnemyRace;
         public int MySelectedRace;
         public int MyRace;
-        public int Build; // should this be included?  
 
         public int Frame;
 
