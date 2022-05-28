@@ -2,22 +2,33 @@
 using LINQtoCSV;
 using Microsoft.ML;
 using SharkyMLDataManager;
+using System.Diagnostics;
 
 Console.WriteLine("Hello, World!");
+var stopwatch = new Stopwatch();
+stopwatch.Start();
 
 var mlContext = new MLContext();
 
 Console.WriteLine("Loading JSON Data");
 var mlDataFileService = new MLDataFileService();
+Console.WriteLine($"{stopwatch.Elapsed}");
 
 Console.WriteLine("Converting JSON Data to Flat Data");
 var flatFrameDataConverter = new FlatFrameDataConverter();
 var convertedData = flatFrameDataConverter.GetFlatFrameData(mlDataFileService.MLGameData);
+Console.WriteLine($"{stopwatch.Elapsed}");
 
 Console.WriteLine("Saving Flat Data");
 var cc = new CsvContext();
 cc.Write(convertedData, "flatdata.csv");
-Console.WriteLine("Done");
+stopwatch.Stop();
+Console.WriteLine($"Done in {stopwatch.Elapsed}");
+
+
+// TODO: train a model for each build
+// predict result column
+// ignore enemyId and build columns
 
 // TODO: create CSV with all the data that can use either code or the model builder to build a model from
 

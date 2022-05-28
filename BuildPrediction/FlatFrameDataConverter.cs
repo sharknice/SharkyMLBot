@@ -21,9 +21,17 @@ namespace BuildPrediction
             if (mLGameData?.MLFramesData == null || mLGameData.Game == null) { return new List<FlatFrameData>(); }
             
             var flatFrameDatas = new List<FlatFrameData>();
+            var enemySeen = false;
             foreach(var mlFrameData in mLGameData.MLFramesData)
             {
-                flatFrameDatas.Add(GetFlatFrameData(mlFrameData, mLGameData.Game));
+                if (!enemySeen)
+                {
+                    enemySeen = mlFrameData.Value.EnemyUnitCounts != null && mlFrameData.Value.EnemyUnitCounts.Sum(e => e.Value) > 0;
+                }
+                if (enemySeen)
+                {
+                    flatFrameDatas.Add(GetFlatFrameData(mlFrameData, mLGameData.Game));
+                }
             }
             
             return flatFrameDatas;
