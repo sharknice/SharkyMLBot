@@ -5,7 +5,7 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-namespace SharkyMLBot
+namespace BuildPrediction
 {
     public partial class MLModel1
     {
@@ -18,290 +18,155 @@ namespace SharkyMLBot
             [ColumnName(@"Result")]
             public float Result { get; set; }
 
-            [ColumnName(@"ENEMY_PROTOSS_IMMORTAL")]
-            public float ENEMY_PROTOSS_IMMORTAL { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_HIGHTEMPLAR")]
-            public float ENEMY_PROTOSS_HIGHTEMPLAR { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_GATEWAY")]
-            public float ENEMY_PROTOSS_GATEWAY { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_FORGE")]
-            public float ENEMY_PROTOSS_FORGE { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_FLEETBEACON")]
-            public float ENEMY_PROTOSS_FLEETBEACON { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_DISRUPTORPHASED")]
-            public float ENEMY_PROTOSS_DISRUPTORPHASED { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_DISRUPTOR")]
-            public float ENEMY_PROTOSS_DISRUPTOR { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_DARKTEMPLAR")]
-            public float ENEMY_PROTOSS_DARKTEMPLAR { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_DARKSHRINE")]
-            public float ENEMY_PROTOSS_DARKSHRINE { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_INTERCEPTOR")]
-            public float ENEMY_PROTOSS_INTERCEPTOR { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_CYBERNETICSCORE")]
-            public float ENEMY_PROTOSS_CYBERNETICSCORE { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_CARRIER")]
-            public float ENEMY_PROTOSS_CARRIER { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_ASSIMILATOR")]
-            public float ENEMY_PROTOSS_ASSIMILATOR { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_ARCHON")]
-            public float ENEMY_PROTOSS_ARCHON { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_ADEPTPHASESHIFT")]
-            public float ENEMY_PROTOSS_ADEPTPHASESHIFT { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_ADEPT")]
-            public float ENEMY_PROTOSS_ADEPT { get; set; }
-
-            [ColumnName(@"SELF_PROTOSS_ASSIMILATORRICH")]
-            public float SELF_PROTOSS_ASSIMILATORRICH { get; set; }
-
-            [ColumnName(@"SELF_PROTOSS_ZEALOT")]
-            public float SELF_PROTOSS_ZEALOT { get; set; }
-
-            [ColumnName(@"SELF_PROTOSS_WARPPRISMPHASING")]
-            public float SELF_PROTOSS_WARPPRISMPHASING { get; set; }
-
-            [ColumnName(@"SELF_PROTOSS_WARPPRISM")]
-            public float SELF_PROTOSS_WARPPRISM { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_COLOSSUS")]
-            public float ENEMY_PROTOSS_COLOSSUS { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_MOTHERSHIP")]
-            public float ENEMY_PROTOSS_MOTHERSHIP { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_MOTHERSHIPCORE")]
-            public float ENEMY_PROTOSS_MOTHERSHIPCORE { get; set; }
-
             [ColumnName(@"ENEMY_PROTOSS_NEXUS")]
             public float ENEMY_PROTOSS_NEXUS { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_WARPPRISMPHASING")]
-            public float ENEMY_PROTOSS_WARPPRISMPHASING { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_WARPPRISM")]
-            public float ENEMY_PROTOSS_WARPPRISM { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_WARPGATE")]
-            public float ENEMY_PROTOSS_WARPGATE { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_VOIDRAY")]
-            public float ENEMY_PROTOSS_VOIDRAY { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_TWILIGHTCOUNCIL")]
-            public float ENEMY_PROTOSS_TWILIGHTCOUNCIL { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_TEMPLARARCHIVE")]
-            public float ENEMY_PROTOSS_TEMPLARARCHIVE { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_TEMPEST")]
-            public float ENEMY_PROTOSS_TEMPEST { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_STARGATE")]
-            public float ENEMY_PROTOSS_STARGATE { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_STALKER")]
-            public float ENEMY_PROTOSS_STALKER { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_SHIELDBATTERY")]
-            public float ENEMY_PROTOSS_SHIELDBATTERY { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_SENTRY")]
-            public float ENEMY_PROTOSS_SENTRY { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_ROBOTICSFACILITY")]
-            public float ENEMY_PROTOSS_ROBOTICSFACILITY { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_ROBOTICSBAY")]
-            public float ENEMY_PROTOSS_ROBOTICSBAY { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_PYLONOVERCHARGED")]
-            public float ENEMY_PROTOSS_PYLONOVERCHARGED { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_PYLON")]
-            public float ENEMY_PROTOSS_PYLON { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_PROBE")]
-            public float ENEMY_PROTOSS_PROBE { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_PHOTONCANNON")]
-            public float ENEMY_PROTOSS_PHOTONCANNON { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_PHOENIX")]
-            public float ENEMY_PROTOSS_PHOENIX { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_ORACLESTASISTRAP")]
-            public float ENEMY_PROTOSS_ORACLESTASISTRAP { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_ORACLE")]
-            public float ENEMY_PROTOSS_ORACLE { get; set; }
 
             [ColumnName(@"ENEMY_PROTOSS_OBSERVER")]
             public float ENEMY_PROTOSS_OBSERVER { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_WARPGATE")]
-            public float SELF_PROTOSS_WARPGATE { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_ORACLE")]
+            public float ENEMY_PROTOSS_ORACLE { get; set; }
 
-            [ColumnName(@"ENEMY_PROTOSS_ZEALOT")]
-            public float ENEMY_PROTOSS_ZEALOT { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_ORACLESTASISTRAP")]
+            public float ENEMY_PROTOSS_ORACLESTASISTRAP { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_VOIDRAY")]
-            public float SELF_PROTOSS_VOIDRAY { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_PHOENIX")]
+            public float ENEMY_PROTOSS_PHOENIX { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_TEMPLARARCHIVE")]
-            public float SELF_PROTOSS_TEMPLARARCHIVE { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_PHOTONCANNON")]
+            public float ENEMY_PROTOSS_PHOTONCANNON { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_DISRUPTOR")]
-            public float SELF_PROTOSS_DISRUPTOR { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_PROBE")]
+            public float ENEMY_PROTOSS_PROBE { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_DARKTEMPLAR")]
-            public float SELF_PROTOSS_DARKTEMPLAR { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_PYLON")]
+            public float ENEMY_PROTOSS_PYLON { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_DARKSHRINE")]
-            public float SELF_PROTOSS_DARKSHRINE { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_PYLONOVERCHARGED")]
+            public float ENEMY_PROTOSS_PYLONOVERCHARGED { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_CYBERNETICSCORE")]
-            public float SELF_PROTOSS_CYBERNETICSCORE { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_ROBOTICSBAY")]
+            public float ENEMY_PROTOSS_ROBOTICSBAY { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_COLOSSUS")]
-            public float SELF_PROTOSS_COLOSSUS { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_MOTHERSHIPCORE")]
+            public float ENEMY_PROTOSS_MOTHERSHIPCORE { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_CARRIER")]
-            public float SELF_PROTOSS_CARRIER { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_ROBOTICSFACILITY")]
+            public float ENEMY_PROTOSS_ROBOTICSFACILITY { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_ASSIMILATOR")]
-            public float SELF_PROTOSS_ASSIMILATOR { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_SHIELDBATTERY")]
+            public float ENEMY_PROTOSS_SHIELDBATTERY { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_ARCHON")]
-            public float SELF_PROTOSS_ARCHON { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_STALKER")]
+            public float ENEMY_PROTOSS_STALKER { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_ADEPTPHASESHIFT")]
-            public float SELF_PROTOSS_ADEPTPHASESHIFT { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_STARGATE")]
+            public float ENEMY_PROTOSS_STARGATE { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_DISRUPTORPHASED")]
-            public float SELF_PROTOSS_DISRUPTORPHASED { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_TEMPEST")]
+            public float ENEMY_PROTOSS_TEMPEST { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_ADEPT")]
-            public float SELF_PROTOSS_ADEPT { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_TEMPLARARCHIVE")]
+            public float ENEMY_PROTOSS_TEMPLARARCHIVE { get; set; }
 
-            [ColumnName(@"ProxyDetected")]
-            public string ProxyDetected { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_TWILIGHTCOUNCIL")]
+            public float ENEMY_PROTOSS_TWILIGHTCOUNCIL { get; set; }
 
-            [ColumnName(@"Frame")]
-            public float Frame { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_VOIDRAY")]
+            public float ENEMY_PROTOSS_VOIDRAY { get; set; }
 
-            [ColumnName(@"MyRace")]
-            public float MyRace { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_WARPGATE")]
+            public float ENEMY_PROTOSS_WARPGATE { get; set; }
 
-            [ColumnName(@"MySelectedRace")]
-            public float MySelectedRace { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_WARPPRISM")]
+            public float ENEMY_PROTOSS_WARPPRISM { get; set; }
 
-            [ColumnName(@"EnemyRace")]
-            public float EnemyRace { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_WARPPRISMPHASING")]
+            public float ENEMY_PROTOSS_WARPPRISMPHASING { get; set; }
 
-            [ColumnName(@"EnemySelectedRace")]
-            public float EnemySelectedRace { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_SENTRY")]
+            public float ENEMY_PROTOSS_SENTRY { get; set; }
 
-            [ColumnName(@"Build")]
-            public string Build { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_MOTHERSHIP")]
+            public float ENEMY_PROTOSS_MOTHERSHIP { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_INTERCEPTOR")]
+            public float ENEMY_PROTOSS_INTERCEPTOR { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_IMMORTAL")]
+            public float ENEMY_PROTOSS_IMMORTAL { get; set; }
 
             [ColumnName(@"MapName")]
             public string MapName { get; set; }
 
-            [ColumnName(@"EnemyId")]
-            public float EnemyId { get; set; }
+            [ColumnName(@"EnemySelectedRace")]
+            public float EnemySelectedRace { get; set; }
+
+            [ColumnName(@"EnemyRace")]
+            public float EnemyRace { get; set; }
+
+            [ColumnName(@"MySelectedRace")]
+            public float MySelectedRace { get; set; }
+
+            [ColumnName(@"MyRace")]
+            public float MyRace { get; set; }
+
+            [ColumnName(@"Frame")]
+            public float Frame { get; set; }
+
+            [ColumnName(@"ProxyDetected")]
+            public string ProxyDetected { get; set; }
 
             [ColumnName(@"ProxyActive")]
             public string ProxyActive { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_FLEETBEACON")]
-            public float SELF_PROTOSS_FLEETBEACON { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_ADEPT")]
+            public float ENEMY_PROTOSS_ADEPT { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_FORGE")]
-            public float SELF_PROTOSS_FORGE { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_ADEPTPHASESHIFT")]
+            public float ENEMY_PROTOSS_ADEPTPHASESHIFT { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_GATEWAY")]
-            public float SELF_PROTOSS_GATEWAY { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_ARCHON")]
+            public float ENEMY_PROTOSS_ARCHON { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_TEMPEST")]
-            public float SELF_PROTOSS_TEMPEST { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_ASSIMILATOR")]
+            public float ENEMY_PROTOSS_ASSIMILATOR { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_STARGATE")]
-            public float SELF_PROTOSS_STARGATE { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_CARRIER")]
+            public float ENEMY_PROTOSS_CARRIER { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_STALKER")]
-            public float SELF_PROTOSS_STALKER { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_COLOSSUS")]
+            public float ENEMY_PROTOSS_COLOSSUS { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_SHIELDBATTERY")]
-            public float SELF_PROTOSS_SHIELDBATTERY { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_CYBERNETICSCORE")]
+            public float ENEMY_PROTOSS_CYBERNETICSCORE { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_SENTRY")]
-            public float SELF_PROTOSS_SENTRY { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_DARKSHRINE")]
+            public float ENEMY_PROTOSS_DARKSHRINE { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_ROBOTICSFACILITY")]
-            public float SELF_PROTOSS_ROBOTICSFACILITY { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_DARKTEMPLAR")]
+            public float ENEMY_PROTOSS_DARKTEMPLAR { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_ROBOTICSBAY")]
-            public float SELF_PROTOSS_ROBOTICSBAY { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_DISRUPTOR")]
+            public float ENEMY_PROTOSS_DISRUPTOR { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_PYLONOVERCHARGED")]
-            public float SELF_PROTOSS_PYLONOVERCHARGED { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_DISRUPTORPHASED")]
+            public float ENEMY_PROTOSS_DISRUPTORPHASED { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_PYLON")]
-            public float SELF_PROTOSS_PYLON { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_FLEETBEACON")]
+            public float ENEMY_PROTOSS_FLEETBEACON { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_PROBE")]
-            public float SELF_PROTOSS_PROBE { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_FORGE")]
+            public float ENEMY_PROTOSS_FORGE { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_PHOTONCANNON")]
-            public float SELF_PROTOSS_PHOTONCANNON { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_GATEWAY")]
+            public float ENEMY_PROTOSS_GATEWAY { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_PHOENIX")]
-            public float SELF_PROTOSS_PHOENIX { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_HIGHTEMPLAR")]
+            public float ENEMY_PROTOSS_HIGHTEMPLAR { get; set; }
 
-            [ColumnName(@"SELF_PROTOSS_ORACLESTASISTRAP")]
-            public float SELF_PROTOSS_ORACLESTASISTRAP { get; set; }
-
-            [ColumnName(@"SELF_PROTOSS_ORACLE")]
-            public float SELF_PROTOSS_ORACLE { get; set; }
-
-            [ColumnName(@"SELF_PROTOSS_OBSERVER")]
-            public float SELF_PROTOSS_OBSERVER { get; set; }
-
-            [ColumnName(@"SELF_PROTOSS_NEXUS")]
-            public float SELF_PROTOSS_NEXUS { get; set; }
-
-            [ColumnName(@"SELF_PROTOSS_MOTHERSHIPCORE")]
-            public float SELF_PROTOSS_MOTHERSHIPCORE { get; set; }
-
-            [ColumnName(@"SELF_PROTOSS_MOTHERSHIP")]
-            public float SELF_PROTOSS_MOTHERSHIP { get; set; }
-
-            [ColumnName(@"SELF_PROTOSS_INTERCEPTOR")]
-            public float SELF_PROTOSS_INTERCEPTOR { get; set; }
-
-            [ColumnName(@"SELF_PROTOSS_IMMORTAL")]
-            public float SELF_PROTOSS_IMMORTAL { get; set; }
-
-            [ColumnName(@"SELF_PROTOSS_HIGHTEMPLAR")]
-            public float SELF_PROTOSS_HIGHTEMPLAR { get; set; }
-
-            [ColumnName(@"SELF_PROTOSS_TWILIGHTCOUNCIL")]
-            public float SELF_PROTOSS_TWILIGHTCOUNCIL { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_ZEALOT")]
+            public float ENEMY_PROTOSS_ZEALOT { get; set; }
 
             [ColumnName(@"ENEMY_PROTOSS_ASSIMILATORRICH")]
             public float ENEMY_PROTOSS_ASSIMILATORRICH { get; set; }
@@ -316,10 +181,171 @@ namespace SharkyMLBot
         #region model output class
         public class ModelOutput
         {
-            [ColumnName("PredictedLabel")]
-            public float Prediction { get; set; }
+            [ColumnName(@"Result")]
+            public uint Result { get; set; }
 
+            [ColumnName(@"ENEMY_PROTOSS_NEXUS")]
+            public float ENEMY_PROTOSS_NEXUS { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_OBSERVER")]
+            public float ENEMY_PROTOSS_OBSERVER { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_ORACLE")]
+            public float ENEMY_PROTOSS_ORACLE { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_ORACLESTASISTRAP")]
+            public float ENEMY_PROTOSS_ORACLESTASISTRAP { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_PHOENIX")]
+            public float ENEMY_PROTOSS_PHOENIX { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_PHOTONCANNON")]
+            public float ENEMY_PROTOSS_PHOTONCANNON { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_PROBE")]
+            public float ENEMY_PROTOSS_PROBE { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_PYLON")]
+            public float ENEMY_PROTOSS_PYLON { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_PYLONOVERCHARGED")]
+            public float ENEMY_PROTOSS_PYLONOVERCHARGED { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_ROBOTICSBAY")]
+            public float ENEMY_PROTOSS_ROBOTICSBAY { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_MOTHERSHIPCORE")]
+            public float ENEMY_PROTOSS_MOTHERSHIPCORE { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_ROBOTICSFACILITY")]
+            public float ENEMY_PROTOSS_ROBOTICSFACILITY { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_SHIELDBATTERY")]
+            public float ENEMY_PROTOSS_SHIELDBATTERY { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_STALKER")]
+            public float ENEMY_PROTOSS_STALKER { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_STARGATE")]
+            public float ENEMY_PROTOSS_STARGATE { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_TEMPEST")]
+            public float ENEMY_PROTOSS_TEMPEST { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_TEMPLARARCHIVE")]
+            public float ENEMY_PROTOSS_TEMPLARARCHIVE { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_TWILIGHTCOUNCIL")]
+            public float ENEMY_PROTOSS_TWILIGHTCOUNCIL { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_VOIDRAY")]
+            public float ENEMY_PROTOSS_VOIDRAY { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_WARPGATE")]
+            public float ENEMY_PROTOSS_WARPGATE { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_WARPPRISM")]
+            public float ENEMY_PROTOSS_WARPPRISM { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_WARPPRISMPHASING")]
+            public float ENEMY_PROTOSS_WARPPRISMPHASING { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_SENTRY")]
+            public float ENEMY_PROTOSS_SENTRY { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_MOTHERSHIP")]
+            public float ENEMY_PROTOSS_MOTHERSHIP { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_INTERCEPTOR")]
+            public float ENEMY_PROTOSS_INTERCEPTOR { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_IMMORTAL")]
+            public float ENEMY_PROTOSS_IMMORTAL { get; set; }
+
+            [ColumnName(@"MapName")]
+            public float[] MapName { get; set; }
+
+            [ColumnName(@"EnemySelectedRace")]
+            public float EnemySelectedRace { get; set; }
+
+            [ColumnName(@"EnemyRace")]
+            public float EnemyRace { get; set; }
+
+            [ColumnName(@"MySelectedRace")]
+            public float MySelectedRace { get; set; }
+
+            [ColumnName(@"MyRace")]
+            public float MyRace { get; set; }
+
+            [ColumnName(@"Frame")]
+            public float Frame { get; set; }
+
+            [ColumnName(@"ProxyDetected")]
+            public float[] ProxyDetected { get; set; }
+
+            [ColumnName(@"ProxyActive")]
+            public float[] ProxyActive { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_ADEPT")]
+            public float ENEMY_PROTOSS_ADEPT { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_ADEPTPHASESHIFT")]
+            public float ENEMY_PROTOSS_ADEPTPHASESHIFT { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_ARCHON")]
+            public float ENEMY_PROTOSS_ARCHON { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_ASSIMILATOR")]
+            public float ENEMY_PROTOSS_ASSIMILATOR { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_CARRIER")]
+            public float ENEMY_PROTOSS_CARRIER { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_COLOSSUS")]
+            public float ENEMY_PROTOSS_COLOSSUS { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_CYBERNETICSCORE")]
+            public float ENEMY_PROTOSS_CYBERNETICSCORE { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_DARKSHRINE")]
+            public float ENEMY_PROTOSS_DARKSHRINE { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_DARKTEMPLAR")]
+            public float ENEMY_PROTOSS_DARKTEMPLAR { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_DISRUPTOR")]
+            public float ENEMY_PROTOSS_DISRUPTOR { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_DISRUPTORPHASED")]
+            public float ENEMY_PROTOSS_DISRUPTORPHASED { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_FLEETBEACON")]
+            public float ENEMY_PROTOSS_FLEETBEACON { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_FORGE")]
+            public float ENEMY_PROTOSS_FORGE { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_GATEWAY")]
+            public float ENEMY_PROTOSS_GATEWAY { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_HIGHTEMPLAR")]
+            public float ENEMY_PROTOSS_HIGHTEMPLAR { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_ZEALOT")]
+            public float ENEMY_PROTOSS_ZEALOT { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_ASSIMILATORRICH")]
+            public float ENEMY_PROTOSS_ASSIMILATORRICH { get; set; }
+
+            [ColumnName(@"Features")]
+            public float[] Features { get; set; }
+
+            [ColumnName(@"PredictedLabel")]
+            public float PredictedLabel { get; set; }
+
+            [ColumnName(@"Score")]
             public float[] Score { get; set; }
+
         }
 
         #endregion

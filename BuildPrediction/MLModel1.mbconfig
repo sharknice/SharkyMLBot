@@ -1,10 +1,10 @@
 ﻿{
-  "TrainingTime": 120,
+  "TrainingTime": 10,
   "Scenario": "Classification",
   "DataSource": {
     "Type": "TabularFile",
     "Version": 1,
-    "FilePath": "C:\\Users\\LP\\source\\repos\\SharkyMLBot\\BuildPrediction\\data\\flatdata.csv",
+    "FilePath": "C:\\Users\\LP\\source\\repos\\SharkyMLBot\\BuildPrediction\\data\\FourGate.csv",
     "Delimiter": ",",
     "DecimalMarker": ".",
     "HasHeader": true,
@@ -18,351 +18,7 @@
         "Version": 1
       },
       {
-        "ColumnName": "ENEMY_PROTOSS_IMMORTAL",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_HIGHTEMPLAR",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_GATEWAY",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_FORGE",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_FLEETBEACON",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_DISRUPTORPHASED",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_DISRUPTOR",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_DARKTEMPLAR",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_DARKSHRINE",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_INTERCEPTOR",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": false,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_CYBERNETICSCORE",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_CARRIER",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_ASSIMILATOR",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_ARCHON",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_ADEPTPHASESHIFT",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_ADEPT",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_ASSIMILATORRICH",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_ZEALOT",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_WARPPRISMPHASING",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_WARPPRISM",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_COLOSSUS",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_MOTHERSHIP",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_MOTHERSHIPCORE",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
         "ColumnName": "ENEMY_PROTOSS_NEXUS",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_WARPPRISMPHASING",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_WARPPRISM",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_WARPGATE",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_VOIDRAY",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_TWILIGHTCOUNCIL",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_TEMPLARARCHIVE",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_TEMPEST",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_STARGATE",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_STALKER",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": false,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_SHIELDBATTERY",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": false,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_SENTRY",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": false,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_ROBOTICSFACILITY",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_ROBOTICSBAY",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_PYLONOVERCHARGED",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_PYLON",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": false,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_PROBE",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": false,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_PHOTONCANNON",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": false,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_PHOENIX",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_ORACLESTASISTRAP",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ENEMY_PROTOSS_ORACLE",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
@@ -378,7 +34,7 @@
         "Version": 1
       },
       {
-        "ColumnName": "SELF_PROTOSS_WARPGATE",
+        "ColumnName": "ENEMY_PROTOSS_ORACLE",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
@@ -386,7 +42,7 @@
         "Version": 1
       },
       {
-        "ColumnName": "ENEMY_PROTOSS_ZEALOT",
+        "ColumnName": "ENEMY_PROTOSS_ORACLESTASISTRAP",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
@@ -394,7 +50,7 @@
         "Version": 1
       },
       {
-        "ColumnName": "SELF_PROTOSS_VOIDRAY",
+        "ColumnName": "ENEMY_PROTOSS_PHOENIX",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
@@ -402,111 +58,7 @@
         "Version": 1
       },
       {
-        "ColumnName": "SELF_PROTOSS_TEMPLARARCHIVE",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_DISRUPTOR",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_DARKTEMPLAR",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_DARKSHRINE",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_CYBERNETICSCORE",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_COLOSSUS",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_CARRIER",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_ASSIMILATOR",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_ARCHON",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_ADEPTPHASESHIFT",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_DISRUPTORPHASED",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_ADEPT",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "ProxyDetected",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "String",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "Frame",
+        "ColumnName": "ENEMY_PROTOSS_PHOTONCANNON",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": false,
@@ -514,7 +66,23 @@
         "Version": 1
       },
       {
-        "ColumnName": "MyRace",
+        "ColumnName": "ENEMY_PROTOSS_PROBE",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "ENEMY_PROTOSS_PYLON",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "ENEMY_PROTOSS_PYLONOVERCHARGED",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
@@ -522,7 +90,151 @@
         "Version": 1
       },
       {
-        "ColumnName": "MySelectedRace",
+        "ColumnName": "ENEMY_PROTOSS_ROBOTICSBAY",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "ENEMY_PROTOSS_MOTHERSHIPCORE",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "ENEMY_PROTOSS_ROBOTICSFACILITY",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "ENEMY_PROTOSS_SHIELDBATTERY",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "ENEMY_PROTOSS_STALKER",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "ENEMY_PROTOSS_STARGATE",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "ENEMY_PROTOSS_TEMPEST",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "ENEMY_PROTOSS_TEMPLARARCHIVE",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "ENEMY_PROTOSS_TWILIGHTCOUNCIL",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "ENEMY_PROTOSS_VOIDRAY",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "ENEMY_PROTOSS_WARPGATE",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "ENEMY_PROTOSS_WARPPRISM",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "ENEMY_PROTOSS_WARPPRISMPHASING",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "ENEMY_PROTOSS_SENTRY",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "ENEMY_PROTOSS_MOTHERSHIP",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "ENEMY_PROTOSS_INTERCEPTOR",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "ENEMY_PROTOSS_IMMORTAL",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "MapName",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "EnemySelectedRace",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
@@ -538,7 +250,7 @@
         "Version": 1
       },
       {
-        "ColumnName": "EnemySelectedRace",
+        "ColumnName": "MySelectedRace",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
@@ -546,25 +258,25 @@
         "Version": 1
       },
       {
-        "ColumnName": "Build",
-        "ColumnPurpose": "Ignore",
-        "ColumnDataFormat": "String",
+        "ColumnName": "MyRace",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
         "IsCategorical": true,
         "Type": "Column",
         "Version": 1
       },
       {
-        "ColumnName": "MapName",
+        "ColumnName": "Frame",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "ProxyDetected",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "String",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "EnemyId",
-        "ColumnPurpose": "Ignore",
-        "ColumnDataFormat": "Single",
         "IsCategorical": true,
         "Type": "Column",
         "Version": 1
@@ -578,7 +290,7 @@
         "Version": 1
       },
       {
-        "ColumnName": "SELF_PROTOSS_FLEETBEACON",
+        "ColumnName": "ENEMY_PROTOSS_ADEPT",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
@@ -586,7 +298,7 @@
         "Version": 1
       },
       {
-        "ColumnName": "SELF_PROTOSS_FORGE",
+        "ColumnName": "ENEMY_PROTOSS_ADEPTPHASESHIFT",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
@@ -594,7 +306,7 @@
         "Version": 1
       },
       {
-        "ColumnName": "SELF_PROTOSS_GATEWAY",
+        "ColumnName": "ENEMY_PROTOSS_ARCHON",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
@@ -602,7 +314,7 @@
         "Version": 1
       },
       {
-        "ColumnName": "SELF_PROTOSS_TEMPEST",
+        "ColumnName": "ENEMY_PROTOSS_ASSIMILATOR",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
@@ -610,15 +322,7 @@
         "Version": 1
       },
       {
-        "ColumnName": "SELF_PROTOSS_STARGATE",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_STALKER",
+        "ColumnName": "ENEMY_PROTOSS_CARRIER",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": false,
@@ -626,23 +330,7 @@
         "Version": 1
       },
       {
-        "ColumnName": "SELF_PROTOSS_SHIELDBATTERY",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": false,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_SENTRY",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": false,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_ROBOTICSFACILITY",
+        "ColumnName": "ENEMY_PROTOSS_COLOSSUS",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
@@ -650,7 +338,7 @@
         "Version": 1
       },
       {
-        "ColumnName": "SELF_PROTOSS_ROBOTICSBAY",
+        "ColumnName": "ENEMY_PROTOSS_CYBERNETICSCORE",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
@@ -658,7 +346,7 @@
         "Version": 1
       },
       {
-        "ColumnName": "SELF_PROTOSS_PYLONOVERCHARGED",
+        "ColumnName": "ENEMY_PROTOSS_DARKSHRINE",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
@@ -666,31 +354,7 @@
         "Version": 1
       },
       {
-        "ColumnName": "SELF_PROTOSS_PYLON",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": false,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_PROBE",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": false,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_PHOTONCANNON",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": false,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_PHOENIX",
+        "ColumnName": "ENEMY_PROTOSS_DARKTEMPLAR",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
@@ -698,7 +362,7 @@
         "Version": 1
       },
       {
-        "ColumnName": "SELF_PROTOSS_ORACLESTASISTRAP",
+        "ColumnName": "ENEMY_PROTOSS_DISRUPTOR",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
@@ -706,7 +370,7 @@
         "Version": 1
       },
       {
-        "ColumnName": "SELF_PROTOSS_ORACLE",
+        "ColumnName": "ENEMY_PROTOSS_DISRUPTORPHASED",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
@@ -714,7 +378,7 @@
         "Version": 1
       },
       {
-        "ColumnName": "SELF_PROTOSS_OBSERVER",
+        "ColumnName": "ENEMY_PROTOSS_FLEETBEACON",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
@@ -722,7 +386,7 @@
         "Version": 1
       },
       {
-        "ColumnName": "SELF_PROTOSS_NEXUS",
+        "ColumnName": "ENEMY_PROTOSS_FORGE",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
@@ -730,7 +394,7 @@
         "Version": 1
       },
       {
-        "ColumnName": "SELF_PROTOSS_MOTHERSHIPCORE",
+        "ColumnName": "ENEMY_PROTOSS_GATEWAY",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
@@ -738,7 +402,7 @@
         "Version": 1
       },
       {
-        "ColumnName": "SELF_PROTOSS_MOTHERSHIP",
+        "ColumnName": "ENEMY_PROTOSS_HIGHTEMPLAR",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
@@ -746,31 +410,7 @@
         "Version": 1
       },
       {
-        "ColumnName": "SELF_PROTOSS_INTERCEPTOR",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": false,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_IMMORTAL",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_HIGHTEMPLAR",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": true,
-        "Type": "Column",
-        "Version": 1
-      },
-      {
-        "ColumnName": "SELF_PROTOSS_TWILIGHTCOUNCIL",
+        "ColumnName": "ENEMY_PROTOSS_ZEALOT",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
@@ -792,1322 +432,598 @@
     "Version": 1
   },
   "RunHistory": {
-    "Version": 0,
+    "Version": 1,
     "Type": "Result",
     "Trials": [
       {
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.16300000250339508
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsMaximumEntropyMulti",
-        "Score": 0.72852233676975942,
-        "RuntimeInSeconds": 0.13400000333786011
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.12399999797344208
+        "Score": 0.85915492957746475,
+        "RuntimeInSeconds": 0.13699999451637268
       },
       {
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "FastTreeOva",
-        "Score": 0.67353951890034369,
-        "RuntimeInSeconds": 0.42800000309944153
+        "Score": 0.92957746478873238,
+        "RuntimeInSeconds": 0.31600001454353333
       },
       {
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "LbfgsMaximumEntropyMulti",
-        "Score": 0.72508591065292094,
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.078000001609325409
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "SdcaLogisticRegressionOva",
+        "Score": 0.85915492957746475,
+        "RuntimeInSeconds": 0.13899999856948853
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastForestOva",
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.3190000057220459
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "LightGbmMulti",
+        "Score": 0.91549295774647887,
+        "RuntimeInSeconds": 0.11699999868869781
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "LbfgsLogisticRegressionOva",
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.086999997496604919
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "SdcaMaximumEntropyMulti",
+        "Score": 0.85915492957746475,
+        "RuntimeInSeconds": 0.092000000178813934
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastTreeOva",
+        "Score": 0.95774647887323938,
+        "RuntimeInSeconds": 0.28600001335144043
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "LightGbmMulti",
+        "Score": 0.92957746478873238,
+        "RuntimeInSeconds": 0.11599999666213989
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "LbfgsMaximumEntropyMulti",
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.0729999989271164
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "SdcaLogisticRegressionOva",
+        "Score": 0.85915492957746475,
         "RuntimeInSeconds": 0.14100000262260437
       },
       {
         "Version": 0,
         "Type": "Trial",
-        "TrainerName": "LbfgsMaximumEntropyMulti",
-        "Score": 0.718213058419244,
-        "RuntimeInSeconds": 0.0949999988079071
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastTreeOva",
-        "Score": 0.75601374570446733,
-        "RuntimeInSeconds": 0.414000004529953
+        "TrainerName": "FastForestOva",
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.31499999761581421
       },
       {
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.125
+        "Score": 0.26760563380281688,
+        "RuntimeInSeconds": 0.078000001609325409
       },
       {
         "Version": 0,
         "Type": "Trial",
-        "TrainerName": "LbfgsMaximumEntropyMulti",
-        "Score": 0.711340206185567,
+        "TrainerName": "LbfgsLogisticRegressionOva",
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.079000003635883331
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "LightGbmMulti",
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.11699999868869781
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastTreeOva",
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.31000000238418579
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastForestOva",
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.31700000166893005
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "SdcaLogisticRegressionOva",
+        "Score": 0.6619718309859155,
         "RuntimeInSeconds": 0.14200000464916229
       },
       {
         "Version": 0,
         "Type": "Trial",
-        "TrainerName": "LbfgsMaximumEntropyMulti",
-        "Score": 0.73195876288659789,
-        "RuntimeInSeconds": 0.11100000143051147
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastTreeOva",
-        "Score": 0.6426116838487973,
-        "RuntimeInSeconds": 0.41100001335144043
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.73539518900343648,
-        "RuntimeInSeconds": 0.14000000059604645
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.82817869415807566,
-        "RuntimeInSeconds": 0.44299998879432678
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.22100000083446503
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.711340206185567,
-        "RuntimeInSeconds": 0.12300000339746475
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.82817869415807566,
-        "RuntimeInSeconds": 0.44699999690055847
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.83848797250859108,
-        "RuntimeInSeconds": 0.47299998998641968
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.83848797250859108,
-        "RuntimeInSeconds": 0.492000013589859
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastTreeOva",
-        "Score": 0.83161512027491413,
-        "RuntimeInSeconds": 0.40900000929832458
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.852233676975945,
-        "RuntimeInSeconds": 0.44800001382827759
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.83848797250859108,
-        "RuntimeInSeconds": 0.4440000057220459
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.72852233676975942,
-        "RuntimeInSeconds": 0.18899999558925629
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastTreeOva",
-        "Score": 0.86254295532646053,
-        "RuntimeInSeconds": 0.65200001001358032
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.2370000034570694
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.7010309278350515,
-        "RuntimeInSeconds": 0.12300000339746475
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.718213058419244,
-        "RuntimeInSeconds": 0.17399999499320984
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.23899999260902405
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
         "TrainerName": "LightGbmMulti",
-        "Score": 0.67353951890034369,
-        "RuntimeInSeconds": 0.17100000381469727
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.12700000405311584
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastTreeOva",
-        "Score": 0.84879725085910651,
-        "RuntimeInSeconds": 0.85100001096725464
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastTreeOva",
-        "Score": 0.865979381443299,
-        "RuntimeInSeconds": 1.0980000495910645
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastTreeOva",
-        "Score": 0.86941580756013748,
-        "RuntimeInSeconds": 2.4500000476837158
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastTreeOva",
-        "Score": 0.6426116838487973,
-        "RuntimeInSeconds": 4.0780000686645508
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.71477663230240551,
-        "RuntimeInSeconds": 0.15099999308586121
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.72164948453608246,
-        "RuntimeInSeconds": 0.14100000262260437
+        "Score": 0.73239436619718312,
+        "RuntimeInSeconds": 0.11400000005960464
       },
       {
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "LbfgsMaximumEntropyMulti",
-        "Score": 0.69415807560137455,
-        "RuntimeInSeconds": 0.075999997556209564
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.074000000953674316
       },
       {
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.1120000034570694
+        "Score": 0.26760563380281688,
+        "RuntimeInSeconds": 0.079000003635883331
       },
       {
         "Version": 0,
         "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.125
+        "TrainerName": "FastTreeOva",
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.30000001192092896
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "LbfgsLogisticRegressionOva",
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.093999996781349182
       },
       {
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "FastForestOva",
-        "Score": 0.84192439862542956,
-        "RuntimeInSeconds": 0.5559999942779541
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.31600001454353333
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "SdcaMaximumEntropyMulti",
+        "Score": 0.78873239436619713,
+        "RuntimeInSeconds": 0.079000003635883331
       },
       {
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "LightGbmMulti",
-        "Score": 0.6872852233676976,
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.11400000005960464
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "SdcaLogisticRegressionOva",
+        "Score": 0.73239436619718312,
         "RuntimeInSeconds": 0.15399999916553497
       },
       {
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "LightGbmMulti",
-        "Score": 0.75257731958762886,
-        "RuntimeInSeconds": 0.14200000464916229
+        "Score": 0.73239436619718312,
+        "RuntimeInSeconds": 0.11599999666213989
       },
       {
         "Version": 0,
         "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.78694158075601373,
-        "RuntimeInSeconds": 0.14200000464916229
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.48797250859106528,
-        "RuntimeInSeconds": 0.1809999942779541
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.83848797250859108,
-        "RuntimeInSeconds": 0.16200000047683716
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.73195876288659789,
-        "RuntimeInSeconds": 0.15800000727176666
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.48797250859106528,
-        "RuntimeInSeconds": 0.14300000667572021
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.72508591065292094,
-        "RuntimeInSeconds": 0.15999999642372131
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.84192439862542956,
-        "RuntimeInSeconds": 0.56999999284744263
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.83848797250859108,
-        "RuntimeInSeconds": 0.460999995470047
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.1080000028014183
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.72508591065292094,
-        "RuntimeInSeconds": 0.16099999845027924
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.73539518900343648,
-        "RuntimeInSeconds": 0.15600000321865082
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.12399999797344208
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.72852233676975942,
-        "RuntimeInSeconds": 0.16099999845027924
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.48797250859106528,
-        "RuntimeInSeconds": 0.14599999785423279
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.73539518900343648,
-        "RuntimeInSeconds": 0.14000000059604645
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.73195876288659789,
-        "RuntimeInSeconds": 0.13899999856948853
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.73539518900343648,
-        "RuntimeInSeconds": 0.14399999380111694
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.845360824742268,
-        "RuntimeInSeconds": 0.49500000476837158
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.22400000691413879
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.738831615120275,
-        "RuntimeInSeconds": 0.15800000727176666
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.48797250859106528,
-        "RuntimeInSeconds": 0.15000000596046448
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.48797250859106528,
-        "RuntimeInSeconds": 0.16500000655651093
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.48797250859106528,
-        "RuntimeInSeconds": 0.14200000464916229
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.59793814432989689,
-        "RuntimeInSeconds": 0.59600001573562622
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.48797250859106528,
-        "RuntimeInSeconds": 0.18600000441074371
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.48797250859106528,
-        "RuntimeInSeconds": 0.44800001382827759
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.845360824742268,
-        "RuntimeInSeconds": 0.47499999403953552
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.48797250859106528,
-        "RuntimeInSeconds": 0.25699999928474426
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.83505154639175261,
-        "RuntimeInSeconds": 0.48199999332427979
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.84879725085910651,
-        "RuntimeInSeconds": 0.47299998998641968
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.852233676975945,
-        "RuntimeInSeconds": 0.47600001096725464
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.73539518900343648,
-        "RuntimeInSeconds": 0.14200000464916229
+        "TrainerName": "FastTreeOva",
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.31299999356269836
       },
       {
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "LbfgsMaximumEntropyMulti",
-        "Score": 0.73539518900343648,
-        "RuntimeInSeconds": 0.12399999797344208
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.48797250859106528,
-        "RuntimeInSeconds": 0.15000000596046448
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.81099656357388317,
-        "RuntimeInSeconds": 0.46700000762939453
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsMaximumEntropyMulti",
-        "Score": 0.48797250859106528,
+        "Score": 0.94366197183098588,
         "RuntimeInSeconds": 0.075999997556209564
       },
       {
         "Version": 0,
         "Type": "Trial",
-        "TrainerName": "LbfgsMaximumEntropyMulti",
-        "Score": 0.74226804123711343,
-        "RuntimeInSeconds": 0.12300000339746475
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.48797250859106528,
-        "RuntimeInSeconds": 0.15199999511241913
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.21500000357627869
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsMaximumEntropyMulti",
-        "Score": 0.64948453608247425,
-        "RuntimeInSeconds": 0.092000000178813934
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.73539518900343648,
-        "RuntimeInSeconds": 0.12800000607967377
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.25
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.86254295532646053,
-        "RuntimeInSeconds": 0.16300000250339508
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.48797250859106528,
-        "RuntimeInSeconds": 0.15299999713897705
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
         "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.11500000208616257
+        "Score": 0.91549295774647887,
+        "RuntimeInSeconds": 0.075999997556209564
       },
       {
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.738831615120275,
-        "RuntimeInSeconds": 0.16599999368190765
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.079999998211860657
       },
       {
         "Version": 0,
         "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.67353951890034369,
+        "TrainerName": "FastForestOva",
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.32699999213218689
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "SdcaLogisticRegressionOva",
+        "Score": 0.26760563380281688,
         "RuntimeInSeconds": 0.14100000262260437
       },
       {
         "Version": 0,
         "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.24899999797344208
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.82817869415807566,
-        "RuntimeInSeconds": 0.47900000214576721
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.10999999940395355
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsMaximumEntropyMulti",
-        "Score": 0.74226804123711343,
-        "RuntimeInSeconds": 0.14200000464916229
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsMaximumEntropyMulti",
-        "Score": 0.61168384879725091,
-        "RuntimeInSeconds": 0.12700000405311584
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsMaximumEntropyMulti",
-        "Score": 0.72508591065292094,
-        "RuntimeInSeconds": 0.10999999940395355
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
         "TrainerName": "LightGbmMulti",
-        "Score": 0.872852233676976,
-        "RuntimeInSeconds": 0.40099999308586121
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.48797250859106528,
-        "RuntimeInSeconds": 5.1820001602172852
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.21899999678134918
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.85910652920962194,
-        "RuntimeInSeconds": 0.46399998664855957
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.10700000077486038
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.23800000548362732
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.1080000028014183
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.82817869415807566,
-        "RuntimeInSeconds": 0.46299999952316284
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsMaximumEntropyMulti",
-        "Score": 0.71477663230240551,
-        "RuntimeInSeconds": 0.090999998152256012
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.12800000607967377
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.22200000286102295
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.63230240549828176,
-        "RuntimeInSeconds": 0.16099999845027924
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.83505154639175261,
-        "RuntimeInSeconds": 0.4869999885559082
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.72852233676975942,
-        "RuntimeInSeconds": 0.15800000727176666
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.23399999737739563
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.84879725085910651,
-        "RuntimeInSeconds": 2.1210000514984131
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.48797250859106528,
-        "RuntimeInSeconds": 0.14200000464916229
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.22499999403953552
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.25099998712539673
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.23899999260902405
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.83848797250859108,
-        "RuntimeInSeconds": 0.460999995470047
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.73539518900343648,
-        "RuntimeInSeconds": 0.15700000524520874
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.1080000028014183
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.81786941580756012,
-        "RuntimeInSeconds": 0.4779999852180481
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.73539518900343648,
-        "RuntimeInSeconds": 0.15600000321865082
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.22200000286102295
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.84879725085910651,
-        "RuntimeInSeconds": 0.4779999852180481
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.23600000143051147
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.12300000339746475
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.73539518900343648,
-        "RuntimeInSeconds": 0.16300000250339508
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.12200000137090683
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.125
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.82130584192439859,
-        "RuntimeInSeconds": 0.527999997138977
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.25499999523162842
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.83505154639175261,
-        "RuntimeInSeconds": 0.49099999666213989
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.10899999737739563
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.22300000488758087
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.22100000083446503
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.12099999934434891
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.73539518900343648,
-        "RuntimeInSeconds": 0.15999999642372131
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.25099998712539673
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.12399999797344208
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.27300000190734863
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.84192439862542956,
-        "RuntimeInSeconds": 0.15899999439716339
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.13699999451637268
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.48797250859106528,
-        "RuntimeInSeconds": 0.1809999942779541
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.11800000071525574
+        "Score": 0.95774647887323938,
+        "RuntimeInSeconds": 0.13199999928474426
       },
       {
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "FastTreeOva",
-        "Score": 0.86941580756013748,
-        "RuntimeInSeconds": 2.750999927520752
+        "Score": 0.95774647887323938,
+        "RuntimeInSeconds": 0.328000009059906
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "SdcaMaximumEntropyMulti",
+        "Score": 0.92957746478873238,
+        "RuntimeInSeconds": 0.076999999582767487
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "LbfgsMaximumEntropyMulti",
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.061999998986721039
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "LbfgsLogisticRegressionOva",
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.078000001609325409
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "LbfgsMaximumEntropyMulti",
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.075999997556209564
       },
       {
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "FastTreeOva",
-        "Score": 0.865979381443299,
-        "RuntimeInSeconds": 0.7369999885559082
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.13899999856948853
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.14200000464916229
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastTreeOva",
-        "Score": 0.88316151202749138,
-        "RuntimeInSeconds": 2.3250000476837158
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastTreeOva",
-        "Score": 0.61168384879725091,
-        "RuntimeInSeconds": 1.7519999742507935
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.11800000071525574
+        "Score": 0.92957746478873238,
+        "RuntimeInSeconds": 0.30199998617172241
       },
       {
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.25600001215934753
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.13899999856948853
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.10999999940395355
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.12700000405311584
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.73539518900343648,
-        "RuntimeInSeconds": 0.16699999570846558
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.13600000739097595
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.14000000059604645
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.73539518900343648,
-        "RuntimeInSeconds": 0.16200000047683716
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.26800000667572021
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.12399999797344208
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.11100000143051147
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.13699999451637268
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.73539518900343648,
-        "RuntimeInSeconds": 0.16699999570846558
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.12399999797344208
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.25499999523162842
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.10999999940395355
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.73539518900343648,
-        "RuntimeInSeconds": 0.15899999439716339
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.13600000739097595
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.25499999523162842
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.14000000059604645
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.23199999332427979
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.29300001263618469
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.73539518900343648,
-        "RuntimeInSeconds": 0.19300000369548798
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.26800000667572021
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.73539518900343648,
-        "RuntimeInSeconds": 0.17000000178813934
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.28499999642372131
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.25499999523162842
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.12300000339746475
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.125
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.15600000321865082
+        "Score": 0.26760563380281688,
+        "RuntimeInSeconds": 0.14300000667572021
       },
       {
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "LightGbmMulti",
-        "Score": 0.48797250859106528,
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.097000002861022949
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastForestOva",
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.34400001168251038
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "SdcaMaximumEntropyMulti",
+        "Score": 0.26760563380281688,
+        "RuntimeInSeconds": 0.076999999582767487
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "SdcaLogisticRegressionOva",
+        "Score": 0.85915492957746475,
         "RuntimeInSeconds": 0.14399999380111694
       },
       {
         "Version": 0,
         "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.26499998569488525
+        "TrainerName": "LbfgsLogisticRegressionOva",
+        "Score": 0.90140845070422537,
+        "RuntimeInSeconds": 0.093999996781349182
       },
       {
         "Version": 0,
         "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.125
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastTreeOva",
-        "Score": 0.8797250859106529,
-        "RuntimeInSeconds": 0.79799997806549072
+        "TrainerName": "LightGbmMulti",
+        "Score": 0.92957746478873238,
+        "RuntimeInSeconds": 1.1540000438690186
       },
       {
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "FastTreeOva",
-        "Score": 0.74570446735395191,
-        "RuntimeInSeconds": 44.860000610351563
+        "Score": 0.95774647887323938,
+        "RuntimeInSeconds": 0.32300001382827759
       },
       {
         "Version": 0,
         "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.11500000208616257
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.10899999737739563
+        "TrainerName": "LbfgsMaximumEntropyMulti",
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.061999998986721039
       },
       {
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.73539518900343648,
-        "RuntimeInSeconds": 0.16599999368190765
+        "Score": 0.94366197183098588,
+        "RuntimeInSeconds": 0.079000003635883331
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "SdcaMaximumEntropyMulti",
+        "Score": 0.92957746478873238,
+        "RuntimeInSeconds": 0.075999997556209564
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastForestOva",
+        "Score": 0.95774647887323938,
+        "RuntimeInSeconds": 0.30099999904632568
       },
       {
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.51202749140893467,
-        "RuntimeInSeconds": 0.21500000357627869
+        "Score": 0.26760563380281688,
+        "RuntimeInSeconds": 0.14300000667572021
       }
     ],
-    "Pipeline": "[{\"EstimatorType\":\"OneHotEncoding\",\"Inputs\":[\"ProxyDetected\",\"MapName\",\"ProxyActive\"],\"Outputs\":[\"ProxyDetected\",\"MapName\",\"ProxyActive\"]},{\"EstimatorType\":\"ReplaceMissingValues\",\"Inputs\":[\"ENEMY_PROTOSS_IMMORTAL\",\"ENEMY_PROTOSS_HIGHTEMPLAR\",\"ENEMY_PROTOSS_GATEWAY\",\"ENEMY_PROTOSS_FORGE\",\"ENEMY_PROTOSS_FLEETBEACON\",\"ENEMY_PROTOSS_DISRUPTORPHASED\",\"ENEMY_PROTOSS_DISRUPTOR\",\"ENEMY_PROTOSS_DARKTEMPLAR\",\"ENEMY_PROTOSS_DARKSHRINE\",\"ENEMY_PROTOSS_INTERCEPTOR\",\"ENEMY_PROTOSS_CYBERNETICSCORE\",\"ENEMY_PROTOSS_CARRIER\",\"ENEMY_PROTOSS_ASSIMILATOR\",\"ENEMY_PROTOSS_ARCHON\",\"ENEMY_PROTOSS_ADEPTPHASESHIFT\",\"ENEMY_PROTOSS_ADEPT\",\"SELF_PROTOSS_ASSIMILATORRICH\",\"SELF_PROTOSS_ZEALOT\",\"SELF_PROTOSS_WARPPRISMPHASING\",\"SELF_PROTOSS_WARPPRISM\",\"ENEMY_PROTOSS_COLOSSUS\",\"ENEMY_PROTOSS_MOTHERSHIP\",\"ENEMY_PROTOSS_MOTHERSHIPCORE\",\"ENEMY_PROTOSS_NEXUS\",\"ENEMY_PROTOSS_WARPPRISMPHASING\",\"ENEMY_PROTOSS_WARPPRISM\",\"ENEMY_PROTOSS_WARPGATE\",\"ENEMY_PROTOSS_VOIDRAY\",\"ENEMY_PROTOSS_TWILIGHTCOUNCIL\",\"ENEMY_PROTOSS_TEMPLARARCHIVE\",\"ENEMY_PROTOSS_TEMPEST\",\"ENEMY_PROTOSS_STARGATE\",\"ENEMY_PROTOSS_STALKER\",\"ENEMY_PROTOSS_SHIELDBATTERY\",\"ENEMY_PROTOSS_SENTRY\",\"ENEMY_PROTOSS_ROBOTICSFACILITY\",\"ENEMY_PROTOSS_ROBOTICSBAY\",\"ENEMY_PROTOSS_PYLONOVERCHARGED\",\"ENEMY_PROTOSS_PYLON\",\"ENEMY_PROTOSS_PROBE\",\"ENEMY_PROTOSS_PHOTONCANNON\",\"ENEMY_PROTOSS_PHOENIX\",\"ENEMY_PROTOSS_ORACLESTASISTRAP\",\"ENEMY_PROTOSS_ORACLE\",\"ENEMY_PROTOSS_OBSERVER\",\"SELF_PROTOSS_WARPGATE\",\"ENEMY_PROTOSS_ZEALOT\",\"SELF_PROTOSS_VOIDRAY\",\"SELF_PROTOSS_TEMPLARARCHIVE\",\"SELF_PROTOSS_DISRUPTOR\",\"SELF_PROTOSS_DARKTEMPLAR\",\"SELF_PROTOSS_DARKSHRINE\",\"SELF_PROTOSS_CYBERNETICSCORE\",\"SELF_PROTOSS_COLOSSUS\",\"SELF_PROTOSS_CARRIER\",\"SELF_PROTOSS_ASSIMILATOR\",\"SELF_PROTOSS_ARCHON\",\"SELF_PROTOSS_ADEPTPHASESHIFT\",\"SELF_PROTOSS_DISRUPTORPHASED\",\"SELF_PROTOSS_ADEPT\",\"Frame\",\"MyRace\",\"MySelectedRace\",\"EnemyRace\",\"EnemySelectedRace\",\"SELF_PROTOSS_FLEETBEACON\",\"SELF_PROTOSS_FORGE\",\"SELF_PROTOSS_GATEWAY\",\"SELF_PROTOSS_TEMPEST\",\"SELF_PROTOSS_STARGATE\",\"SELF_PROTOSS_STALKER\",\"SELF_PROTOSS_SHIELDBATTERY\",\"SELF_PROTOSS_SENTRY\",\"SELF_PROTOSS_ROBOTICSFACILITY\",\"SELF_PROTOSS_ROBOTICSBAY\",\"SELF_PROTOSS_PYLONOVERCHARGED\",\"SELF_PROTOSS_PYLON\",\"SELF_PROTOSS_PROBE\",\"SELF_PROTOSS_PHOTONCANNON\",\"SELF_PROTOSS_PHOENIX\",\"SELF_PROTOSS_ORACLESTASISTRAP\",\"SELF_PROTOSS_ORACLE\",\"SELF_PROTOSS_OBSERVER\",\"SELF_PROTOSS_NEXUS\",\"SELF_PROTOSS_MOTHERSHIPCORE\",\"SELF_PROTOSS_MOTHERSHIP\",\"SELF_PROTOSS_INTERCEPTOR\",\"SELF_PROTOSS_IMMORTAL\",\"SELF_PROTOSS_HIGHTEMPLAR\",\"SELF_PROTOSS_TWILIGHTCOUNCIL\",\"ENEMY_PROTOSS_ASSIMILATORRICH\"],\"Outputs\":[\"ENEMY_PROTOSS_IMMORTAL\",\"ENEMY_PROTOSS_HIGHTEMPLAR\",\"ENEMY_PROTOSS_GATEWAY\",\"ENEMY_PROTOSS_FORGE\",\"ENEMY_PROTOSS_FLEETBEACON\",\"ENEMY_PROTOSS_DISRUPTORPHASED\",\"ENEMY_PROTOSS_DISRUPTOR\",\"ENEMY_PROTOSS_DARKTEMPLAR\",\"ENEMY_PROTOSS_DARKSHRINE\",\"ENEMY_PROTOSS_INTERCEPTOR\",\"ENEMY_PROTOSS_CYBERNETICSCORE\",\"ENEMY_PROTOSS_CARRIER\",\"ENEMY_PROTOSS_ASSIMILATOR\",\"ENEMY_PROTOSS_ARCHON\",\"ENEMY_PROTOSS_ADEPTPHASESHIFT\",\"ENEMY_PROTOSS_ADEPT\",\"SELF_PROTOSS_ASSIMILATORRICH\",\"SELF_PROTOSS_ZEALOT\",\"SELF_PROTOSS_WARPPRISMPHASING\",\"SELF_PROTOSS_WARPPRISM\",\"ENEMY_PROTOSS_COLOSSUS\",\"ENEMY_PROTOSS_MOTHERSHIP\",\"ENEMY_PROTOSS_MOTHERSHIPCORE\",\"ENEMY_PROTOSS_NEXUS\",\"ENEMY_PROTOSS_WARPPRISMPHASING\",\"ENEMY_PROTOSS_WARPPRISM\",\"ENEMY_PROTOSS_WARPGATE\",\"ENEMY_PROTOSS_VOIDRAY\",\"ENEMY_PROTOSS_TWILIGHTCOUNCIL\",\"ENEMY_PROTOSS_TEMPLARARCHIVE\",\"ENEMY_PROTOSS_TEMPEST\",\"ENEMY_PROTOSS_STARGATE\",\"ENEMY_PROTOSS_STALKER\",\"ENEMY_PROTOSS_SHIELDBATTERY\",\"ENEMY_PROTOSS_SENTRY\",\"ENEMY_PROTOSS_ROBOTICSFACILITY\",\"ENEMY_PROTOSS_ROBOTICSBAY\",\"ENEMY_PROTOSS_PYLONOVERCHARGED\",\"ENEMY_PROTOSS_PYLON\",\"ENEMY_PROTOSS_PROBE\",\"ENEMY_PROTOSS_PHOTONCANNON\",\"ENEMY_PROTOSS_PHOENIX\",\"ENEMY_PROTOSS_ORACLESTASISTRAP\",\"ENEMY_PROTOSS_ORACLE\",\"ENEMY_PROTOSS_OBSERVER\",\"SELF_PROTOSS_WARPGATE\",\"ENEMY_PROTOSS_ZEALOT\",\"SELF_PROTOSS_VOIDRAY\",\"SELF_PROTOSS_TEMPLARARCHIVE\",\"SELF_PROTOSS_DISRUPTOR\",\"SELF_PROTOSS_DARKTEMPLAR\",\"SELF_PROTOSS_DARKSHRINE\",\"SELF_PROTOSS_CYBERNETICSCORE\",\"SELF_PROTOSS_COLOSSUS\",\"SELF_PROTOSS_CARRIER\",\"SELF_PROTOSS_ASSIMILATOR\",\"SELF_PROTOSS_ARCHON\",\"SELF_PROTOSS_ADEPTPHASESHIFT\",\"SELF_PROTOSS_DISRUPTORPHASED\",\"SELF_PROTOSS_ADEPT\",\"Frame\",\"MyRace\",\"MySelectedRace\",\"EnemyRace\",\"EnemySelectedRace\",\"SELF_PROTOSS_FLEETBEACON\",\"SELF_PROTOSS_FORGE\",\"SELF_PROTOSS_GATEWAY\",\"SELF_PROTOSS_TEMPEST\",\"SELF_PROTOSS_STARGATE\",\"SELF_PROTOSS_STALKER\",\"SELF_PROTOSS_SHIELDBATTERY\",\"SELF_PROTOSS_SENTRY\",\"SELF_PROTOSS_ROBOTICSFACILITY\",\"SELF_PROTOSS_ROBOTICSBAY\",\"SELF_PROTOSS_PYLONOVERCHARGED\",\"SELF_PROTOSS_PYLON\",\"SELF_PROTOSS_PROBE\",\"SELF_PROTOSS_PHOTONCANNON\",\"SELF_PROTOSS_PHOENIX\",\"SELF_PROTOSS_ORACLESTASISTRAP\",\"SELF_PROTOSS_ORACLE\",\"SELF_PROTOSS_OBSERVER\",\"SELF_PROTOSS_NEXUS\",\"SELF_PROTOSS_MOTHERSHIPCORE\",\"SELF_PROTOSS_MOTHERSHIP\",\"SELF_PROTOSS_INTERCEPTOR\",\"SELF_PROTOSS_IMMORTAL\",\"SELF_PROTOSS_HIGHTEMPLAR\",\"SELF_PROTOSS_TWILIGHTCOUNCIL\",\"ENEMY_PROTOSS_ASSIMILATORRICH\"]},{\"EstimatorType\":\"Concatenate\",\"Inputs\":[\"ProxyDetected\",\"MapName\",\"ProxyActive\",\"ENEMY_PROTOSS_IMMORTAL\",\"ENEMY_PROTOSS_HIGHTEMPLAR\",\"ENEMY_PROTOSS_GATEWAY\",\"ENEMY_PROTOSS_FORGE\",\"ENEMY_PROTOSS_FLEETBEACON\",\"ENEMY_PROTOSS_DISRUPTORPHASED\",\"ENEMY_PROTOSS_DISRUPTOR\",\"ENEMY_PROTOSS_DARKTEMPLAR\",\"ENEMY_PROTOSS_DARKSHRINE\",\"ENEMY_PROTOSS_INTERCEPTOR\",\"ENEMY_PROTOSS_CYBERNETICSCORE\",\"ENEMY_PROTOSS_CARRIER\",\"ENEMY_PROTOSS_ASSIMILATOR\",\"ENEMY_PROTOSS_ARCHON\",\"ENEMY_PROTOSS_ADEPTPHASESHIFT\",\"ENEMY_PROTOSS_ADEPT\",\"SELF_PROTOSS_ASSIMILATORRICH\",\"SELF_PROTOSS_ZEALOT\",\"SELF_PROTOSS_WARPPRISMPHASING\",\"SELF_PROTOSS_WARPPRISM\",\"ENEMY_PROTOSS_COLOSSUS\",\"ENEMY_PROTOSS_MOTHERSHIP\",\"ENEMY_PROTOSS_MOTHERSHIPCORE\",\"ENEMY_PROTOSS_NEXUS\",\"ENEMY_PROTOSS_WARPPRISMPHASING\",\"ENEMY_PROTOSS_WARPPRISM\",\"ENEMY_PROTOSS_WARPGATE\",\"ENEMY_PROTOSS_VOIDRAY\",\"ENEMY_PROTOSS_TWILIGHTCOUNCIL\",\"ENEMY_PROTOSS_TEMPLARARCHIVE\",\"ENEMY_PROTOSS_TEMPEST\",\"ENEMY_PROTOSS_STARGATE\",\"ENEMY_PROTOSS_STALKER\",\"ENEMY_PROTOSS_SHIELDBATTERY\",\"ENEMY_PROTOSS_SENTRY\",\"ENEMY_PROTOSS_ROBOTICSFACILITY\",\"ENEMY_PROTOSS_ROBOTICSBAY\",\"ENEMY_PROTOSS_PYLONOVERCHARGED\",\"ENEMY_PROTOSS_PYLON\",\"ENEMY_PROTOSS_PROBE\",\"ENEMY_PROTOSS_PHOTONCANNON\",\"ENEMY_PROTOSS_PHOENIX\",\"ENEMY_PROTOSS_ORACLESTASISTRAP\",\"ENEMY_PROTOSS_ORACLE\",\"ENEMY_PROTOSS_OBSERVER\",\"SELF_PROTOSS_WARPGATE\",\"ENEMY_PROTOSS_ZEALOT\",\"SELF_PROTOSS_VOIDRAY\",\"SELF_PROTOSS_TEMPLARARCHIVE\",\"SELF_PROTOSS_DISRUPTOR\",\"SELF_PROTOSS_DARKTEMPLAR\",\"SELF_PROTOSS_DARKSHRINE\",\"SELF_PROTOSS_CYBERNETICSCORE\",\"SELF_PROTOSS_COLOSSUS\",\"SELF_PROTOSS_CARRIER\",\"SELF_PROTOSS_ASSIMILATOR\",\"SELF_PROTOSS_ARCHON\",\"SELF_PROTOSS_ADEPTPHASESHIFT\",\"SELF_PROTOSS_DISRUPTORPHASED\",\"SELF_PROTOSS_ADEPT\",\"Frame\",\"MyRace\",\"MySelectedRace\",\"EnemyRace\",\"EnemySelectedRace\",\"SELF_PROTOSS_FLEETBEACON\",\"SELF_PROTOSS_FORGE\",\"SELF_PROTOSS_GATEWAY\",\"SELF_PROTOSS_TEMPEST\",\"SELF_PROTOSS_STARGATE\",\"SELF_PROTOSS_STALKER\",\"SELF_PROTOSS_SHIELDBATTERY\",\"SELF_PROTOSS_SENTRY\",\"SELF_PROTOSS_ROBOTICSFACILITY\",\"SELF_PROTOSS_ROBOTICSBAY\",\"SELF_PROTOSS_PYLONOVERCHARGED\",\"SELF_PROTOSS_PYLON\",\"SELF_PROTOSS_PROBE\",\"SELF_PROTOSS_PHOTONCANNON\",\"SELF_PROTOSS_PHOENIX\",\"SELF_PROTOSS_ORACLESTASISTRAP\",\"SELF_PROTOSS_ORACLE\",\"SELF_PROTOSS_OBSERVER\",\"SELF_PROTOSS_NEXUS\",\"SELF_PROTOSS_MOTHERSHIPCORE\",\"SELF_PROTOSS_MOTHERSHIP\",\"SELF_PROTOSS_INTERCEPTOR\",\"SELF_PROTOSS_IMMORTAL\",\"SELF_PROTOSS_HIGHTEMPLAR\",\"SELF_PROTOSS_TWILIGHTCOUNCIL\",\"ENEMY_PROTOSS_ASSIMILATORRICH\"],\"Outputs\":[\"Features\"]},{\"EstimatorType\":\"MapValueToKey\",\"Inputs\":[\"Result\"],\"Outputs\":[\"Result\"]},{\"LabelColumnName\":\"Result\",\"FeatureColumnName\":\"Features\",\"NumberOfLeaves\":\"183\",\"MinimumExampleCountPerLeaf\":\"2\",\"NumberOfTrees\":\"2641\",\"LearningRate\":\"1\",\"FeatureFraction\":\"0.431438326447041\",\"MaximumBinCountPerFeature\":\"8\",\"EstimatorType\":\"FastTreeOva\",\"Inputs\":[\"Result\"],\"Outputs\":[\"Features\"]},{\"EstimatorType\":\"MapKeyToValue\",\"Inputs\":[\"PredictedLabel\"],\"Outputs\":[\"PredictedLabel\"]}]",
+    "Pipeline": {
+      "parameter": {
+        "0": {
+          "OutputColumnNames": [
+            "MapName",
+            "ProxyDetected",
+            "ProxyActive"
+          ],
+          "InputColumnNames": [
+            "MapName",
+            "ProxyDetected",
+            "ProxyActive"
+          ],
+          "OutputKind": "Indicator"
+        },
+        "1": {
+          "OutputColumnNames": [
+            "ENEMY_PROTOSS_NEXUS",
+            "ENEMY_PROTOSS_OBSERVER",
+            "ENEMY_PROTOSS_ORACLE",
+            "ENEMY_PROTOSS_ORACLESTASISTRAP",
+            "ENEMY_PROTOSS_PHOENIX",
+            "ENEMY_PROTOSS_PHOTONCANNON",
+            "ENEMY_PROTOSS_PROBE",
+            "ENEMY_PROTOSS_PYLON",
+            "ENEMY_PROTOSS_PYLONOVERCHARGED",
+            "ENEMY_PROTOSS_ROBOTICSBAY",
+            "ENEMY_PROTOSS_MOTHERSHIPCORE",
+            "ENEMY_PROTOSS_ROBOTICSFACILITY",
+            "ENEMY_PROTOSS_SHIELDBATTERY",
+            "ENEMY_PROTOSS_STALKER",
+            "ENEMY_PROTOSS_STARGATE",
+            "ENEMY_PROTOSS_TEMPEST",
+            "ENEMY_PROTOSS_TEMPLARARCHIVE",
+            "ENEMY_PROTOSS_TWILIGHTCOUNCIL",
+            "ENEMY_PROTOSS_VOIDRAY",
+            "ENEMY_PROTOSS_WARPGATE",
+            "ENEMY_PROTOSS_WARPPRISM",
+            "ENEMY_PROTOSS_WARPPRISMPHASING",
+            "ENEMY_PROTOSS_SENTRY",
+            "ENEMY_PROTOSS_MOTHERSHIP",
+            "ENEMY_PROTOSS_INTERCEPTOR",
+            "ENEMY_PROTOSS_IMMORTAL",
+            "EnemySelectedRace",
+            "EnemyRace",
+            "MySelectedRace",
+            "MyRace",
+            "Frame",
+            "ENEMY_PROTOSS_ADEPT",
+            "ENEMY_PROTOSS_ADEPTPHASESHIFT",
+            "ENEMY_PROTOSS_ARCHON",
+            "ENEMY_PROTOSS_ASSIMILATOR",
+            "ENEMY_PROTOSS_CARRIER",
+            "ENEMY_PROTOSS_COLOSSUS",
+            "ENEMY_PROTOSS_CYBERNETICSCORE",
+            "ENEMY_PROTOSS_DARKSHRINE",
+            "ENEMY_PROTOSS_DARKTEMPLAR",
+            "ENEMY_PROTOSS_DISRUPTOR",
+            "ENEMY_PROTOSS_DISRUPTORPHASED",
+            "ENEMY_PROTOSS_FLEETBEACON",
+            "ENEMY_PROTOSS_FORGE",
+            "ENEMY_PROTOSS_GATEWAY",
+            "ENEMY_PROTOSS_HIGHTEMPLAR",
+            "ENEMY_PROTOSS_ZEALOT",
+            "ENEMY_PROTOSS_ASSIMILATORRICH"
+          ],
+          "InputColumnNames": [
+            "ENEMY_PROTOSS_NEXUS",
+            "ENEMY_PROTOSS_OBSERVER",
+            "ENEMY_PROTOSS_ORACLE",
+            "ENEMY_PROTOSS_ORACLESTASISTRAP",
+            "ENEMY_PROTOSS_PHOENIX",
+            "ENEMY_PROTOSS_PHOTONCANNON",
+            "ENEMY_PROTOSS_PROBE",
+            "ENEMY_PROTOSS_PYLON",
+            "ENEMY_PROTOSS_PYLONOVERCHARGED",
+            "ENEMY_PROTOSS_ROBOTICSBAY",
+            "ENEMY_PROTOSS_MOTHERSHIPCORE",
+            "ENEMY_PROTOSS_ROBOTICSFACILITY",
+            "ENEMY_PROTOSS_SHIELDBATTERY",
+            "ENEMY_PROTOSS_STALKER",
+            "ENEMY_PROTOSS_STARGATE",
+            "ENEMY_PROTOSS_TEMPEST",
+            "ENEMY_PROTOSS_TEMPLARARCHIVE",
+            "ENEMY_PROTOSS_TWILIGHTCOUNCIL",
+            "ENEMY_PROTOSS_VOIDRAY",
+            "ENEMY_PROTOSS_WARPGATE",
+            "ENEMY_PROTOSS_WARPPRISM",
+            "ENEMY_PROTOSS_WARPPRISMPHASING",
+            "ENEMY_PROTOSS_SENTRY",
+            "ENEMY_PROTOSS_MOTHERSHIP",
+            "ENEMY_PROTOSS_INTERCEPTOR",
+            "ENEMY_PROTOSS_IMMORTAL",
+            "EnemySelectedRace",
+            "EnemyRace",
+            "MySelectedRace",
+            "MyRace",
+            "Frame",
+            "ENEMY_PROTOSS_ADEPT",
+            "ENEMY_PROTOSS_ADEPTPHASESHIFT",
+            "ENEMY_PROTOSS_ARCHON",
+            "ENEMY_PROTOSS_ASSIMILATOR",
+            "ENEMY_PROTOSS_CARRIER",
+            "ENEMY_PROTOSS_COLOSSUS",
+            "ENEMY_PROTOSS_CYBERNETICSCORE",
+            "ENEMY_PROTOSS_DARKSHRINE",
+            "ENEMY_PROTOSS_DARKTEMPLAR",
+            "ENEMY_PROTOSS_DISRUPTOR",
+            "ENEMY_PROTOSS_DISRUPTORPHASED",
+            "ENEMY_PROTOSS_FLEETBEACON",
+            "ENEMY_PROTOSS_FORGE",
+            "ENEMY_PROTOSS_GATEWAY",
+            "ENEMY_PROTOSS_HIGHTEMPLAR",
+            "ENEMY_PROTOSS_ZEALOT",
+            "ENEMY_PROTOSS_ASSIMILATORRICH"
+          ]
+        },
+        "2": {
+          "InputColumnNames": [
+            "MapName",
+            "ProxyDetected",
+            "ProxyActive",
+            "ENEMY_PROTOSS_NEXUS",
+            "ENEMY_PROTOSS_OBSERVER",
+            "ENEMY_PROTOSS_ORACLE",
+            "ENEMY_PROTOSS_ORACLESTASISTRAP",
+            "ENEMY_PROTOSS_PHOENIX",
+            "ENEMY_PROTOSS_PHOTONCANNON",
+            "ENEMY_PROTOSS_PROBE",
+            "ENEMY_PROTOSS_PYLON",
+            "ENEMY_PROTOSS_PYLONOVERCHARGED",
+            "ENEMY_PROTOSS_ROBOTICSBAY",
+            "ENEMY_PROTOSS_MOTHERSHIPCORE",
+            "ENEMY_PROTOSS_ROBOTICSFACILITY",
+            "ENEMY_PROTOSS_SHIELDBATTERY",
+            "ENEMY_PROTOSS_STALKER",
+            "ENEMY_PROTOSS_STARGATE",
+            "ENEMY_PROTOSS_TEMPEST",
+            "ENEMY_PROTOSS_TEMPLARARCHIVE",
+            "ENEMY_PROTOSS_TWILIGHTCOUNCIL",
+            "ENEMY_PROTOSS_VOIDRAY",
+            "ENEMY_PROTOSS_WARPGATE",
+            "ENEMY_PROTOSS_WARPPRISM",
+            "ENEMY_PROTOSS_WARPPRISMPHASING",
+            "ENEMY_PROTOSS_SENTRY",
+            "ENEMY_PROTOSS_MOTHERSHIP",
+            "ENEMY_PROTOSS_INTERCEPTOR",
+            "ENEMY_PROTOSS_IMMORTAL",
+            "EnemySelectedRace",
+            "EnemyRace",
+            "MySelectedRace",
+            "MyRace",
+            "Frame",
+            "ENEMY_PROTOSS_ADEPT",
+            "ENEMY_PROTOSS_ADEPTPHASESHIFT",
+            "ENEMY_PROTOSS_ARCHON",
+            "ENEMY_PROTOSS_ASSIMILATOR",
+            "ENEMY_PROTOSS_CARRIER",
+            "ENEMY_PROTOSS_COLOSSUS",
+            "ENEMY_PROTOSS_CYBERNETICSCORE",
+            "ENEMY_PROTOSS_DARKSHRINE",
+            "ENEMY_PROTOSS_DARKTEMPLAR",
+            "ENEMY_PROTOSS_DISRUPTOR",
+            "ENEMY_PROTOSS_DISRUPTORPHASED",
+            "ENEMY_PROTOSS_FLEETBEACON",
+            "ENEMY_PROTOSS_FORGE",
+            "ENEMY_PROTOSS_GATEWAY",
+            "ENEMY_PROTOSS_HIGHTEMPLAR",
+            "ENEMY_PROTOSS_ZEALOT",
+            "ENEMY_PROTOSS_ASSIMILATORRICH"
+          ],
+          "OutputColumnName": "Features"
+        },
+        "3": {
+          "OutputColumnName": "Result",
+          "InputColumnName": "Result"
+        },
+        "4": {
+          "NumberOfLeaves": 4,
+          "MinimumExampleCountPerLeaf": 17,
+          "NumberOfTrees": 4,
+          "MaximumBinCountPerFeature": 427,
+          "FeatureFraction": 0.96115455628257429,
+          "LearningRate": 0.055531935361235504,
+          "LabelColumnName": "Result",
+          "FeatureColumnName": "Features"
+        },
+        "5": {
+          "OutputColumnName": "PredictedLabel",
+          "InputColumnName": "PredictedLabel"
+        }
+      },
+      "estimators": [
+        "OneHotEncoding",
+        "ReplaceMissingValues",
+        "Concatenate",
+        "MapValueToKey",
+        "FastTreeOva",
+        "MapKeyToValue"
+      ]
+    },
     "MetricName": "MicroAccuracy"
   },
   "Type": "TrainingConfig",
-  "Version": 1
+  "Version": 2
 }

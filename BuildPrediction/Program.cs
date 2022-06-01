@@ -28,14 +28,23 @@ foreach (var group in groups)
     var convertedData = flatFrameDataConverter.GetFlatFrameData(group);
     Console.WriteLine($"{stopwatch.Elapsed}");
 
-    Console.WriteLine("Saving Flat Data");
-    var cc = new CsvContext();
-    cc.Write(convertedData, $"{group.Key}.csv");
+    //Console.WriteLine("Saving Flat Data");
+    //var cc = new CsvContext();
+    //cc.Write(convertedData, $"data/{group.Key}.csv");
+
+    Console.WriteLine("Generating Model");
+    var trainingDataView = mlContext.Data.LoadFromEnumerable(convertedData);
+    var trainedModel = MLModel1.RetrainPipeline(mlContext, trainingDataView);
+    Console.WriteLine("Saving Model");
+    mlContext.Model.Save(trainedModel, trainingDataView.Schema, $"data/{group.Key}.zip");
 }
 
 
 stopwatch.Stop();
 Console.WriteLine($"Done in {stopwatch.Elapsed}");
+
+//At end of game update data and train ML model for that build
+//ML build chooser, run each build against last game, use winning build with highest confidence 
 
 
 // TODO: train a model for each build
