@@ -1,4 +1,5 @@
-﻿using SC2APIProtocol;
+﻿using BuildPrediction;
+using SC2APIProtocol;
 using Sharky.DefaultBot;
 using Sharky.Managers;
 using SharkyMLDataManager;
@@ -12,15 +13,17 @@ namespace SharkyMLBot.Managers
         protected Dictionary<int, MLFrameData> MLFramesData { get; set; }
         FrameDataGatherer FrameDataGatherer;
         MLDataFileService MLDataFileService;
+        BuildModelTrainingManager BuildModelTrainingManager;
 
         int LearningDataUpdateRate;
 
-        public MLBuildManager(DefaultSharkyBot defaultSharkyBot, FrameDataGatherer frameDataGatherer, MLDataFileService mLDataFileService) : base(defaultSharkyBot)
+        public MLBuildManager(DefaultSharkyBot defaultSharkyBot, FrameDataGatherer frameDataGatherer, MLDataFileService mLDataFileService, BuildModelTrainingManager buildModelTrainingManager) : base(defaultSharkyBot)
         {
             MLFramesData = new Dictionary<int, MLFrameData>();
 
             FrameDataGatherer = frameDataGatherer;
             MLDataFileService = mLDataFileService;
+            BuildModelTrainingManager = buildModelTrainingManager;
 
             LearningDataUpdateRate = 1344; // 1 minute
         }
@@ -43,6 +46,8 @@ namespace SharkyMLBot.Managers
 
             var learningGameData = new MLGameData { Game = game, MLFramesData = MLFramesData };
             MLDataFileService.SaveGame(learningGameData);
+
+            BuildModelTrainingManager.UpdateBuildModels(game);
         }
 
         public override IEnumerable<SC2APIProtocol.Action> OnFrame(ResponseObservation observation)

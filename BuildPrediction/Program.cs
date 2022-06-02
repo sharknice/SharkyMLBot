@@ -6,8 +6,10 @@ using System.Diagnostics;
 
 Console.WriteLine("Hello, World!");
 
-var buildModelManager = new BuildModelManager();
+var buildModelManager = new BuildModelTrainingManager();
 buildModelManager.UpdateBuildModels();
+
+
 
 
 //At end of game update data and train ML model for that build

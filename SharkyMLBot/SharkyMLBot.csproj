@@ -8,6 +8,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Sharky\S2ClientProtocol\S2ClientProtocol.csproj" />
     <ProjectReference Include="..\..\Sharky\Sharky\Sharky.csproj" />
+    <ProjectReference Include="..\BuildPrediction\BuildPrediction.csproj" />
     <ProjectReference Include="..\SharkyMLDataManager\SharkyMLDataManager.csproj" />
   </ItemGroup>
   <ItemGroup>

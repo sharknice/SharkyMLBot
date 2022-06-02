@@ -1,11 +1,22 @@
 ﻿using Microsoft.ML;
+using Sharky;
 using SharkyMLDataManager;
 using System.Diagnostics;
 
 namespace BuildPrediction
 {
-    public class BuildModelManager
+    public class BuildModelTrainingManager
     {
+        public string BuildModelsDirectory { get; set; }
+
+        public BuildModelTrainingManager()
+        {
+            BuildModelsDirectory = $"data/BuildModels";
+        }
+
+        /// <summary>
+        /// Updates all the build models
+        /// </summary>
         public void UpdateBuildModels()
         {
             Console.WriteLine("Updating Build Models");
@@ -18,16 +29,39 @@ namespace BuildPrediction
             var mlDataFileService = new MLDataFileService();
             Console.WriteLine($"{stopwatch.Elapsed}");
 
-            var buildModelsDirectory = $"data/BuildModels";
-
             var raceGroups = mlDataFileService.MLGameData.GroupBy(g => string.Join(" ", g.Game.EnemyRace));
-            SaveGroupBuilds(stopwatch, mlContext, $"{buildModelsDirectory}/Race", raceGroups);
+            SaveGroupBuilds(stopwatch, mlContext, $"{BuildModelsDirectory}/Race", raceGroups);
 
             var enemyIdGroups = mlDataFileService.MLGameData.GroupBy(g => string.Join(" ", g.Game.EnemyId));
-            SaveGroupBuilds(stopwatch, mlContext, $"{buildModelsDirectory}/EnemyId", enemyIdGroups);
+            SaveGroupBuilds(stopwatch, mlContext, $"{BuildModelsDirectory}/EnemyId", enemyIdGroups);
 
             stopwatch.Stop();
             Console.WriteLine($"Done in {stopwatch.Elapsed}");
+        }
+
+        /// <summary>
+        /// Updates the build models affected by this game 
+        /// </summary>
+        /// <param name="game"></param>
+        public void UpdateBuildModels(Game game)
+        {
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
+
+            var mlContext = new MLContext();
+            var mlDataFileService = new MLDataFileService();
+            var buildString = string.Join(" ", game.Builds.Select(g => g.Value));
+
+            var mlGameData = mlDataFileService.MLGameData.Where(g => string.Join(" ", g.Game.Builds.Select(g => g.Value)) == buildString);
+
+            var raceGroups = mlGameData.Where(g => g.Game.EnemyRace == game.EnemyRace).GroupBy(g => string.Join(" ", g.Game.EnemyRace));
+            SaveGroupBuilds(stopwatch, mlContext, $"{BuildModelsDirectory}/Race", raceGroups);
+
+            var enemyIdGroups = mlGameData.Where(g => g.Game.EnemyId == game.EnemyId).GroupBy(g => string.Join(" ", g.Game.EnemyId));
+            SaveGroupBuilds(stopwatch, mlContext, $"{BuildModelsDirectory}/EnemyId", enemyIdGroups);
+
+            stopwatch.Stop();
+            Console.WriteLine($"Updated {buildString} build models for {game.EnemyRace} and {game.EnemyId} in {stopwatch.Elapsed}");
         }
 
         private static void SaveGroupBuilds(Stopwatch stopwatch, MLContext mlContext, string directory, IEnumerable<IGrouping<string, MLGameData>> groups)
