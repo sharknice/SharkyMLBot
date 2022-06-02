@@ -1,47 +1,14 @@
 ﻿using BuildPrediction;
-using LINQtoCSV;
 using Microsoft.ML;
 using Sharky.Builds.BuildChoosing;
 using SharkyMLDataManager;
 using System.Diagnostics;
 
 Console.WriteLine("Hello, World!");
-var stopwatch = new Stopwatch();
-stopwatch.Start();
 
-var mlContext = new MLContext();
+var buildModelManager = new BuildModelManager();
+buildModelManager.UpdateBuildModels();
 
-Console.WriteLine("Loading JSON Data");
-var mlDataFileService = new MLDataFileService();
-Console.WriteLine($"{stopwatch.Elapsed}");
-
-// TODO: group data by build
-var buildMatcher = new BuildMatcher();
-var groups = mlDataFileService.MLGameData.GroupBy(g => string.Join(" ", g.Game.Builds.Select(g => g.Value)));
-
-foreach (var group in groups)
-{
-    Console.WriteLine(group.Key);
-
-    Console.WriteLine("Converting JSON Data to Flat Data");
-    var flatFrameDataConverter = new FlatFrameDataConverter();
-    var convertedData = flatFrameDataConverter.GetFlatFrameData(group);
-    Console.WriteLine($"{stopwatch.Elapsed}");
-
-    //Console.WriteLine("Saving Flat Data");
-    //var cc = new CsvContext();
-    //cc.Write(convertedData, $"data/{group.Key}.csv");
-
-    Console.WriteLine("Generating Model");
-    var trainingDataView = mlContext.Data.LoadFromEnumerable(convertedData);
-    var trainedModel = MLModel1.RetrainPipeline(mlContext, trainingDataView);
-    Console.WriteLine("Saving Model");
-    mlContext.Model.Save(trainedModel, trainingDataView.Schema, $"data/{group.Key}.zip");
-}
-
-
-stopwatch.Stop();
-Console.WriteLine($"Done in {stopwatch.Elapsed}");
 
 //At end of game update data and train ML model for that build
 //ML build chooser, run each build against last game, use winning build with highest confidence 

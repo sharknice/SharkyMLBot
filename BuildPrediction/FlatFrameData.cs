@@ -1,7 +1,4 @@
-﻿using LINQtoCSV;
-using Microsoft.ML.Data;
-
-namespace BuildPrediction
+﻿namespace BuildPrediction
 {
     public class FlatFrameData
     {
