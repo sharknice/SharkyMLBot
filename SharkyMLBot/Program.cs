@@ -18,7 +18,14 @@ defaultSharkyBot.BuildChoices[Race.Protoss] = buildChoices.DefaultBuildChoices;
 var frameDataGatherer = new FrameDataGatherer(defaultSharkyBot);
 var mLDataFileService = new MLDataFileService();
 var buildModelTrainingManager = new BuildModelTrainingManager();
+// TODO: set to use mlbuilddecisionservice
+
+var buildDecisionService = new MLBuildDecisionService(defaultSharkyBot.ChatService, defaultSharkyBot.EnemyPlayerService, defaultSharkyBot.RecordService, defaultSharkyBot.BuildMatcher, mLDataFileService);
+defaultSharkyBot.BuildDecisionService = buildDecisionService;
+defaultSharkyBot.BuildManager.BuildDecisionService = buildDecisionService;
+
 var buildManager = new MLBuildManager(defaultSharkyBot, frameDataGatherer, mLDataFileService, buildModelTrainingManager);
+buildManager.BuildDecisionService = buildDecisionService;
 defaultSharkyBot.Managers.RemoveAll(m => m.GetType() == typeof(BuildManager));
 defaultSharkyBot.Managers.Add(buildManager);
 

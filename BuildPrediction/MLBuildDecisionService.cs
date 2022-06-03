@@ -9,17 +9,16 @@ using static BuildPrediction.MLModel1;
 
 namespace BuildPrediction
 {
-    //ML build chooser, run each build against last game, use winning build with highest confidence 
-    // what we are really looking for is our build that would have won against the enemy build for the given game
-    // maybe look at first few minutes of data?
-
     public class MLBuildDecisionService : RecentBuildDecisionService
     {
         public string BuildModelsDirectory { get; set; }
 
-        public MLBuildDecisionService(ChatService chatService, EnemyPlayerService enemyPlayerService, RecordService recordService, BuildMatcher buildMatcher)
+        MLDataFileService MLDataFileService { get; set; }
+
+        public MLBuildDecisionService(ChatService chatService, EnemyPlayerService enemyPlayerService, RecordService recordService, BuildMatcher buildMatcher, MLDataFileService mLDataFileService)
             : base(chatService, enemyPlayerService, recordService, buildMatcher)
         {
+            MLDataFileService = mLDataFileService;
             BuildModelsDirectory = $"data/BuildModels";
         }
 
@@ -45,12 +44,14 @@ namespace BuildPrediction
                 }
                 else
                 {
-                    // TODO: use DateTime of game along with enemyID to get the ML data
-
-                    var counter = GetBestCounterBuild(buildSequences, lastGame, myRace);
-                    if (counter != null)
+                    var lastGameMlData = MLDataFileService.MLGameData.FirstOrDefault(g => g.Game.DateTime == lastGame.DateTime && g.Game.EnemyId == lastGame.EnemyId);
+                    if (lastGameMlData != null)
                     {
-                        return counter;
+                        var counter = GetBestCounterBuild(buildSequences, lastGameMlData, myRace);
+                        if (counter != null)
+                        {
+                            return counter;
+                        }
                     }
                 }
             }
@@ -65,6 +66,9 @@ namespace BuildPrediction
             var lastGame = gameData.Game;
             var directory = $"{BuildModelsDirectory}/Race/{lastGame.EnemyRace}";
 
+            List<string> bestSequence = null;
+            var bestSequenceValue = 0f;
+
             foreach (var buildSequence in buildSequences)
             {
                 var buildString = string.Join(" ", buildSequence);
@@ -72,6 +76,9 @@ namespace BuildPrediction
                 if (File.Exists(modelPath))
                 {
                     // TODO: put this into it's own service
+                    var sequenceValue = 0f;
+                    var maxValue = 0f;
+
                     Console.WriteLine($"Predicting {buildString}");
                     if (gameData.MLFramesData == null) { continue; }
                     foreach (var frameData in gameData.MLFramesData)
@@ -90,64 +97,86 @@ namespace BuildPrediction
                             MySelectedRace = (float)gameData.Game.MySelectedRace,
                             MyRace = (float)gameData.Game.MyRace,
                             Frame = frameData.Key,
-                            ProxyDetected = data.DetectedEnemyStrategies.Contains("Proxy").ToString(),
-                            ProxyActive = data.ActiveEnemyStrategies.Contains("Proxy").ToString(),
-                            ENEMY_PROTOSS_NEXUS = data.EnemyUnitCounts[UnitTypes.PROTOSS_NEXUS],
-                            ENEMY_PROTOSS_OBSERVER = data.EnemyUnitCounts[UnitTypes.PROTOSS_OBSERVER],
-                            ENEMY_PROTOSS_ORACLE = data.EnemyUnitCounts[UnitTypes.PROTOSS_ORACLE],
-                            ENEMY_PROTOSS_ORACLESTASISTRAP = data.EnemyUnitCounts[UnitTypes.PROTOSS_ORACLESTASISTRAP],
-                            ENEMY_PROTOSS_PHOENIX = data.EnemyUnitCounts[UnitTypes.PROTOSS_PHOENIX],
-                            ENEMY_PROTOSS_PHOTONCANNON = data.EnemyUnitCounts[UnitTypes.PROTOSS_PHOTONCANNON],
-                            ENEMY_PROTOSS_PROBE = data.EnemyUnitCounts[UnitTypes.PROTOSS_PROBE],
-                            ENEMY_PROTOSS_PYLON = data.EnemyUnitCounts[UnitTypes.PROTOSS_PYLON],
-                            ENEMY_PROTOSS_PYLONOVERCHARGED = data.EnemyUnitCounts[UnitTypes.PROTOSS_PYLONOVERCHARGED],
-                            ENEMY_PROTOSS_ROBOTICSBAY = data.EnemyUnitCounts[UnitTypes.PROTOSS_ROBOTICSBAY],
-                            ENEMY_PROTOSS_MOTHERSHIPCORE = data.EnemyUnitCounts[UnitTypes.PROTOSS_MOTHERSHIPCORE],
-                            ENEMY_PROTOSS_ROBOTICSFACILITY = data.EnemyUnitCounts[UnitTypes.PROTOSS_ROBOTICSFACILITY],
-                            ENEMY_PROTOSS_SHIELDBATTERY = data.EnemyUnitCounts[UnitTypes.PROTOSS_SHIELDBATTERY],
-                            ENEMY_PROTOSS_STALKER = data.EnemyUnitCounts[UnitTypes.PROTOSS_STALKER],
-                            ENEMY_PROTOSS_STARGATE = data.EnemyUnitCounts[UnitTypes.PROTOSS_STARGATE],
-                            ENEMY_PROTOSS_TEMPEST = data.EnemyUnitCounts[UnitTypes.PROTOSS_TEMPEST],
-                            ENEMY_PROTOSS_TEMPLARARCHIVE = data.EnemyUnitCounts[UnitTypes.PROTOSS_TEMPLARARCHIVE],
-                            ENEMY_PROTOSS_TWILIGHTCOUNCIL = data.EnemyUnitCounts[UnitTypes.PROTOSS_TWILIGHTCOUNCIL],
-                            ENEMY_PROTOSS_VOIDRAY = data.EnemyUnitCounts[UnitTypes.PROTOSS_VOIDRAY],
-                            ENEMY_PROTOSS_WARPGATE = data.EnemyUnitCounts[UnitTypes.PROTOSS_WARPGATE],
-                            ENEMY_PROTOSS_WARPPRISM = data.EnemyUnitCounts[UnitTypes.PROTOSS_WARPPRISM],
-                            ENEMY_PROTOSS_WARPPRISMPHASING = data.EnemyUnitCounts[UnitTypes.PROTOSS_WARPPRISMPHASING],
-                            ENEMY_PROTOSS_SENTRY = data.EnemyUnitCounts[UnitTypes.PROTOSS_SENTRY],
-                            ENEMY_PROTOSS_MOTHERSHIP = data.EnemyUnitCounts[UnitTypes.PROTOSS_MOTHERSHIP],
-                            ENEMY_PROTOSS_INTERCEPTOR = data.EnemyUnitCounts[UnitTypes.PROTOSS_INTERCEPTOR],
-                            ENEMY_PROTOSS_IMMORTAL = data.EnemyUnitCounts[UnitTypes.PROTOSS_IMMORTAL],
-                            ENEMY_PROTOSS_ADEPT = data.EnemyUnitCounts[UnitTypes.PROTOSS_ADEPT],
-                            ENEMY_PROTOSS_ADEPTPHASESHIFT = data.EnemyUnitCounts[UnitTypes.PROTOSS_ADEPTPHASESHIFT],
-                            ENEMY_PROTOSS_ARCHON = data.EnemyUnitCounts[UnitTypes.PROTOSS_ARCHON],
-                            ENEMY_PROTOSS_ASSIMILATOR = data.EnemyUnitCounts[UnitTypes.PROTOSS_ASSIMILATOR],
-                            ENEMY_PROTOSS_CARRIER = data.EnemyUnitCounts[UnitTypes.PROTOSS_CARRIER],
-                            ENEMY_PROTOSS_COLOSSUS = data.EnemyUnitCounts[UnitTypes.PROTOSS_COLOSSUS],
-                            ENEMY_PROTOSS_CYBERNETICSCORE = data.EnemyUnitCounts[UnitTypes.PROTOSS_CYBERNETICSCORE],
-                            ENEMY_PROTOSS_DARKSHRINE = data.EnemyUnitCounts[UnitTypes.PROTOSS_DARKSHRINE],
-                            ENEMY_PROTOSS_DARKTEMPLAR = data.EnemyUnitCounts[UnitTypes.PROTOSS_DARKTEMPLAR],
-                            ENEMY_PROTOSS_DISRUPTOR = data.EnemyUnitCounts[UnitTypes.PROTOSS_DISRUPTOR],
-                            ENEMY_PROTOSS_DISRUPTORPHASED = data.EnemyUnitCounts[UnitTypes.PROTOSS_DISRUPTORPHASED],
-                            ENEMY_PROTOSS_FLEETBEACON = data.EnemyUnitCounts[UnitTypes.PROTOSS_FLEETBEACON],
-                            ENEMY_PROTOSS_FORGE = data.EnemyUnitCounts[UnitTypes.PROTOSS_FORGE],
-                            ENEMY_PROTOSS_GATEWAY = data.EnemyUnitCounts[UnitTypes.PROTOSS_GATEWAY],
-                            ENEMY_PROTOSS_HIGHTEMPLAR = data.EnemyUnitCounts[UnitTypes.PROTOSS_HIGHTEMPLAR],
-                            ENEMY_PROTOSS_ZEALOT = data.EnemyUnitCounts[UnitTypes.PROTOSS_ZEALOT],
-                            ENEMY_PROTOSS_ASSIMILATORRICH = data.EnemyUnitCounts[UnitTypes.PROTOSS_ASSIMILATOR],
+                            ProxyDetected = data.DetectedEnemyStrategies.Contains("Proxy"),
+                            ProxyActive = data.ActiveEnemyStrategies.Contains("Proxy"),
+                            ENEMY_PROTOSS_NEXUS = GetEnemyUnitCount(data, UnitTypes.PROTOSS_NEXUS),
+                            ENEMY_PROTOSS_OBSERVER = GetEnemyUnitCount(data, UnitTypes.PROTOSS_OBSERVER),
+                            ENEMY_PROTOSS_ORACLE = GetEnemyUnitCount(data, UnitTypes.PROTOSS_ORACLE),
+                            ENEMY_PROTOSS_ORACLESTASISTRAP = GetEnemyUnitCount(data, UnitTypes.PROTOSS_ORACLESTASISTRAP),
+                            ENEMY_PROTOSS_PHOENIX = GetEnemyUnitCount(data, UnitTypes.PROTOSS_PHOENIX),
+                            ENEMY_PROTOSS_PHOTONCANNON = GetEnemyUnitCount(data, UnitTypes.PROTOSS_PHOTONCANNON),
+                            ENEMY_PROTOSS_PROBE = GetEnemyUnitCount(data, UnitTypes.PROTOSS_PROBE),
+                            ENEMY_PROTOSS_PYLON = GetEnemyUnitCount(data, UnitTypes.PROTOSS_PYLON),
+                            ENEMY_PROTOSS_PYLONOVERCHARGED = GetEnemyUnitCount(data, UnitTypes.PROTOSS_PYLONOVERCHARGED),
+                            ENEMY_PROTOSS_ROBOTICSBAY = GetEnemyUnitCount(data, UnitTypes.PROTOSS_ROBOTICSBAY),
+                            ENEMY_PROTOSS_MOTHERSHIPCORE = GetEnemyUnitCount(data, UnitTypes.PROTOSS_MOTHERSHIPCORE),
+                            ENEMY_PROTOSS_ROBOTICSFACILITY = GetEnemyUnitCount(data, UnitTypes.PROTOSS_ROBOTICSFACILITY),
+                            ENEMY_PROTOSS_SHIELDBATTERY = GetEnemyUnitCount(data, UnitTypes.PROTOSS_SHIELDBATTERY),
+                            ENEMY_PROTOSS_STALKER = GetEnemyUnitCount(data, UnitTypes.PROTOSS_STALKER),
+                            ENEMY_PROTOSS_STARGATE = GetEnemyUnitCount(data, UnitTypes.PROTOSS_STARGATE),
+                            ENEMY_PROTOSS_TEMPEST = GetEnemyUnitCount(data, UnitTypes.PROTOSS_TEMPEST),
+                            ENEMY_PROTOSS_TEMPLARARCHIVE = GetEnemyUnitCount(data, UnitTypes.PROTOSS_TEMPLARARCHIVE),
+                            ENEMY_PROTOSS_TWILIGHTCOUNCIL = GetEnemyUnitCount(data, UnitTypes.PROTOSS_TWILIGHTCOUNCIL),
+                            ENEMY_PROTOSS_VOIDRAY = GetEnemyUnitCount(data, UnitTypes.PROTOSS_VOIDRAY),
+                            ENEMY_PROTOSS_WARPGATE = GetEnemyUnitCount(data, UnitTypes.PROTOSS_WARPGATE),
+                            ENEMY_PROTOSS_WARPPRISM = GetEnemyUnitCount(data, UnitTypes.PROTOSS_WARPPRISM),
+                            ENEMY_PROTOSS_WARPPRISMPHASING = GetEnemyUnitCount(data, UnitTypes.PROTOSS_WARPPRISMPHASING),
+                            ENEMY_PROTOSS_SENTRY = GetEnemyUnitCount(data, UnitTypes.PROTOSS_SENTRY),
+                            ENEMY_PROTOSS_MOTHERSHIP = GetEnemyUnitCount(data, UnitTypes.PROTOSS_MOTHERSHIP),
+                            ENEMY_PROTOSS_INTERCEPTOR = GetEnemyUnitCount(data, UnitTypes.PROTOSS_INTERCEPTOR),
+                            ENEMY_PROTOSS_IMMORTAL = GetEnemyUnitCount(data, UnitTypes.PROTOSS_IMMORTAL),
+                            ENEMY_PROTOSS_ADEPT = GetEnemyUnitCount(data, UnitTypes.PROTOSS_ADEPT),
+                            ENEMY_PROTOSS_ADEPTPHASESHIFT = GetEnemyUnitCount(data, UnitTypes.PROTOSS_ADEPTPHASESHIFT),
+                            ENEMY_PROTOSS_ARCHON = GetEnemyUnitCount(data, UnitTypes.PROTOSS_ARCHON),
+                            ENEMY_PROTOSS_ASSIMILATOR = GetEnemyUnitCount(data, UnitTypes.PROTOSS_ASSIMILATOR),
+                            ENEMY_PROTOSS_CARRIER = GetEnemyUnitCount(data, UnitTypes.PROTOSS_CARRIER),
+                            ENEMY_PROTOSS_COLOSSUS = GetEnemyUnitCount(data, UnitTypes.PROTOSS_COLOSSUS),
+                            ENEMY_PROTOSS_CYBERNETICSCORE = GetEnemyUnitCount(data, UnitTypes.PROTOSS_CYBERNETICSCORE),
+                            ENEMY_PROTOSS_DARKSHRINE = GetEnemyUnitCount(data, UnitTypes.PROTOSS_DARKSHRINE),
+                            ENEMY_PROTOSS_DARKTEMPLAR = GetEnemyUnitCount(data, UnitTypes.PROTOSS_DARKTEMPLAR),
+                            ENEMY_PROTOSS_DISRUPTOR = GetEnemyUnitCount(data, UnitTypes.PROTOSS_DISRUPTOR),
+                            ENEMY_PROTOSS_DISRUPTORPHASED = GetEnemyUnitCount(data, UnitTypes.PROTOSS_DISRUPTORPHASED),
+                            ENEMY_PROTOSS_FLEETBEACON = GetEnemyUnitCount(data, UnitTypes.PROTOSS_FLEETBEACON),
+                            ENEMY_PROTOSS_FORGE = GetEnemyUnitCount(data, UnitTypes.PROTOSS_FORGE),
+                            ENEMY_PROTOSS_GATEWAY = GetEnemyUnitCount(data, UnitTypes.PROTOSS_GATEWAY),
+                            ENEMY_PROTOSS_HIGHTEMPLAR = GetEnemyUnitCount(data, UnitTypes.PROTOSS_HIGHTEMPLAR),
+                            ENEMY_PROTOSS_ZEALOT = GetEnemyUnitCount(data, UnitTypes.PROTOSS_ZEALOT),
+                            ENEMY_PROTOSS_ASSIMILATORRICH = GetEnemyUnitCount(data, UnitTypes.PROTOSS_ASSIMILATOR),
                         };
                         var result = predictionEngine.Predict(modelInput);
                         Console.WriteLine($"Frame {frameData.Key}");
                         Console.WriteLine($"Result: {result.PredictedLabel}, Score: {string.Join(" ", result.Score)}");
-                    }
-                    // TODO: determine if this is good somehow
-                    // maybe add up the score of every win, use the highest one
 
+                        maxValue += 1;
+                        // TODO: figure out which score is for winning, and always add that on, not sure if there is a way to do that, might have to only add the highest one if predictedlabel is win
+                        sequenceValue += result.Score[0]; // not sure what result.score is, this code could be wrong
+                    }
+
+                    var overall = sequenceValue / maxValue;
+                    if (overall > 0 && overall > bestSequenceValue)
+                    {
+                        bestSequenceValue = overall;
+                        bestSequence = buildSequence;
+                    }
                 }
 
             }
 
+            if (bestSequenceValue > .75f)
+            {
+                return bestSequence;
+            }
+
             return null; // if nothing good just do it the old way
+        }
+
+        int GetEnemyUnitCount(MLFrameData? data, UnitTypes unitType)
+        {
+            if (data.EnemyUnitCounts.TryGetValue(unitType, out var result))
+            {
+                return result;
+            }
+            return 0;
         }
     }
 }

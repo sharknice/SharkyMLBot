@@ -1,4 +1,5 @@
-﻿using SC2APIProtocol;
+﻿using BuildPrediction;
+using SC2APIProtocol;
 using Sharky;
 using Sharky.DefaultBot;
 using Sharky.Managers;
@@ -16,7 +17,8 @@ defaultSharkyBot.BuildChoices[Race.Protoss] = buildChoices.TwoBaseVoidRaysBuildC
 
 var frameDataGatherer = new FrameDataGatherer(defaultSharkyBot);
 var mLDataFileService = new MLDataFileService();
-var buildManager = new MLBuildManager(defaultSharkyBot, frameDataGatherer, mLDataFileService);
+var buildModelTrainingManager = new BuildModelTrainingManager();
+var buildManager = new MLBuildManager(defaultSharkyBot, frameDataGatherer, mLDataFileService, buildModelTrainingManager);
 defaultSharkyBot.Managers.RemoveAll(m => m.GetType() == typeof(BuildManager));
 defaultSharkyBot.Managers.Add(buildManager);
 

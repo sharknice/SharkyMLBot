@@ -115,10 +115,10 @@ namespace BuildPrediction
             public float Frame { get; set; }
 
             [ColumnName(@"ProxyDetected")]
-            public string ProxyDetected { get; set; }
+            public bool ProxyDetected { get; set; }
 
             [ColumnName(@"ProxyActive")]
-            public string ProxyActive { get; set; }
+            public bool ProxyActive { get; set; }
 
             [ColumnName(@"ENEMY_PROTOSS_ADEPT")]
             public float ENEMY_PROTOSS_ADEPT { get; set; }
