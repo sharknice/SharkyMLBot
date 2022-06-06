@@ -1,11 +1,9 @@
-﻿using BuildPrediction;
-using SC2APIProtocol;
+﻿using SC2APIProtocol;
 using Sharky;
 using Sharky.DefaultBot;
-using Sharky.Managers;
 using SharkyMLBot;
-using SharkyMLBot.Managers;
-using SharkyMLDataManager;
+
+// TODO: need a way to inteligently classify builds for the build models so that it ends when the build starts automatically switching based on counters
 
 Console.WriteLine("Starting SharkyMLBot");
 
@@ -15,19 +13,8 @@ var defaultSharkyBot = new DefaultSharkyBot(gameConnection);
 var buildChoices = new ProtossBuildChoices(defaultSharkyBot);
 defaultSharkyBot.BuildChoices[Race.Protoss] = buildChoices.DefaultBuildChoices;
 
-var frameDataGatherer = new FrameDataGatherer(defaultSharkyBot);
-var mLDataFileService = new MLDataFileService();
-var buildModelTrainingManager = new BuildModelTrainingManager();
-var gameDataToModelInputConverter = new GameDataToModelInputConverter();
-
-var buildDecisionService = new MLBuildDecisionService(defaultSharkyBot, mLDataFileService, gameDataToModelInputConverter);
-defaultSharkyBot.BuildDecisionService = buildDecisionService;
-defaultSharkyBot.BuildManager.BuildDecisionService = buildDecisionService;
-
-var buildManager = new MLBuildManager(defaultSharkyBot, frameDataGatherer, mLDataFileService, buildModelTrainingManager);
-buildManager.BuildDecisionService = buildDecisionService;
-defaultSharkyBot.Managers.RemoveAll(m => m.GetType() == typeof(BuildManager));
-defaultSharkyBot.Managers.Add(buildManager);
+var defaultSharkyMLModule = new DefaultSharkyMLModule(defaultSharkyBot);
+defaultSharkyBot = defaultSharkyMLModule.ActivateMachineLearning(defaultSharkyBot);
 
 var bot = defaultSharkyBot.CreateBot(defaultSharkyBot.Managers, defaultSharkyBot.DebugService);
 

@@ -89,13 +89,16 @@ namespace BuildPrediction
 
                 Console.WriteLine("Generating Model");
                 var trainingDataView = mlContext.Data.LoadFromEnumerable(convertedData);
-                var trainedModel = MLModel1.RetrainPipeline(mlContext, trainingDataView);
-                Console.WriteLine($"{stopwatch.Elapsed}");
+                if (convertedData.Count > 0)
+                {
+                    var trainedModel = MLModel1.RetrainPipeline(mlContext, trainingDataView);
+                    Console.WriteLine($"{stopwatch.Elapsed}");
 
-                Console.WriteLine("Saving Model");
-                System.IO.Directory.CreateDirectory("data/buildmodels");
-                mlContext.Model.Save(trainedModel, trainingDataView.Schema, $"{directory}/{group.Key}.zip");
-                Console.WriteLine($"{stopwatch.Elapsed}");
+                    Console.WriteLine("Saving Model");
+                    System.IO.Directory.CreateDirectory("data/buildmodels");
+                    mlContext.Model.Save(trainedModel, trainingDataView.Schema, $"{directory}/{group.Key}.zip");
+                    Console.WriteLine($"{stopwatch.Elapsed}");
+                }
             }
         }
     }

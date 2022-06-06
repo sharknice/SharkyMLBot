@@ -4,7 +4,6 @@ using Sharky.Builds.BuildChoosing;
 using Sharky.DefaultBot;
 using Sharky.EnemyPlayer;
 using SharkyMLDataManager;
-using static BuildPrediction.MLModel1;
 
 namespace BuildPrediction
 {
@@ -14,14 +13,21 @@ namespace BuildPrediction
 
         MLDataFileService MLDataFileService;
         GameDataToModelInputConverter GameDataToModelInputConverter;
+        BuildModelScoreService BuildModelScoreService;
 
-        public MLBuildDecisionService(DefaultSharkyBot defaultSharkyBot, MLDataFileService mLDataFileService, GameDataToModelInputConverter gameDataToModelInputConverter)
+        public MLBuildDecisionService(DefaultSharkyBot defaultSharkyBot, MLDataFileService mLDataFileService, GameDataToModelInputConverter gameDataToModelInputConverter, BuildModelTrainingManager buildModelTrainingManager, BuildModelScoreService buildModelScoreService)
             : base(defaultSharkyBot)
         {
             MLDataFileService = mLDataFileService;
             GameDataToModelInputConverter = gameDataToModelInputConverter;
 
             BuildModelsDirectory = $"data/BuildModels";
+
+            if (!Directory.Exists(BuildModelsDirectory))
+            {
+                buildModelTrainingManager.UpdateBuildModels();
+            }
+            BuildModelScoreService = buildModelScoreService;
         }
 
         public override List<string> GetBestBuild(EnemyPlayer enemyBot, List<List<string>> buildSequences, string map, List<EnemyPlayer> enemyBots, Race enemyRace, Race myRace)
@@ -80,41 +86,26 @@ namespace BuildPrediction
                 var modelPath = $"{directory}/{buildString}.zip";
                 if (File.Exists(modelPath))
                 {
-                    var mlModel = mlContext.Model.Load(modelPath, out var _);
-                    var predictionEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
-
-                    var sequenceValue = 0f;
-                    var maxValue = 0f;
-
-                    Console.WriteLine($"Predicting {buildString}");
-                    
-                    foreach (var inputModel in inputModels)
-                    {                                            
-                        var result = predictionEngine.Predict(inputModel);
-
-                        var score = 0f;
-                        if (result.PredictedLabel == 1)
-                        {
-                            score = result.Score.Max();
-                        }
-                        sequenceValue += score;
-                        maxValue += 1;
-
-                        Console.WriteLine($"Frame {inputModel.Frame}, Result: {result.PredictedLabel}, Score: {score}");
-                    }
-
-                    var overall = sequenceValue / maxValue;
-                    Console.WriteLine($"{buildString}: {overall}");
-                    if (overall > 0 && overall > bestSequenceValue)
+                    try
                     {
-                        bestSequenceValue = overall;
-                        bestSequence = buildSequence;
+                        var overall = BuildModelScoreService.GetScoreForBuildModel(inputModels, mlContext, modelPath);
+                        if (overall > 0 && overall > bestSequenceValue)
+                        {
+                            bestSequenceValue = overall;
+                            bestSequence = buildSequence;
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine($"Something is wrong with {modelPath}");
+                        Console.WriteLine(e.Message);
                     }
                 }
             }
 
             if (bestSequenceValue > .5f)
             {
+                Console.WriteLine($"Best: {bestSequenceValue}, Build: {string.Join(" ", bestSequence)}");
                 return bestSequence;
             }
 

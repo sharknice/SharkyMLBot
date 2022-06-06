@@ -33,8 +33,6 @@ namespace SharkyMLBot.Managers
             MLFramesData = new Dictionary<int, MLFrameData>();
 
             base.OnStart(gameInfo, data, pingResponse, observation, playerId, opponentId);
-
-            // TODO: Use ML to get the counter build to the last game
         }
 
         public override void OnEnd(ResponseObservation observation, Result result)

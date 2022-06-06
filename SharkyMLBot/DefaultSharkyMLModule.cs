@@ -1,0 +1,42 @@
+﻿using BuildPrediction;
+using Sharky.DefaultBot;
+using Sharky.Managers;
+using SharkyMLBot.Managers;
+using SharkyMLDataManager;
+
+namespace SharkyMLBot
+{
+    public class DefaultSharkyMLModule
+    {
+        public FrameDataGatherer FrameDataGatherer { get; set; }
+        public MLDataFileService MLDataFileService { get; set; }
+        public BuildModelTrainingManager BuildModelTrainingManager { get; set; }
+        public GameDataToModelInputConverter GameDataToModelInputConverter { get; set; }
+        public BuildModelScoreService BuildModelScoreService { get; set; }
+        public MLBuildManager MLBuildManager { get; set; }
+        public MLBuildDecisionService MLBuildDecisionService { get; set; }
+
+        public DefaultSharkyMLModule(DefaultSharkyBot defaultSharkyBot)
+        {
+            FrameDataGatherer = new FrameDataGatherer(defaultSharkyBot);
+            MLDataFileService = new MLDataFileService();
+            BuildModelTrainingManager = new BuildModelTrainingManager();
+            GameDataToModelInputConverter = new GameDataToModelInputConverter();
+            BuildModelScoreService = new BuildModelScoreService();
+            MLBuildManager = new MLBuildManager(defaultSharkyBot, FrameDataGatherer, MLDataFileService, BuildModelTrainingManager);
+            MLBuildDecisionService = new MLBuildDecisionService(defaultSharkyBot, MLDataFileService, GameDataToModelInputConverter, BuildModelTrainingManager, BuildModelScoreService);
+        }
+
+        public DefaultSharkyBot ActivateMachineLearning(DefaultSharkyBot defaultSharkyBot)
+        {
+            defaultSharkyBot.BuildDecisionService = MLBuildDecisionService;
+            defaultSharkyBot.BuildManager.BuildDecisionService = MLBuildDecisionService;
+
+            MLBuildManager.BuildDecisionService = MLBuildDecisionService;
+            defaultSharkyBot.Managers.RemoveAll(m => m.GetType() == typeof(BuildManager));
+            defaultSharkyBot.Managers.Add(MLBuildManager);
+
+            return defaultSharkyBot;
+        }
+    }
+}
