@@ -43,9 +43,7 @@ namespace BuildPrediction
             {
                 Result = game.Result,
 
-                //EnemyId = game.EnemyId,
                 MapName = game.MapName,
-                //Build = mlFrameData.Value.BuildHistory?.LastOrDefault().Value,
 
                 EnemySelectedRace = (int)game.EnemySelectedRace,
                 EnemyRace = (int)game.EnemyRace,

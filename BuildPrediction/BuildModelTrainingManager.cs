@@ -9,9 +9,9 @@ namespace BuildPrediction
     {
         public string BuildModelsDirectory { get; set; }
 
-        public BuildModelTrainingManager()
+        public BuildModelTrainingManager(string buildModelsDirectory = $"data/BuildModels")
         {
-            BuildModelsDirectory = $"data/BuildModels";
+            BuildModelsDirectory = buildModelsDirectory;
         }
 
         /// <summary>
@@ -25,15 +25,18 @@ namespace BuildPrediction
 
             var mlContext = new MLContext();
 
-            Console.WriteLine("Loading JSON Data");
+            Console.WriteLine("Loading ML JSON Data");
             var mlDataFileService = new MLDataFileService();
-            Console.WriteLine($"{stopwatch.Elapsed}");
 
-            var raceGroups = mlDataFileService.MLGameData.GroupBy(g => string.Join(" ", g.Game.EnemyRace));
-            SaveGroupBuilds(stopwatch, mlContext, $"{BuildModelsDirectory}/Race", raceGroups);
+            var raceGroups = mlDataFileService.MLGameData.GroupBy(g => string.Join(" ", g.Game.MyRace));
+            foreach (var raceGroup in raceGroups)
+            {
+                var matchupGroups = raceGroup.GroupBy(g => string.Join(" ", g.Game.EnemyRace));
+                SaveGroupBuilds(stopwatch, mlContext, $"{BuildModelsDirectory}/{raceGroup.Key}/Race", matchupGroups);
 
-            var enemyIdGroups = mlDataFileService.MLGameData.GroupBy(g => string.Join(" ", g.Game.EnemyId));
-            SaveGroupBuilds(stopwatch, mlContext, $"{BuildModelsDirectory}/EnemyId", enemyIdGroups);
+                var enemyIdGroups = raceGroup.GroupBy(g => string.Join(" ", g.Game.EnemyId));
+                SaveGroupBuilds(stopwatch, mlContext, $"{BuildModelsDirectory}/{raceGroup.Key}/EnemyId", enemyIdGroups);
+            }
 
             stopwatch.Stop();
             Console.WriteLine($"Done in {stopwatch.Elapsed}");
@@ -52,13 +55,13 @@ namespace BuildPrediction
             var mlDataFileService = new MLDataFileService();
             var buildString = string.Join(" ", game.Builds.Select(g => g.Value));
 
-            var mlGameData = mlDataFileService.MLGameData.Where(g => string.Join(" ", g.Game.Builds.Select(g => g.Value)) == buildString);
+            var mlGameData = mlDataFileService.MLGameData.Where(g => g.Game.MyRace == game.MyRace && string.Join(" ", g.Game.Builds.Select(g => g.Value)) == buildString);
 
             var raceGroups = mlGameData.Where(g => g.Game.EnemyRace == game.EnemyRace).GroupBy(g => string.Join(" ", g.Game.EnemyRace));
-            SaveGroupBuilds(stopwatch, mlContext, $"{BuildModelsDirectory}/Race", raceGroups);
+            SaveGroupBuilds(stopwatch, mlContext, $"{BuildModelsDirectory}/{game.MyRace}/Race", raceGroups);
 
             var enemyIdGroups = mlGameData.Where(g => g.Game.EnemyId == game.EnemyId).GroupBy(g => string.Join(" ", g.Game.EnemyId));
-            SaveGroupBuilds(stopwatch, mlContext, $"{BuildModelsDirectory}/EnemyId", enemyIdGroups);
+            SaveGroupBuilds(stopwatch, mlContext, $"{BuildModelsDirectory}/{game.MyRace}/EnemyId", enemyIdGroups);
 
             stopwatch.Stop();
             Console.WriteLine($"Updated {buildString} build models for {game.EnemyRace} and {game.EnemyId} in {stopwatch.Elapsed}");
@@ -68,7 +71,6 @@ namespace BuildPrediction
         {
             foreach (var group in groups)
             {
-                Console.WriteLine(group.Key);
                 var buildGroups = group.GroupBy(g => string.Join(" ", g.Game.Builds.Select(g => g.Value)));
                 SaveBuilds(stopwatch, mlContext, $"{directory}/{group.Key}", buildGroups);
             }
@@ -80,24 +82,17 @@ namespace BuildPrediction
 
             foreach (var group in buildGroups)
             {
-                Console.WriteLine(group.Key);
-
-                Console.WriteLine("Converting JSON Data to Flat Data");
                 var flatFrameDataConverter = new FlatFrameDataConverter();
                 var convertedData = flatFrameDataConverter.GetFlatFrameData(group);
-                Console.WriteLine($"{stopwatch.Elapsed}");
 
-                Console.WriteLine("Generating Model");
                 var trainingDataView = mlContext.Data.LoadFromEnumerable(convertedData);
                 if (convertedData.Count > 0)
                 {
                     var trainedModel = MLModel1.RetrainPipeline(mlContext, trainingDataView);
-                    Console.WriteLine($"{stopwatch.Elapsed}");
-
-                    Console.WriteLine("Saving Model");
-                    System.IO.Directory.CreateDirectory("data/buildmodels");
-                    mlContext.Model.Save(trainedModel, trainingDataView.Schema, $"{directory}/{group.Key}.zip");
-                    Console.WriteLine($"{stopwatch.Elapsed}");
+                    var modelPath = $"{directory}/{group.Key}.zip";
+                    System.IO.Directory.CreateDirectory(directory);
+                    mlContext.Model.Save(trainedModel, trainingDataView.Schema, modelPath);
+                    Console.WriteLine($"{modelPath}");
                 }
             }
         }

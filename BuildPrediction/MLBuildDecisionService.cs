@@ -15,13 +15,13 @@ namespace BuildPrediction
         GameDataToModelInputConverter GameDataToModelInputConverter;
         BuildModelScoreService BuildModelScoreService;
 
-        public MLBuildDecisionService(DefaultSharkyBot defaultSharkyBot, MLDataFileService mLDataFileService, GameDataToModelInputConverter gameDataToModelInputConverter, BuildModelTrainingManager buildModelTrainingManager, BuildModelScoreService buildModelScoreService)
+        public MLBuildDecisionService(DefaultSharkyBot defaultSharkyBot, MLDataFileService mLDataFileService, GameDataToModelInputConverter gameDataToModelInputConverter, BuildModelTrainingManager buildModelTrainingManager, BuildModelScoreService buildModelScoreService, string buildModelsDirectory)
             : base(defaultSharkyBot)
         {
             MLDataFileService = mLDataFileService;
             GameDataToModelInputConverter = gameDataToModelInputConverter;
 
-            BuildModelsDirectory = $"data/BuildModels";
+            BuildModelsDirectory = buildModelsDirectory;
 
             if (!Directory.Exists(BuildModelsDirectory))
             {
@@ -36,7 +36,7 @@ namespace BuildPrediction
             debugMessage.Add($"Choosing build against {enemyBot.Name} - {enemyBot.Id} on {map}");
             Console.WriteLine($"Choosing build against {enemyBot.Name} - {enemyBot.Id} on {map}");
 
-            var lastGame = enemyBot.Games.Where(g => g.EnemyRace == enemyRace).FirstOrDefault();
+            var lastGame = enemyBot.Games.Where(g => g.EnemySelectedRace == enemyRace).FirstOrDefault();
             if (lastGame != null)
             {
                 Console.WriteLine($"{(Result)lastGame.Result} last game with: {string.Join(" ", lastGame.Builds.Values)}");
@@ -55,7 +55,7 @@ namespace BuildPrediction
                     var lastGameMlData = MLDataFileService.MLGameData.FirstOrDefault(g => g.Game.DateTime == lastGame.DateTime && g.Game.EnemyId == lastGame.EnemyId);
                     if (lastGameMlData != null)
                     {
-                        var counter = GetBestCounterBuild(buildSequences, lastGameMlData, map);
+                        var counter = GetBestCounterBuild(buildSequences, lastGameMlData, map, myRace);
                         if (counter != null)
                         {
                             return counter;
@@ -68,11 +68,11 @@ namespace BuildPrediction
             return base.GetBestBuild(enemyBot, buildSequences, map, enemyBots, enemyRace, myRace);
         }
 
-        List<string>? GetBestCounterBuild(List<List<string>> buildSequences, MLGameData gameData, string mapName)
+        List<string>? GetBestCounterBuild(List<List<string>> buildSequences, MLGameData gameData, string mapName, Race myRace)
         {
             if (gameData.Game == null) { return null; }
             var lastGame = gameData.Game;
-            var directory = $"{BuildModelsDirectory}/Race/{lastGame.EnemyRace}";
+            var directory = $"{BuildModelsDirectory}/{myRace}/Race/{lastGame.EnemyRace}";
 
             var inputModels = GameDataToModelInputConverter.GetModelInputs(gameData, mapName);
             var mlContext = new MLContext();

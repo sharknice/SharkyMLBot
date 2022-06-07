@@ -1,19 +1,22 @@
 ﻿using BuildPrediction;
-using Microsoft.ML;
-using Sharky.Builds.BuildChoosing;
+using LINQtoCSV;
 using SharkyMLDataManager;
-using System.Diagnostics;
 
 Console.WriteLine("Hello, World!");
 
-var buildModelManager = new BuildModelTrainingManager();
+var mlDataFileService = new MLDataFileService();
+var groups = mlDataFileService.MLGameData.GroupBy(g => string.Join(" ", g.Game.Builds.Select(g => g.Value)));
+foreach (var group in groups)
+{
+    Console.WriteLine(group.Key);
+
+    Console.WriteLine("Converting JSON Data to Flat Data");
+    var flatFrameDataConverter = new FlatFrameDataConverter();
+    var convertedData = flatFrameDataConverter.GetFlatFrameData(group);
+
+    var cc = new CsvContext();
+    cc.Write(convertedData, $"data/{group.Key}.csv");
+}
+
+var buildModelManager = new BuildModelTrainingManager($"data/BuildModels");
 buildModelManager.UpdateBuildModels();
-
-
-
-
-//ML build chooser, run each build against last game, use winning build with highest confidence 
-
-
-// what we are really looking for is our build that would have won against the enemy build for the given game
-// maybe look at first few minutes of data?

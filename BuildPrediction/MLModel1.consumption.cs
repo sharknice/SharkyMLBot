@@ -18,6 +18,282 @@ namespace BuildPrediction
             [ColumnName(@"Result")]
             public float Result { get; set; }
 
+            [ColumnName(@"ENEMY_ZERG_CHANGELING")]
+            public float ENEMY_ZERG_CHANGELING { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_CHANGELINGMARINE")]
+            public float ENEMY_ZERG_CHANGELINGMARINE { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_CHANGELINGMARINESHIELD")]
+            public float ENEMY_ZERG_CHANGELINGMARINESHIELD { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_CHANGELINGZEALOT")]
+            public float ENEMY_ZERG_CHANGELINGZEALOT { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_CHANGELINGZERGLING")]
+            public float ENEMY_ZERG_CHANGELINGZERGLING { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_CHANGELINGZERGLINGWINGS")]
+            public float ENEMY_ZERG_CHANGELINGZERGLINGWINGS { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_CORRUPTOR")]
+            public float ENEMY_ZERG_CORRUPTOR { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_CREEPTUMOR")]
+            public float ENEMY_ZERG_CREEPTUMOR { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_CREEPTUMORBURROWED")]
+            public float ENEMY_ZERG_CREEPTUMORBURROWED { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_CREEPTUMORQUEEN")]
+            public float ENEMY_ZERG_CREEPTUMORQUEEN { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_DRONE")]
+            public float ENEMY_ZERG_DRONE { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_DRONEBURROWED")]
+            public float ENEMY_ZERG_DRONEBURROWED { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_EGG")]
+            public float ENEMY_ZERG_EGG { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_EVOLUTIONCHAMBER")]
+            public float ENEMY_ZERG_EVOLUTIONCHAMBER { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_EXTRACTOR")]
+            public float ENEMY_ZERG_EXTRACTOR { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_GREATERSPIRE")]
+            public float ENEMY_ZERG_GREATERSPIRE { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_HATCHERY")]
+            public float ENEMY_ZERG_HATCHERY { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_BROODLORDCOCOON")]
+            public float ENEMY_ZERG_BROODLORDCOCOON { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_BROODLORD")]
+            public float ENEMY_ZERG_BROODLORD { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_BROODLING")]
+            public float ENEMY_ZERG_BROODLING { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_BANELINGNEST")]
+            public float ENEMY_ZERG_BANELINGNEST { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_SIEGETANK")]
+            public float ENEMY_TERRAN_SIEGETANK { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_SIEGETANKSIEGED")]
+            public float ENEMY_TERRAN_SIEGETANKSIEGED { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_STARPORT")]
+            public float ENEMY_TERRAN_STARPORT { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_STARPORTFLYING")]
+            public float ENEMY_TERRAN_STARPORTFLYING { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_STARPORTREACTOR")]
+            public float ENEMY_TERRAN_STARPORTREACTOR { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_STARPORTTECHLAB")]
+            public float ENEMY_TERRAN_STARPORTTECHLAB { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_SUPPLYDEPOT")]
+            public float ENEMY_TERRAN_SUPPLYDEPOT { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_SUPPLYDEPOTLOWERED")]
+            public float ENEMY_TERRAN_SUPPLYDEPOTLOWERED { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_HIVE")]
+            public float ENEMY_ZERG_HIVE { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_THOR")]
+            public float ENEMY_TERRAN_THOR { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_VIKINGASSAULT")]
+            public float ENEMY_TERRAN_VIKINGASSAULT { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_VIKINGFIGHTER")]
+            public float ENEMY_TERRAN_VIKINGFIGHTER { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_WIDOWMINE")]
+            public float ENEMY_TERRAN_WIDOWMINE { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_WIDOWMINEBURROWED")]
+            public float ENEMY_TERRAN_WIDOWMINEBURROWED { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_REFINERYRICH")]
+            public float ENEMY_TERRAN_REFINERYRICH { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_BANELING")]
+            public float ENEMY_ZERG_BANELING { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_BANELINGBURROWED")]
+            public float ENEMY_ZERG_BANELINGBURROWED { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_BANELINGCOCOON")]
+            public float ENEMY_ZERG_BANELINGCOCOON { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_THORAP")]
+            public float ENEMY_TERRAN_THORAP { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_HYDRALISK")]
+            public float ENEMY_ZERG_HYDRALISK { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_HYDRALISKBURROWED")]
+            public float ENEMY_ZERG_HYDRALISKBURROWED { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_HYDRALISKDEN")]
+            public float ENEMY_ZERG_HYDRALISKDEN { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_RAVAGER")]
+            public float ENEMY_ZERG_RAVAGER { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_RAVAGERCOCOON")]
+            public float ENEMY_ZERG_RAVAGERCOCOON { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_ROACH")]
+            public float ENEMY_ZERG_ROACH { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_ROACHBURROWED")]
+            public float ENEMY_ZERG_ROACHBURROWED { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_ROACHWARREN")]
+            public float ENEMY_ZERG_ROACHWARREN { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_SPAWNINGPOOL")]
+            public float ENEMY_ZERG_SPAWNINGPOOL { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_SPINECRAWLER")]
+            public float ENEMY_ZERG_SPINECRAWLER { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_SPINECRAWLERUPROOTED")]
+            public float ENEMY_ZERG_SPINECRAWLERUPROOTED { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_QUEENBURROWED")]
+            public float ENEMY_ZERG_QUEENBURROWED { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_SPIRE")]
+            public float ENEMY_ZERG_SPIRE { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_SPORECRAWLERUPROOTED")]
+            public float ENEMY_ZERG_SPORECRAWLERUPROOTED { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_SWARMHOSTBURROWEDMP")]
+            public float ENEMY_ZERG_SWARMHOSTBURROWEDMP { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_SWARMHOSTMP")]
+            public float ENEMY_ZERG_SWARMHOSTMP { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_TRANSPORTOVERLORDCOCOON")]
+            public float ENEMY_ZERG_TRANSPORTOVERLORDCOCOON { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_ULTRALISK")]
+            public float ENEMY_ZERG_ULTRALISK { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_ULTRALISKCAVERN")]
+            public float ENEMY_ZERG_ULTRALISKCAVERN { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_VIPER")]
+            public float ENEMY_ZERG_VIPER { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_ZERGLING")]
+            public float ENEMY_ZERG_ZERGLING { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_SPORECRAWLER")]
+            public float ENEMY_ZERG_SPORECRAWLER { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_SENSORTOWER")]
+            public float ENEMY_TERRAN_SENSORTOWER { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_QUEEN")]
+            public float ENEMY_ZERG_QUEEN { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_OVERLORDTRANSPORT")]
+            public float ENEMY_ZERG_OVERLORDTRANSPORT { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_INFESTATIONPIT")]
+            public float ENEMY_ZERG_INFESTATIONPIT { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_INFESTEDTERRANSEGG")]
+            public float ENEMY_ZERG_INFESTEDTERRANSEGG { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_INFESTOR")]
+            public float ENEMY_ZERG_INFESTOR { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_INFESTORBURROWED")]
+            public float ENEMY_ZERG_INFESTORBURROWED { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_INFESTORTERRAN")]
+            public float ENEMY_ZERG_INFESTORTERRAN { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_LAIR")]
+            public float ENEMY_ZERG_LAIR { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_LARVA")]
+            public float ENEMY_ZERG_LARVA { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_LOCUSTMP")]
+            public float ENEMY_ZERG_LOCUSTMP { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_OVERSEER")]
+            public float ENEMY_ZERG_OVERSEER { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_LOCUSTMPFLYING")]
+            public float ENEMY_ZERG_LOCUSTMPFLYING { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_LURKERMP")]
+            public float ENEMY_ZERG_LURKERMP { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_LURKERMPBURROWED")]
+            public float ENEMY_ZERG_LURKERMPBURROWED { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_LURKERMPEGG")]
+            public float ENEMY_ZERG_LURKERMPEGG { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_MUTALISK")]
+            public float ENEMY_ZERG_MUTALISK { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_NYDUSCANAL")]
+            public float ENEMY_ZERG_NYDUSCANAL { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_NYDUSNETWORK")]
+            public float ENEMY_ZERG_NYDUSNETWORK { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_OVERLORD")]
+            public float ENEMY_ZERG_OVERLORD { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_OVERLORDCOCOON")]
+            public float ENEMY_ZERG_OVERLORDCOCOON { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_LURKERDENMP")]
+            public float ENEMY_ZERG_LURKERDENMP { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_SCV")]
+            public float ENEMY_TERRAN_SCV { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_REFINERY")]
+            public float ENEMY_TERRAN_REFINERY { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_REAPER")]
+            public float ENEMY_TERRAN_REAPER { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_HIGHTEMPLAR")]
+            public float ENEMY_PROTOSS_HIGHTEMPLAR { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_IMMORTAL")]
+            public float ENEMY_PROTOSS_IMMORTAL { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_INTERCEPTOR")]
+            public float ENEMY_PROTOSS_INTERCEPTOR { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_MOTHERSHIP")]
+            public float ENEMY_PROTOSS_MOTHERSHIP { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_MOTHERSHIPCORE")]
+            public float ENEMY_PROTOSS_MOTHERSHIPCORE { get; set; }
+
             [ColumnName(@"ENEMY_PROTOSS_NEXUS")]
             public float ENEMY_PROTOSS_NEXUS { get; set; }
 
@@ -27,11 +303,11 @@ namespace BuildPrediction
             [ColumnName(@"ENEMY_PROTOSS_ORACLE")]
             public float ENEMY_PROTOSS_ORACLE { get; set; }
 
+            [ColumnName(@"ENEMY_PROTOSS_GATEWAY")]
+            public float ENEMY_PROTOSS_GATEWAY { get; set; }
+
             [ColumnName(@"ENEMY_PROTOSS_ORACLESTASISTRAP")]
             public float ENEMY_PROTOSS_ORACLESTASISTRAP { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_PHOENIX")]
-            public float ENEMY_PROTOSS_PHOENIX { get; set; }
 
             [ColumnName(@"ENEMY_PROTOSS_PHOTONCANNON")]
             public float ENEMY_PROTOSS_PHOTONCANNON { get; set; }
@@ -48,53 +324,26 @@ namespace BuildPrediction
             [ColumnName(@"ENEMY_PROTOSS_ROBOTICSBAY")]
             public float ENEMY_PROTOSS_ROBOTICSBAY { get; set; }
 
-            [ColumnName(@"ENEMY_PROTOSS_MOTHERSHIPCORE")]
-            public float ENEMY_PROTOSS_MOTHERSHIPCORE { get; set; }
-
             [ColumnName(@"ENEMY_PROTOSS_ROBOTICSFACILITY")]
             public float ENEMY_PROTOSS_ROBOTICSFACILITY { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_SHIELDBATTERY")]
-            public float ENEMY_PROTOSS_SHIELDBATTERY { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_STALKER")]
-            public float ENEMY_PROTOSS_STALKER { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_STARGATE")]
-            public float ENEMY_PROTOSS_STARGATE { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_TEMPEST")]
-            public float ENEMY_PROTOSS_TEMPEST { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_TEMPLARARCHIVE")]
-            public float ENEMY_PROTOSS_TEMPLARARCHIVE { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_TWILIGHTCOUNCIL")]
-            public float ENEMY_PROTOSS_TWILIGHTCOUNCIL { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_VOIDRAY")]
-            public float ENEMY_PROTOSS_VOIDRAY { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_WARPGATE")]
-            public float ENEMY_PROTOSS_WARPGATE { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_WARPPRISM")]
-            public float ENEMY_PROTOSS_WARPPRISM { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_WARPPRISMPHASING")]
-            public float ENEMY_PROTOSS_WARPPRISMPHASING { get; set; }
 
             [ColumnName(@"ENEMY_PROTOSS_SENTRY")]
             public float ENEMY_PROTOSS_SENTRY { get; set; }
 
-            [ColumnName(@"ENEMY_PROTOSS_MOTHERSHIP")]
-            public float ENEMY_PROTOSS_MOTHERSHIP { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_SHIELDBATTERY")]
+            public float ENEMY_PROTOSS_SHIELDBATTERY { get; set; }
 
-            [ColumnName(@"ENEMY_PROTOSS_INTERCEPTOR")]
-            public float ENEMY_PROTOSS_INTERCEPTOR { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_PHOENIX")]
+            public float ENEMY_PROTOSS_PHOENIX { get; set; }
 
-            [ColumnName(@"ENEMY_PROTOSS_IMMORTAL")]
-            public float ENEMY_PROTOSS_IMMORTAL { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_STALKER")]
+            public float ENEMY_PROTOSS_STALKER { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_FORGE")]
+            public float ENEMY_PROTOSS_FORGE { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_DISRUPTORPHASED")]
+            public float ENEMY_PROTOSS_DISRUPTORPHASED { get; set; }
 
             [ColumnName(@"MapName")]
             public string MapName { get; set; }
@@ -120,11 +369,11 @@ namespace BuildPrediction
             [ColumnName(@"ProxyActive")]
             public bool ProxyActive { get; set; }
 
+            [ColumnName(@"ENEMY_PROTOSS_FLEETBEACON")]
+            public float ENEMY_PROTOSS_FLEETBEACON { get; set; }
+
             [ColumnName(@"ENEMY_PROTOSS_ADEPT")]
             public float ENEMY_PROTOSS_ADEPT { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_ADEPTPHASESHIFT")]
-            public float ENEMY_PROTOSS_ADEPTPHASESHIFT { get; set; }
 
             [ColumnName(@"ENEMY_PROTOSS_ARCHON")]
             public float ENEMY_PROTOSS_ARCHON { get; set; }
@@ -150,90 +399,83 @@ namespace BuildPrediction
             [ColumnName(@"ENEMY_PROTOSS_DISRUPTOR")]
             public float ENEMY_PROTOSS_DISRUPTOR { get; set; }
 
-            [ColumnName(@"ENEMY_PROTOSS_DISRUPTORPHASED")]
-            public float ENEMY_PROTOSS_DISRUPTORPHASED { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_ADEPTPHASESHIFT")]
+            public float ENEMY_PROTOSS_ADEPTPHASESHIFT { get; set; }
 
-            [ColumnName(@"ENEMY_PROTOSS_FLEETBEACON")]
-            public float ENEMY_PROTOSS_FLEETBEACON { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_FORGE")]
-            public float ENEMY_PROTOSS_FORGE { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_GATEWAY")]
-            public float ENEMY_PROTOSS_GATEWAY { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_HIGHTEMPLAR")]
-            public float ENEMY_PROTOSS_HIGHTEMPLAR { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_ZEALOT")]
-            public float ENEMY_PROTOSS_ZEALOT { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_ASSIMILATORRICH")]
-            public float ENEMY_PROTOSS_ASSIMILATORRICH { get; set; }
-
-        }
-
-        #endregion
-
-        /// <summary>
-        /// model output class for MLModel1.
-        /// </summary>
-        #region model output class
-        public class ModelOutput
-        {
-            [ColumnName(@"Result")]
-            public uint Result { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_NEXUS")]
-            public float ENEMY_PROTOSS_NEXUS { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_OBSERVER")]
-            public float ENEMY_PROTOSS_OBSERVER { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_ORACLE")]
-            public float ENEMY_PROTOSS_ORACLE { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_ORACLESTASISTRAP")]
-            public float ENEMY_PROTOSS_ORACLESTASISTRAP { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_PHOENIX")]
-            public float ENEMY_PROTOSS_PHOENIX { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_PHOTONCANNON")]
-            public float ENEMY_PROTOSS_PHOTONCANNON { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_PROBE")]
-            public float ENEMY_PROTOSS_PROBE { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_PYLON")]
-            public float ENEMY_PROTOSS_PYLON { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_PYLONOVERCHARGED")]
-            public float ENEMY_PROTOSS_PYLONOVERCHARGED { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_ROBOTICSBAY")]
-            public float ENEMY_PROTOSS_ROBOTICSBAY { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_MOTHERSHIPCORE")]
-            public float ENEMY_PROTOSS_MOTHERSHIPCORE { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_ROBOTICSFACILITY")]
-            public float ENEMY_PROTOSS_ROBOTICSFACILITY { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_SHIELDBATTERY")]
-            public float ENEMY_PROTOSS_SHIELDBATTERY { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_STALKER")]
-            public float ENEMY_PROTOSS_STALKER { get; set; }
+            [ColumnName(@"ENEMY_ZERG_ZERGLINGBURROWED")]
+            public float ENEMY_ZERG_ZERGLINGBURROWED { get; set; }
 
             [ColumnName(@"ENEMY_PROTOSS_STARGATE")]
             public float ENEMY_PROTOSS_STARGATE { get; set; }
 
+            [ColumnName(@"ENEMY_PROTOSS_TEMPLARARCHIVE")]
+            public float ENEMY_PROTOSS_TEMPLARARCHIVE { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_FACTORYREACTOR")]
+            public float ENEMY_TERRAN_FACTORYREACTOR { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_FACTORYTECHLAB")]
+            public float ENEMY_TERRAN_FACTORYTECHLAB { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_FUSIONCORE")]
+            public float ENEMY_TERRAN_FUSIONCORE { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_GHOST")]
+            public float ENEMY_TERRAN_GHOST { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_GHOSTACADEMY")]
+            public float ENEMY_TERRAN_GHOSTACADEMY { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_HELLION")]
+            public float ENEMY_TERRAN_HELLION { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_HELLIONTANK")]
+            public float ENEMY_TERRAN_HELLIONTANK { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_LIBERATOR")]
+            public float ENEMY_TERRAN_LIBERATOR { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_FACTORYFLYING")]
+            public float ENEMY_TERRAN_FACTORYFLYING { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_LIBERATORAG")]
+            public float ENEMY_TERRAN_LIBERATORAG { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_MARINE")]
+            public float ENEMY_TERRAN_MARINE { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_MEDIVAC")]
+            public float ENEMY_TERRAN_MEDIVAC { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_MISSILETURRET")]
+            public float ENEMY_TERRAN_MISSILETURRET { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_MULE")]
+            public float ENEMY_TERRAN_MULE { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_ORBITALCOMMAND")]
+            public float ENEMY_TERRAN_ORBITALCOMMAND { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_ORBITALCOMMANDFLYING")]
+            public float ENEMY_TERRAN_ORBITALCOMMANDFLYING { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_PLANETARYFORTRESS")]
+            public float ENEMY_TERRAN_PLANETARYFORTRESS { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_RAVEN")]
+            public float ENEMY_TERRAN_RAVEN { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_MARAUDER")]
+            public float ENEMY_TERRAN_MARAUDER { get; set; }
+
             [ColumnName(@"ENEMY_PROTOSS_TEMPEST")]
             public float ENEMY_PROTOSS_TEMPEST { get; set; }
 
-            [ColumnName(@"ENEMY_PROTOSS_TEMPLARARCHIVE")]
-            public float ENEMY_PROTOSS_TEMPLARARCHIVE { get; set; }
+            [ColumnName(@"ENEMY_TERRAN_FACTORY")]
+            public float ENEMY_TERRAN_FACTORY { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_CYCLONE")]
+            public float ENEMY_TERRAN_CYCLONE { get; set; }
 
             [ColumnName(@"ENEMY_PROTOSS_TWILIGHTCOUNCIL")]
             public float ENEMY_PROTOSS_TWILIGHTCOUNCIL { get; set; }
@@ -250,17 +492,390 @@ namespace BuildPrediction
             [ColumnName(@"ENEMY_PROTOSS_WARPPRISMPHASING")]
             public float ENEMY_PROTOSS_WARPPRISMPHASING { get; set; }
 
-            [ColumnName(@"ENEMY_PROTOSS_SENTRY")]
-            public float ENEMY_PROTOSS_SENTRY { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_ZEALOT")]
+            public float ENEMY_PROTOSS_ZEALOT { get; set; }
 
-            [ColumnName(@"ENEMY_PROTOSS_MOTHERSHIP")]
-            public float ENEMY_PROTOSS_MOTHERSHIP { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_ASSIMILATORRICH")]
+            public float ENEMY_PROTOSS_ASSIMILATORRICH { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_ARMORY")]
+            public float ENEMY_TERRAN_ARMORY { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_ENGINEERINGBAY")]
+            public float ENEMY_TERRAN_ENGINEERINGBAY { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_AUTOTURRET")]
+            public float ENEMY_TERRAN_AUTOTURRET { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_BARRACKS")]
+            public float ENEMY_TERRAN_BARRACKS { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_BARRACKSFLYING")]
+            public float ENEMY_TERRAN_BARRACKSFLYING { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_BARRACKSREACTOR")]
+            public float ENEMY_TERRAN_BARRACKSREACTOR { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_BARRACKSTECHLAB")]
+            public float ENEMY_TERRAN_BARRACKSTECHLAB { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_BATTLECRUISER")]
+            public float ENEMY_TERRAN_BATTLECRUISER { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_BUNKER")]
+            public float ENEMY_TERRAN_BUNKER { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_COMMANDCENTER")]
+            public float ENEMY_TERRAN_COMMANDCENTER { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_COMMANDCENTERFLYING")]
+            public float ENEMY_TERRAN_COMMANDCENTERFLYING { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_BANSHEE")]
+            public float ENEMY_TERRAN_BANSHEE { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_EXTRACTORRICH")]
+            public float ENEMY_ZERG_EXTRACTORRICH { get; set; }
+
+        }
+
+        #endregion
+
+        /// <summary>
+        /// model output class for MLModel1.
+        /// </summary>
+        #region model output class
+        public class ModelOutput
+        {
+            [ColumnName(@"Result")]
+            public uint Result { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_CHANGELING")]
+            public float ENEMY_ZERG_CHANGELING { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_CHANGELINGMARINE")]
+            public float ENEMY_ZERG_CHANGELINGMARINE { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_CHANGELINGMARINESHIELD")]
+            public float ENEMY_ZERG_CHANGELINGMARINESHIELD { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_CHANGELINGZEALOT")]
+            public float ENEMY_ZERG_CHANGELINGZEALOT { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_CHANGELINGZERGLING")]
+            public float ENEMY_ZERG_CHANGELINGZERGLING { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_CHANGELINGZERGLINGWINGS")]
+            public float ENEMY_ZERG_CHANGELINGZERGLINGWINGS { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_CORRUPTOR")]
+            public float ENEMY_ZERG_CORRUPTOR { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_CREEPTUMOR")]
+            public float ENEMY_ZERG_CREEPTUMOR { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_CREEPTUMORBURROWED")]
+            public float ENEMY_ZERG_CREEPTUMORBURROWED { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_CREEPTUMORQUEEN")]
+            public float ENEMY_ZERG_CREEPTUMORQUEEN { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_DRONE")]
+            public float ENEMY_ZERG_DRONE { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_DRONEBURROWED")]
+            public float ENEMY_ZERG_DRONEBURROWED { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_EGG")]
+            public float ENEMY_ZERG_EGG { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_EVOLUTIONCHAMBER")]
+            public float ENEMY_ZERG_EVOLUTIONCHAMBER { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_EXTRACTOR")]
+            public float ENEMY_ZERG_EXTRACTOR { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_GREATERSPIRE")]
+            public float ENEMY_ZERG_GREATERSPIRE { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_HATCHERY")]
+            public float ENEMY_ZERG_HATCHERY { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_BROODLORDCOCOON")]
+            public float ENEMY_ZERG_BROODLORDCOCOON { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_BROODLORD")]
+            public float ENEMY_ZERG_BROODLORD { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_BROODLING")]
+            public float ENEMY_ZERG_BROODLING { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_BANELINGNEST")]
+            public float ENEMY_ZERG_BANELINGNEST { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_SIEGETANK")]
+            public float ENEMY_TERRAN_SIEGETANK { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_SIEGETANKSIEGED")]
+            public float ENEMY_TERRAN_SIEGETANKSIEGED { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_STARPORT")]
+            public float ENEMY_TERRAN_STARPORT { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_STARPORTFLYING")]
+            public float ENEMY_TERRAN_STARPORTFLYING { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_STARPORTREACTOR")]
+            public float ENEMY_TERRAN_STARPORTREACTOR { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_STARPORTTECHLAB")]
+            public float ENEMY_TERRAN_STARPORTTECHLAB { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_SUPPLYDEPOT")]
+            public float ENEMY_TERRAN_SUPPLYDEPOT { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_SUPPLYDEPOTLOWERED")]
+            public float ENEMY_TERRAN_SUPPLYDEPOTLOWERED { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_HIVE")]
+            public float ENEMY_ZERG_HIVE { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_THOR")]
+            public float ENEMY_TERRAN_THOR { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_VIKINGASSAULT")]
+            public float ENEMY_TERRAN_VIKINGASSAULT { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_VIKINGFIGHTER")]
+            public float ENEMY_TERRAN_VIKINGFIGHTER { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_WIDOWMINE")]
+            public float ENEMY_TERRAN_WIDOWMINE { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_WIDOWMINEBURROWED")]
+            public float ENEMY_TERRAN_WIDOWMINEBURROWED { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_REFINERYRICH")]
+            public float ENEMY_TERRAN_REFINERYRICH { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_BANELING")]
+            public float ENEMY_ZERG_BANELING { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_BANELINGBURROWED")]
+            public float ENEMY_ZERG_BANELINGBURROWED { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_BANELINGCOCOON")]
+            public float ENEMY_ZERG_BANELINGCOCOON { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_THORAP")]
+            public float ENEMY_TERRAN_THORAP { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_HYDRALISK")]
+            public float ENEMY_ZERG_HYDRALISK { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_HYDRALISKBURROWED")]
+            public float ENEMY_ZERG_HYDRALISKBURROWED { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_HYDRALISKDEN")]
+            public float ENEMY_ZERG_HYDRALISKDEN { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_RAVAGER")]
+            public float ENEMY_ZERG_RAVAGER { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_RAVAGERCOCOON")]
+            public float ENEMY_ZERG_RAVAGERCOCOON { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_ROACH")]
+            public float ENEMY_ZERG_ROACH { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_ROACHBURROWED")]
+            public float ENEMY_ZERG_ROACHBURROWED { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_ROACHWARREN")]
+            public float ENEMY_ZERG_ROACHWARREN { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_SPAWNINGPOOL")]
+            public float ENEMY_ZERG_SPAWNINGPOOL { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_SPINECRAWLER")]
+            public float ENEMY_ZERG_SPINECRAWLER { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_SPINECRAWLERUPROOTED")]
+            public float ENEMY_ZERG_SPINECRAWLERUPROOTED { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_QUEENBURROWED")]
+            public float ENEMY_ZERG_QUEENBURROWED { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_SPIRE")]
+            public float ENEMY_ZERG_SPIRE { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_SPORECRAWLERUPROOTED")]
+            public float ENEMY_ZERG_SPORECRAWLERUPROOTED { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_SWARMHOSTBURROWEDMP")]
+            public float ENEMY_ZERG_SWARMHOSTBURROWEDMP { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_SWARMHOSTMP")]
+            public float ENEMY_ZERG_SWARMHOSTMP { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_TRANSPORTOVERLORDCOCOON")]
+            public float ENEMY_ZERG_TRANSPORTOVERLORDCOCOON { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_ULTRALISK")]
+            public float ENEMY_ZERG_ULTRALISK { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_ULTRALISKCAVERN")]
+            public float ENEMY_ZERG_ULTRALISKCAVERN { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_VIPER")]
+            public float ENEMY_ZERG_VIPER { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_ZERGLING")]
+            public float ENEMY_ZERG_ZERGLING { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_SPORECRAWLER")]
+            public float ENEMY_ZERG_SPORECRAWLER { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_SENSORTOWER")]
+            public float ENEMY_TERRAN_SENSORTOWER { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_QUEEN")]
+            public float ENEMY_ZERG_QUEEN { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_OVERLORDTRANSPORT")]
+            public float ENEMY_ZERG_OVERLORDTRANSPORT { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_INFESTATIONPIT")]
+            public float ENEMY_ZERG_INFESTATIONPIT { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_INFESTEDTERRANSEGG")]
+            public float ENEMY_ZERG_INFESTEDTERRANSEGG { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_INFESTOR")]
+            public float ENEMY_ZERG_INFESTOR { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_INFESTORBURROWED")]
+            public float ENEMY_ZERG_INFESTORBURROWED { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_INFESTORTERRAN")]
+            public float ENEMY_ZERG_INFESTORTERRAN { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_LAIR")]
+            public float ENEMY_ZERG_LAIR { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_LARVA")]
+            public float ENEMY_ZERG_LARVA { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_LOCUSTMP")]
+            public float ENEMY_ZERG_LOCUSTMP { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_OVERSEER")]
+            public float ENEMY_ZERG_OVERSEER { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_LOCUSTMPFLYING")]
+            public float ENEMY_ZERG_LOCUSTMPFLYING { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_LURKERMP")]
+            public float ENEMY_ZERG_LURKERMP { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_LURKERMPBURROWED")]
+            public float ENEMY_ZERG_LURKERMPBURROWED { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_LURKERMPEGG")]
+            public float ENEMY_ZERG_LURKERMPEGG { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_MUTALISK")]
+            public float ENEMY_ZERG_MUTALISK { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_NYDUSCANAL")]
+            public float ENEMY_ZERG_NYDUSCANAL { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_NYDUSNETWORK")]
+            public float ENEMY_ZERG_NYDUSNETWORK { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_OVERLORD")]
+            public float ENEMY_ZERG_OVERLORD { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_OVERLORDCOCOON")]
+            public float ENEMY_ZERG_OVERLORDCOCOON { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_LURKERDENMP")]
+            public float ENEMY_ZERG_LURKERDENMP { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_SCV")]
+            public float ENEMY_TERRAN_SCV { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_REFINERY")]
+            public float ENEMY_TERRAN_REFINERY { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_REAPER")]
+            public float ENEMY_TERRAN_REAPER { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_HIGHTEMPLAR")]
+            public float ENEMY_PROTOSS_HIGHTEMPLAR { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_IMMORTAL")]
+            public float ENEMY_PROTOSS_IMMORTAL { get; set; }
 
             [ColumnName(@"ENEMY_PROTOSS_INTERCEPTOR")]
             public float ENEMY_PROTOSS_INTERCEPTOR { get; set; }
 
-            [ColumnName(@"ENEMY_PROTOSS_IMMORTAL")]
-            public float ENEMY_PROTOSS_IMMORTAL { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_MOTHERSHIP")]
+            public float ENEMY_PROTOSS_MOTHERSHIP { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_MOTHERSHIPCORE")]
+            public float ENEMY_PROTOSS_MOTHERSHIPCORE { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_NEXUS")]
+            public float ENEMY_PROTOSS_NEXUS { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_OBSERVER")]
+            public float ENEMY_PROTOSS_OBSERVER { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_ORACLE")]
+            public float ENEMY_PROTOSS_ORACLE { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_GATEWAY")]
+            public float ENEMY_PROTOSS_GATEWAY { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_ORACLESTASISTRAP")]
+            public float ENEMY_PROTOSS_ORACLESTASISTRAP { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_PHOTONCANNON")]
+            public float ENEMY_PROTOSS_PHOTONCANNON { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_PROBE")]
+            public float ENEMY_PROTOSS_PROBE { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_PYLON")]
+            public float ENEMY_PROTOSS_PYLON { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_PYLONOVERCHARGED")]
+            public float ENEMY_PROTOSS_PYLONOVERCHARGED { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_ROBOTICSBAY")]
+            public float ENEMY_PROTOSS_ROBOTICSBAY { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_ROBOTICSFACILITY")]
+            public float ENEMY_PROTOSS_ROBOTICSFACILITY { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_SENTRY")]
+            public float ENEMY_PROTOSS_SENTRY { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_SHIELDBATTERY")]
+            public float ENEMY_PROTOSS_SHIELDBATTERY { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_PHOENIX")]
+            public float ENEMY_PROTOSS_PHOENIX { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_STALKER")]
+            public float ENEMY_PROTOSS_STALKER { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_FORGE")]
+            public float ENEMY_PROTOSS_FORGE { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_DISRUPTORPHASED")]
+            public float ENEMY_PROTOSS_DISRUPTORPHASED { get; set; }
 
             [ColumnName(@"MapName")]
             public float[] MapName { get; set; }
@@ -286,11 +901,11 @@ namespace BuildPrediction
             [ColumnName(@"ProxyActive")]
             public float[] ProxyActive { get; set; }
 
+            [ColumnName(@"ENEMY_PROTOSS_FLEETBEACON")]
+            public float ENEMY_PROTOSS_FLEETBEACON { get; set; }
+
             [ColumnName(@"ENEMY_PROTOSS_ADEPT")]
             public float ENEMY_PROTOSS_ADEPT { get; set; }
-
-            [ColumnName(@"ENEMY_PROTOSS_ADEPTPHASESHIFT")]
-            public float ENEMY_PROTOSS_ADEPTPHASESHIFT { get; set; }
 
             [ColumnName(@"ENEMY_PROTOSS_ARCHON")]
             public float ENEMY_PROTOSS_ARCHON { get; set; }
@@ -316,26 +931,143 @@ namespace BuildPrediction
             [ColumnName(@"ENEMY_PROTOSS_DISRUPTOR")]
             public float ENEMY_PROTOSS_DISRUPTOR { get; set; }
 
-            [ColumnName(@"ENEMY_PROTOSS_DISRUPTORPHASED")]
-            public float ENEMY_PROTOSS_DISRUPTORPHASED { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_ADEPTPHASESHIFT")]
+            public float ENEMY_PROTOSS_ADEPTPHASESHIFT { get; set; }
 
-            [ColumnName(@"ENEMY_PROTOSS_FLEETBEACON")]
-            public float ENEMY_PROTOSS_FLEETBEACON { get; set; }
+            [ColumnName(@"ENEMY_ZERG_ZERGLINGBURROWED")]
+            public float ENEMY_ZERG_ZERGLINGBURROWED { get; set; }
 
-            [ColumnName(@"ENEMY_PROTOSS_FORGE")]
-            public float ENEMY_PROTOSS_FORGE { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_STARGATE")]
+            public float ENEMY_PROTOSS_STARGATE { get; set; }
 
-            [ColumnName(@"ENEMY_PROTOSS_GATEWAY")]
-            public float ENEMY_PROTOSS_GATEWAY { get; set; }
+            [ColumnName(@"ENEMY_PROTOSS_TEMPLARARCHIVE")]
+            public float ENEMY_PROTOSS_TEMPLARARCHIVE { get; set; }
 
-            [ColumnName(@"ENEMY_PROTOSS_HIGHTEMPLAR")]
-            public float ENEMY_PROTOSS_HIGHTEMPLAR { get; set; }
+            [ColumnName(@"ENEMY_TERRAN_FACTORYREACTOR")]
+            public float ENEMY_TERRAN_FACTORYREACTOR { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_FACTORYTECHLAB")]
+            public float ENEMY_TERRAN_FACTORYTECHLAB { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_FUSIONCORE")]
+            public float ENEMY_TERRAN_FUSIONCORE { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_GHOST")]
+            public float ENEMY_TERRAN_GHOST { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_GHOSTACADEMY")]
+            public float ENEMY_TERRAN_GHOSTACADEMY { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_HELLION")]
+            public float ENEMY_TERRAN_HELLION { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_HELLIONTANK")]
+            public float ENEMY_TERRAN_HELLIONTANK { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_LIBERATOR")]
+            public float ENEMY_TERRAN_LIBERATOR { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_FACTORYFLYING")]
+            public float ENEMY_TERRAN_FACTORYFLYING { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_LIBERATORAG")]
+            public float ENEMY_TERRAN_LIBERATORAG { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_MARINE")]
+            public float ENEMY_TERRAN_MARINE { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_MEDIVAC")]
+            public float ENEMY_TERRAN_MEDIVAC { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_MISSILETURRET")]
+            public float ENEMY_TERRAN_MISSILETURRET { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_MULE")]
+            public float ENEMY_TERRAN_MULE { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_ORBITALCOMMAND")]
+            public float ENEMY_TERRAN_ORBITALCOMMAND { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_ORBITALCOMMANDFLYING")]
+            public float ENEMY_TERRAN_ORBITALCOMMANDFLYING { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_PLANETARYFORTRESS")]
+            public float ENEMY_TERRAN_PLANETARYFORTRESS { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_RAVEN")]
+            public float ENEMY_TERRAN_RAVEN { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_MARAUDER")]
+            public float ENEMY_TERRAN_MARAUDER { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_TEMPEST")]
+            public float ENEMY_PROTOSS_TEMPEST { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_FACTORY")]
+            public float ENEMY_TERRAN_FACTORY { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_CYCLONE")]
+            public float ENEMY_TERRAN_CYCLONE { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_TWILIGHTCOUNCIL")]
+            public float ENEMY_PROTOSS_TWILIGHTCOUNCIL { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_VOIDRAY")]
+            public float ENEMY_PROTOSS_VOIDRAY { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_WARPGATE")]
+            public float ENEMY_PROTOSS_WARPGATE { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_WARPPRISM")]
+            public float ENEMY_PROTOSS_WARPPRISM { get; set; }
+
+            [ColumnName(@"ENEMY_PROTOSS_WARPPRISMPHASING")]
+            public float ENEMY_PROTOSS_WARPPRISMPHASING { get; set; }
 
             [ColumnName(@"ENEMY_PROTOSS_ZEALOT")]
             public float ENEMY_PROTOSS_ZEALOT { get; set; }
 
             [ColumnName(@"ENEMY_PROTOSS_ASSIMILATORRICH")]
             public float ENEMY_PROTOSS_ASSIMILATORRICH { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_ARMORY")]
+            public float ENEMY_TERRAN_ARMORY { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_ENGINEERINGBAY")]
+            public float ENEMY_TERRAN_ENGINEERINGBAY { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_AUTOTURRET")]
+            public float ENEMY_TERRAN_AUTOTURRET { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_BARRACKS")]
+            public float ENEMY_TERRAN_BARRACKS { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_BARRACKSFLYING")]
+            public float ENEMY_TERRAN_BARRACKSFLYING { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_BARRACKSREACTOR")]
+            public float ENEMY_TERRAN_BARRACKSREACTOR { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_BARRACKSTECHLAB")]
+            public float ENEMY_TERRAN_BARRACKSTECHLAB { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_BATTLECRUISER")]
+            public float ENEMY_TERRAN_BATTLECRUISER { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_BUNKER")]
+            public float ENEMY_TERRAN_BUNKER { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_COMMANDCENTER")]
+            public float ENEMY_TERRAN_COMMANDCENTER { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_COMMANDCENTERFLYING")]
+            public float ENEMY_TERRAN_COMMANDCENTERFLYING { get; set; }
+
+            [ColumnName(@"ENEMY_TERRAN_BANSHEE")]
+            public float ENEMY_TERRAN_BANSHEE { get; set; }
+
+            [ColumnName(@"ENEMY_ZERG_EXTRACTORRICH")]
+            public float ENEMY_ZERG_EXTRACTORRICH { get; set; }
 
             [ColumnName(@"Features")]
             public float[] Features { get; set; }
