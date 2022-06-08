@@ -55,7 +55,7 @@ namespace BuildPrediction
             var mlDataFileService = new MLDataFileService();
             var buildString = string.Join(" ", game.Builds.Select(g => g.Value));
 
-            var mlGameData = mlDataFileService.MLGameData.Where(g => g.Game.MyRace == game.MyRace && string.Join(" ", g.Game.Builds.Select(g => g.Value)) == buildString);
+            var mlGameData = mlDataFileService.MLGameData.Where(g => g.Game.MyRace == game.MyRace && string.Join(" ", g.Game.PlannedBuildSequence.Select(g => g)) == buildString);
 
             var raceGroups = mlGameData.Where(g => g.Game.EnemyRace == game.EnemyRace).GroupBy(g => string.Join(" ", g.Game.EnemyRace));
             SaveGroupBuilds(stopwatch, mlContext, $"{BuildModelsDirectory}/{game.MyRace}/Race", raceGroups);

@@ -55,7 +55,7 @@ namespace BuildPrediction
                     var lastGameMlData = MLDataFileService.MLGameData.FirstOrDefault(g => g.Game.DateTime == lastGame.DateTime && g.Game.EnemyId == lastGame.EnemyId);
                     if (lastGameMlData != null)
                     {
-                        var counter = GetBestCounterBuild(buildSequences, lastGameMlData, map, myRace);
+                        var counter = GetBestCounterBuild(buildSequences.Where(b => !BuildMatcher.MatchesBuildSequence(lastGame, b)), lastGameMlData, map, myRace);
                         if (counter != null)
                         {
                             return counter;
@@ -68,7 +68,7 @@ namespace BuildPrediction
             return base.GetBestBuild(enemyBot, buildSequences, map, enemyBots, enemyRace, myRace);
         }
 
-        List<string>? GetBestCounterBuild(List<List<string>> buildSequences, MLGameData gameData, string mapName, Race myRace)
+        List<string>? GetBestCounterBuild(IEnumerable<List<string>> buildSequences, MLGameData gameData, string mapName, Race myRace)
         {
             if (gameData.Game == null) { return null; }
             var lastGame = gameData.Game;

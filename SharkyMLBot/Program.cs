@@ -3,9 +3,6 @@ using Sharky;
 using Sharky.DefaultBot;
 using SharkyMLBot;
 
-// TODO: add units for every race to data conversion
-// TODO: need a way to inteligently classify builds for the build models so that it ends when the build starts automatically switching based on counters
-
 Console.WriteLine("Starting SharkyMLBot");
 
 var gameConnection = new GameConnection();
