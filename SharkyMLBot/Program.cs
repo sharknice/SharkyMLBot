@@ -1,4 +1,5 @@
-﻿using SC2APIProtocol;
+﻿using BuildPrediction;
+using SC2APIProtocol;
 using Sharky;
 using Sharky.DefaultBot;
 using SharkyMLBot;
@@ -19,7 +20,7 @@ var bot = defaultSharkyBot.CreateBot(defaultSharkyBot.Managers, defaultSharkyBot
 var myRace = Race.Protoss;
 if (args.Length == 0)
 {
-    gameConnection.RunSinglePlayer(bot, @"HardwireAIE.SC2Map", myRace, Race.Protoss, Difficulty.VeryHard, AIBuild.Macro, 0).Wait();
+    gameConnection.RunSinglePlayer(bot, @"HardwireAIE.SC2Map", myRace, Race.Random, Difficulty.VeryHard, AIBuild.Macro, 0).Wait();
 }
 else
 {

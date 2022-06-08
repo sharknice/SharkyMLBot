@@ -1,10 +1,9 @@
-﻿using BuildPrediction;
-using SC2APIProtocol;
+﻿using SC2APIProtocol;
 using Sharky.DefaultBot;
 using Sharky.Managers;
 using SharkyMLDataManager;
 
-namespace SharkyMLBot.Managers
+namespace BuildPrediction.Managers
 {
     public class MLBuildManager : BuildManager
     {
@@ -53,7 +52,7 @@ namespace SharkyMLBot.Managers
             var frame = (int)observation.Observation.GameLoop;
             if (frame % LearningDataUpdateRate == 0)
             {
-                MLFramesData[frame] = FrameDataGatherer.GetFrameData(BuildHistory, EnemyStrategyHistory.History);          
+                MLFramesData[frame] = FrameDataGatherer.GetFrameData(BuildHistory, EnemyStrategyHistory.History);
             }
 
             return base.OnFrame(observation);

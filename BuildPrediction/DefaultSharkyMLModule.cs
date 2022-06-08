@@ -1,10 +1,9 @@
-﻿using BuildPrediction;
+﻿using BuildPrediction.Managers;
 using Sharky.DefaultBot;
 using Sharky.Managers;
-using SharkyMLBot.Managers;
 using SharkyMLDataManager;
 
-namespace SharkyMLBot
+namespace BuildPrediction
 {
     public class DefaultSharkyMLModule
     {

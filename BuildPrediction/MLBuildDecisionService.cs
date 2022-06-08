@@ -36,7 +36,7 @@ namespace BuildPrediction
             debugMessage.Add($"Choosing build against {enemyBot.Name} - {enemyBot.Id} on {map}");
             Console.WriteLine($"Choosing build against {enemyBot.Name} - {enemyBot.Id} on {map}");
 
-            var lastGame = enemyBot.Games.Where(g => g.EnemySelectedRace == enemyRace).FirstOrDefault();
+            var lastGame = enemyBot.Games.Where(g => g.MyRace == myRace && g.EnemySelectedRace == enemyRace).FirstOrDefault();
             if (lastGame != null)
             {
                 Console.WriteLine($"{(Result)lastGame.Result} last game with: {string.Join(" ", lastGame.Builds.Values)}");

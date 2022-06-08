@@ -1,10 +1,10 @@
 ﻿using BuildPrediction;
+using BuildPrediction.Managers;
 using SC2APIProtocol;
 using Sharky;
 using Sharky.DefaultBot;
 using Sharky.Managers;
 using SharkyMLBot;
-using SharkyMLBot.Managers;
 using SharkyMLDataManager;
 
 Console.WriteLine("Starting TwoBaseVoidrays SharkyMLBot");

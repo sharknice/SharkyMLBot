@@ -64,7 +64,7 @@ namespace BuildPrediction
             SaveGroupBuilds(stopwatch, mlContext, $"{BuildModelsDirectory}/{game.MyRace}/EnemyId", enemyIdGroups);
 
             stopwatch.Stop();
-            Console.WriteLine($"Updated {buildString} build models for {game.EnemyRace} and {game.EnemyId} in {stopwatch.Elapsed}");
+            Console.WriteLine($"Updated {buildString} build models against {game.EnemyRace} and {game.EnemyId} in {stopwatch.Elapsed}");
         }
 
         private static void SaveGroupBuilds(Stopwatch stopwatch, MLContext mlContext, string directory, IEnumerable<IGrouping<string, MLGameData>> groups)

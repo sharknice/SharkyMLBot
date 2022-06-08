@@ -1,5 +1,5 @@
 ﻿using BuildPrediction;
-using LINQtoCSV;
+//using LINQtoCSV;
 using SharkyMLDataManager;
 
 Console.WriteLine("Hello, World!");
@@ -14,8 +14,8 @@ foreach (var group in groups)
     var flatFrameDataConverter = new FlatFrameDataConverter();
     var convertedData = flatFrameDataConverter.GetFlatFrameData(group);
 
-    var cc = new CsvContext();
-    cc.Write(convertedData, $"data/{group.Key}.csv");
+    //var cc = new CsvContext();
+    //cc.Write(convertedData, $"data/{group.Key}.csv");
 }
 
 var buildModelManager = new BuildModelTrainingManager($"data/BuildModels");

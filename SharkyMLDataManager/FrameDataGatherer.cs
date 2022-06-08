@@ -29,11 +29,6 @@ namespace SharkyMLDataManager
             // TODO: enemy mined minerals and mined gas is not right, snapshots are messing it up, need to somehow better estimate it or save counts
             // mabye just remove them or just don't use them until something is figured out
 
-            // TODO: maybe adjust the data gather rate to like 10 seconds, but only use every 1 minute?
-
-            // TODO: should only do enemy strategy proxy? or include distance building is away?
-            // TODO: should include buildings in progress separate from completed buildings?
-
             var enemyGeysers = BaseData.EnemyBases.SelectMany(b => b.VespeneGeysers.Where(u => u.Alliance == Alliance.Enemy));
             var emptyEnemyGeysers = BaseData.EnemyBases.SelectMany(b => b.VespeneGeysers.Where(u => u.Alliance != Alliance.Enemy));
             var enemyMinedGas = (2250 * enemyGeysers.Count()) - enemyGeysers.Sum(g => g.VespeneContents);
