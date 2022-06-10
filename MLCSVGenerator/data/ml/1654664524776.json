@@ -1,0 +1,1023 @@
+﻿{
+  "Game": {
+    "DateTime": "2022-06-08T05:02:04.6979425+00:00",
+    "EnemyId": "1",
+    "MapName": "Hardwire AIE",
+    "EnemySelectedRace": 3,
+    "EnemyRace": 3,
+    "MySelectedRace": 3,
+    "MyRace": 3,
+    "Length": 24986,
+    "Result": 1,
+    "EnemyStrategies": {
+      "2016": "ProtossFastExpand"
+    },
+    "Builds": {
+      "0": "OneBaseCarriers"
+    },
+    "EnemyChat": {},
+    "MyChat": {
+      "2018": "Tag:EnemyStrategy-ProtossFastExpand"
+    },
+    "PlannedBuildSequence": [
+      "OneBaseCarriers"
+    ]
+  },
+  "MLFramesData": {
+    "0": {
+      "BuildHistory": {
+        "0": "OneBaseCarriers"
+      },
+      "EnemyStrategyHistory": {},
+      "ActiveEnemyStrategies": [],
+      "DetectedEnemyStrategies": [],
+      "SelfUnitCounts": {
+        "PROTOSS_PROBE": 12,
+        "PROTOSS_NEXUS": 1
+      },
+      "EnemyUnitCounts": {},
+      "SelfBaseData": {
+        "BaseCount": 1,
+        "WorkerCount": 12,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 0,
+        "MinedGas": 0,
+        "MineralPatchCount": 8,
+        "MinedMinerals": 0
+      },
+      "EnemyBaseData": {
+        "BaseCount": 0,
+        "WorkerCount": 0,
+        "OpenGeyserCount": 0,
+        "BuiltGeyserCount": 0,
+        "MinedGas": 0,
+        "MineralPatchCount": 0,
+        "MinedMinerals": 0
+      }
+    },
+    "1344": {
+      "BuildHistory": {
+        "0": "OneBaseCarriers"
+      },
+      "EnemyStrategyHistory": {},
+      "ActiveEnemyStrategies": [],
+      "DetectedEnemyStrategies": [],
+      "SelfUnitCounts": {
+        "PROTOSS_ASSIMILATOR": 2,
+        "PROTOSS_PROBE": 16,
+        "PROTOSS_NEXUS": 1,
+        "PROTOSS_PYLON": 1,
+        "PROTOSS_GATEWAY": 1
+      },
+      "EnemyUnitCounts": {
+        "PROTOSS_PROBE": 1
+      },
+      "SelfBaseData": {
+        "BaseCount": 1,
+        "WorkerCount": 16,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 0,
+        "MinedGas": 0,
+        "MineralPatchCount": 8,
+        "MinedMinerals": 780
+      },
+      "EnemyBaseData": {
+        "BaseCount": 0,
+        "WorkerCount": 1,
+        "OpenGeyserCount": 0,
+        "BuiltGeyserCount": 0,
+        "MinedGas": 0,
+        "MineralPatchCount": 0,
+        "MinedMinerals": 0
+      }
+    },
+    "2688": {
+      "BuildHistory": {
+        "0": "OneBaseCarriers"
+      },
+      "EnemyStrategyHistory": {
+        "2016": "ProtossFastExpand"
+      },
+      "ActiveEnemyStrategies": [
+        "ProtossFastExpand"
+      ],
+      "DetectedEnemyStrategies": [
+        "ProtossFastExpand"
+      ],
+      "SelfUnitCounts": {
+        "PROTOSS_PROBE": 22,
+        "PROTOSS_ASSIMILATOR": 2,
+        "PROTOSS_NEXUS": 1,
+        "PROTOSS_PYLON": 2,
+        "PROTOSS_FORGE": 1,
+        "PROTOSS_CYBERNETICSCORE": 1,
+        "PROTOSS_GATEWAY": 1
+      },
+      "EnemyUnitCounts": {
+        "PROTOSS_ASSIMILATOR": 1,
+        "PROTOSS_PROBE": 10,
+        "PROTOSS_NEXUS": 2,
+        "PROTOSS_PYLON": 1,
+        "PROTOSS_GATEWAY": 1
+      },
+      "SelfBaseData": {
+        "BaseCount": 1,
+        "WorkerCount": 22,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 0,
+        "MinedGas": 0,
+        "MineralPatchCount": 8,
+        "MinedMinerals": 1515
+      },
+      "EnemyBaseData": {
+        "BaseCount": 2,
+        "WorkerCount": 10,
+        "OpenGeyserCount": 3,
+        "BuiltGeyserCount": 1,
+        "MinedGas": 2250,
+        "MineralPatchCount": 16,
+        "MinedMinerals": 21600
+      }
+    },
+    "4032": {
+      "BuildHistory": {
+        "0": "OneBaseCarriers"
+      },
+      "EnemyStrategyHistory": {
+        "2016": "ProtossFastExpand"
+      },
+      "ActiveEnemyStrategies": [],
+      "DetectedEnemyStrategies": [
+        "ProtossFastExpand"
+      ],
+      "SelfUnitCounts": {
+        "PROTOSS_PROBE": 23,
+        "PROTOSS_SENTRY": 1,
+        "PROTOSS_SHIELDBATTERY": 2,
+        "PROTOSS_CYBERNETICSCORE": 1,
+        "PROTOSS_ASSIMILATOR": 2,
+        "PROTOSS_PHOTONCANNON": 1,
+        "PROTOSS_PYLON": 3,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_FORGE": 1,
+        "PROTOSS_NEXUS": 1,
+        "PROTOSS_STARGATE": 1
+      },
+      "EnemyUnitCounts": {
+        "PROTOSS_ASSIMILATOR": 1,
+        "PROTOSS_PROBE": 7,
+        "PROTOSS_NEXUS": 2,
+        "PROTOSS_PYLON": 1,
+        "PROTOSS_ZEALOT": 1,
+        "PROTOSS_GATEWAY": 1
+      },
+      "SelfBaseData": {
+        "BaseCount": 1,
+        "WorkerCount": 23,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 0,
+        "MinedGas": 0,
+        "MineralPatchCount": 8,
+        "MinedMinerals": 2380
+      },
+      "EnemyBaseData": {
+        "BaseCount": 2,
+        "WorkerCount": 7,
+        "OpenGeyserCount": 3,
+        "BuiltGeyserCount": 1,
+        "MinedGas": 2250,
+        "MineralPatchCount": 16,
+        "MinedMinerals": 21600
+      }
+    },
+    "5376": {
+      "BuildHistory": {
+        "0": "OneBaseCarriers"
+      },
+      "EnemyStrategyHistory": {
+        "2016": "ProtossFastExpand"
+      },
+      "ActiveEnemyStrategies": [],
+      "DetectedEnemyStrategies": [
+        "ProtossFastExpand"
+      ],
+      "SelfUnitCounts": {
+        "PROTOSS_PROBE": 23,
+        "PROTOSS_SENTRY": 1,
+        "PROTOSS_PYLON": 4,
+        "PROTOSS_SHIELDBATTERY": 2,
+        "PROTOSS_CYBERNETICSCORE": 1,
+        "PROTOSS_ASSIMILATOR": 2,
+        "PROTOSS_PHOTONCANNON": 2,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_FORGE": 1,
+        "PROTOSS_FLEETBEACON": 1,
+        "PROTOSS_NEXUS": 1,
+        "PROTOSS_ORACLE": 1,
+        "PROTOSS_STARGATE": 1
+      },
+      "EnemyUnitCounts": {
+        "PROTOSS_PROBE": 6,
+        "PROTOSS_PYLON": 3,
+        "PROTOSS_ASSIMILATOR": 2,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_NEXUS": 2,
+        "PROTOSS_CYBERNETICSCORE": 1,
+        "PROTOSS_STARGATE": 3,
+        "PROTOSS_ZEALOT": 1
+      },
+      "SelfBaseData": {
+        "BaseCount": 1,
+        "WorkerCount": 23,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 0,
+        "MinedGas": 0,
+        "MineralPatchCount": 8,
+        "MinedMinerals": 3355
+      },
+      "EnemyBaseData": {
+        "BaseCount": 2,
+        "WorkerCount": 6,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 2,
+        "MinedGas": 4500,
+        "MineralPatchCount": 16,
+        "MinedMinerals": 21600
+      }
+    },
+    "6720": {
+      "BuildHistory": {
+        "0": "OneBaseCarriers"
+      },
+      "EnemyStrategyHistory": {
+        "2016": "ProtossFastExpand"
+      },
+      "ActiveEnemyStrategies": [],
+      "DetectedEnemyStrategies": [
+        "ProtossFastExpand"
+      ],
+      "SelfUnitCounts": {
+        "PROTOSS_PROBE": 22,
+        "PROTOSS_SENTRY": 1,
+        "PROTOSS_PHOTONCANNON": 3,
+        "PROTOSS_PYLON": 5,
+        "PROTOSS_SHIELDBATTERY": 3,
+        "PROTOSS_INTERCEPTOR": 6,
+        "PROTOSS_CYBERNETICSCORE": 1,
+        "PROTOSS_ASSIMILATOR": 2,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_FORGE": 1,
+        "PROTOSS_FLEETBEACON": 1,
+        "PROTOSS_NEXUS": 1,
+        "PROTOSS_ORACLE": 1,
+        "PROTOSS_STARGATE": 1,
+        "PROTOSS_CARRIER": 1
+      },
+      "EnemyUnitCounts": {
+        "PROTOSS_PROBE": 26,
+        "PROTOSS_PYLON": 6,
+        "PROTOSS_ORACLE": 1,
+        "PROTOSS_ASSIMILATOR": 4,
+        "PROTOSS_STARGATE": 3,
+        "PROTOSS_NEXUS": 2,
+        "PROTOSS_CYBERNETICSCORE": 1,
+        "PROTOSS_VOIDRAY": 1,
+        "PROTOSS_ZEALOT": 1,
+        "PROTOSS_GATEWAY": 1
+      },
+      "SelfBaseData": {
+        "BaseCount": 1,
+        "WorkerCount": 22,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 0,
+        "MinedGas": 0,
+        "MineralPatchCount": 8,
+        "MinedMinerals": 4340
+      },
+      "EnemyBaseData": {
+        "BaseCount": 2,
+        "WorkerCount": 26,
+        "OpenGeyserCount": 0,
+        "BuiltGeyserCount": 4,
+        "MinedGas": 5032,
+        "MineralPatchCount": 16,
+        "MinedMinerals": 21600
+      }
+    },
+    "8064": {
+      "BuildHistory": {
+        "0": "OneBaseCarriers"
+      },
+      "EnemyStrategyHistory": {
+        "2016": "ProtossFastExpand"
+      },
+      "ActiveEnemyStrategies": [],
+      "DetectedEnemyStrategies": [
+        "ProtossFastExpand"
+      ],
+      "SelfUnitCounts": {
+        "PROTOSS_PROBE": 22,
+        "PROTOSS_INTERCEPTOR": 14,
+        "PROTOSS_SENTRY": 1,
+        "PROTOSS_SHIELDBATTERY": 6,
+        "PROTOSS_PHOTONCANNON": 6,
+        "PROTOSS_PYLON": 5,
+        "PROTOSS_CYBERNETICSCORE": 1,
+        "PROTOSS_ASSIMILATOR": 2,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_FORGE": 1,
+        "PROTOSS_FLEETBEACON": 1,
+        "PROTOSS_NEXUS": 1,
+        "PROTOSS_STARGATE": 1,
+        "PROTOSS_CARRIER": 2
+      },
+      "EnemyUnitCounts": {
+        "PROTOSS_PROBE": 28,
+        "PROTOSS_PYLON": 6,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_ASSIMILATOR": 4,
+        "PROTOSS_VOIDRAY": 3,
+        "PROTOSS_STARGATE": 3,
+        "PROTOSS_NEXUS": 2,
+        "PROTOSS_CYBERNETICSCORE": 1
+      },
+      "SelfBaseData": {
+        "BaseCount": 1,
+        "WorkerCount": 22,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 0,
+        "MinedGas": 0,
+        "MineralPatchCount": 8,
+        "MinedMinerals": 5280
+      },
+      "EnemyBaseData": {
+        "BaseCount": 2,
+        "WorkerCount": 28,
+        "OpenGeyserCount": 0,
+        "BuiltGeyserCount": 4,
+        "MinedGas": 9000,
+        "MineralPatchCount": 16,
+        "MinedMinerals": 21600
+      }
+    },
+    "9408": {
+      "BuildHistory": {
+        "0": "OneBaseCarriers"
+      },
+      "EnemyStrategyHistory": {
+        "2016": "ProtossFastExpand"
+      },
+      "ActiveEnemyStrategies": [],
+      "DetectedEnemyStrategies": [
+        "ProtossFastExpand"
+      ],
+      "SelfUnitCounts": {
+        "PROTOSS_PROBE": 22,
+        "PROTOSS_PHOTONCANNON": 8,
+        "PROTOSS_SENTRY": 1,
+        "PROTOSS_INTERCEPTOR": 5,
+        "PROTOSS_SHIELDBATTERY": 8,
+        "PROTOSS_PYLON": 5,
+        "PROTOSS_CYBERNETICSCORE": 1,
+        "PROTOSS_ASSIMILATOR": 2,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_FORGE": 1,
+        "PROTOSS_CARRIER": 1,
+        "PROTOSS_FLEETBEACON": 1,
+        "PROTOSS_NEXUS": 1,
+        "PROTOSS_STARGATE": 1
+      },
+      "EnemyUnitCounts": {
+        "PROTOSS_STARGATE": 3,
+        "PROTOSS_PROBE": 18,
+        "PROTOSS_PYLON": 7,
+        "PROTOSS_ASSIMILATOR": 4,
+        "PROTOSS_VOIDRAY": 5,
+        "PROTOSS_NEXUS": 2,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_CYBERNETICSCORE": 1
+      },
+      "SelfBaseData": {
+        "BaseCount": 1,
+        "WorkerCount": 22,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 0,
+        "MinedGas": 0,
+        "MineralPatchCount": 8,
+        "MinedMinerals": 6225
+      },
+      "EnemyBaseData": {
+        "BaseCount": 2,
+        "WorkerCount": 18,
+        "OpenGeyserCount": 0,
+        "BuiltGeyserCount": 4,
+        "MinedGas": 9000,
+        "MineralPatchCount": 16,
+        "MinedMinerals": 21600
+      }
+    },
+    "10752": {
+      "BuildHistory": {
+        "0": "OneBaseCarriers"
+      },
+      "EnemyStrategyHistory": {
+        "2016": "ProtossFastExpand"
+      },
+      "ActiveEnemyStrategies": [],
+      "DetectedEnemyStrategies": [
+        "ProtossFastExpand"
+      ],
+      "SelfUnitCounts": {
+        "PROTOSS_PROBE": 22,
+        "PROTOSS_PHOTONCANNON": 7,
+        "PROTOSS_SENTRY": 1,
+        "PROTOSS_SHIELDBATTERY": 8,
+        "PROTOSS_PYLON": 5,
+        "PROTOSS_CARRIER": 2,
+        "PROTOSS_CYBERNETICSCORE": 1,
+        "PROTOSS_ASSIMILATOR": 2,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_FORGE": 1,
+        "PROTOSS_FLEETBEACON": 1,
+        "PROTOSS_NEXUS": 1,
+        "PROTOSS_STARGATE": 1
+      },
+      "EnemyUnitCounts": {
+        "PROTOSS_STARGATE": 3,
+        "PROTOSS_PROBE": 18,
+        "PROTOSS_PYLON": 7,
+        "PROTOSS_ORACLE": 1,
+        "PROTOSS_ASSIMILATOR": 4,
+        "PROTOSS_VOIDRAY": 8,
+        "PROTOSS_NEXUS": 2,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_CYBERNETICSCORE": 1
+      },
+      "SelfBaseData": {
+        "BaseCount": 1,
+        "WorkerCount": 22,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 0,
+        "MinedGas": 0,
+        "MineralPatchCount": 8,
+        "MinedMinerals": 7215
+      },
+      "EnemyBaseData": {
+        "BaseCount": 2,
+        "WorkerCount": 18,
+        "OpenGeyserCount": 0,
+        "BuiltGeyserCount": 4,
+        "MinedGas": 9000,
+        "MineralPatchCount": 16,
+        "MinedMinerals": 21600
+      }
+    },
+    "12096": {
+      "BuildHistory": {
+        "0": "OneBaseCarriers"
+      },
+      "EnemyStrategyHistory": {
+        "2016": "ProtossFastExpand"
+      },
+      "ActiveEnemyStrategies": [],
+      "DetectedEnemyStrategies": [
+        "ProtossFastExpand"
+      ],
+      "SelfUnitCounts": {
+        "PROTOSS_PHOTONCANNON": 7,
+        "PROTOSS_PROBE": 22,
+        "PROTOSS_SHIELDBATTERY": 9,
+        "PROTOSS_FORGE": 1,
+        "PROTOSS_PYLON": 6,
+        "PROTOSS_INTERCEPTOR": 8,
+        "PROTOSS_FLEETBEACON": 1,
+        "PROTOSS_ASSIMILATOR": 2,
+        "PROTOSS_SENTRY": 1,
+        "PROTOSS_CARRIER": 2,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_STARGATE": 1,
+        "PROTOSS_CYBERNETICSCORE": 1,
+        "PROTOSS_NEXUS": 1
+      },
+      "EnemyUnitCounts": {
+        "PROTOSS_STARGATE": 3,
+        "PROTOSS_PROBE": 18,
+        "PROTOSS_PYLON": 7,
+        "PROTOSS_ORACLE": 1,
+        "PROTOSS_ASSIMILATOR": 4,
+        "PROTOSS_VOIDRAY": 11,
+        "PROTOSS_NEXUS": 2,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_CYBERNETICSCORE": 1
+      },
+      "SelfBaseData": {
+        "BaseCount": 1,
+        "WorkerCount": 22,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 0,
+        "MinedGas": 0,
+        "MineralPatchCount": 5,
+        "MinedMinerals": 7880
+      },
+      "EnemyBaseData": {
+        "BaseCount": 2,
+        "WorkerCount": 18,
+        "OpenGeyserCount": 0,
+        "BuiltGeyserCount": 4,
+        "MinedGas": 9000,
+        "MineralPatchCount": 16,
+        "MinedMinerals": 21600
+      }
+    },
+    "13440": {
+      "BuildHistory": {
+        "0": "OneBaseCarriers"
+      },
+      "EnemyStrategyHistory": {
+        "2016": "ProtossFastExpand"
+      },
+      "ActiveEnemyStrategies": [],
+      "DetectedEnemyStrategies": [
+        "ProtossFastExpand"
+      ],
+      "SelfUnitCounts": {
+        "PROTOSS_PHOTONCANNON": 8,
+        "PROTOSS_PROBE": 22,
+        "PROTOSS_CARRIER": 3,
+        "PROTOSS_SHIELDBATTERY": 9,
+        "PROTOSS_FORGE": 1,
+        "PROTOSS_PYLON": 6,
+        "PROTOSS_FLEETBEACON": 1,
+        "PROTOSS_ASSIMILATOR": 2,
+        "PROTOSS_SENTRY": 1,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_STARGATE": 1,
+        "PROTOSS_CYBERNETICSCORE": 1,
+        "PROTOSS_NEXUS": 1,
+        "PROTOSS_MOTHERSHIP": 1
+      },
+      "EnemyUnitCounts": {
+        "PROTOSS_STARGATE": 3,
+        "PROTOSS_PROBE": 18,
+        "PROTOSS_PYLON": 7,
+        "PROTOSS_ASSIMILATOR": 4,
+        "PROTOSS_VOIDRAY": 2,
+        "PROTOSS_NEXUS": 2,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_CYBERNETICSCORE": 1
+      },
+      "SelfBaseData": {
+        "BaseCount": 1,
+        "WorkerCount": 22,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 0,
+        "MinedGas": 0,
+        "MineralPatchCount": 4,
+        "MinedMinerals": 8460
+      },
+      "EnemyBaseData": {
+        "BaseCount": 2,
+        "WorkerCount": 18,
+        "OpenGeyserCount": 0,
+        "BuiltGeyserCount": 4,
+        "MinedGas": 9000,
+        "MineralPatchCount": 16,
+        "MinedMinerals": 21600
+      }
+    },
+    "14784": {
+      "BuildHistory": {
+        "0": "OneBaseCarriers"
+      },
+      "EnemyStrategyHistory": {
+        "2016": "ProtossFastExpand"
+      },
+      "ActiveEnemyStrategies": [],
+      "DetectedEnemyStrategies": [
+        "ProtossFastExpand"
+      ],
+      "SelfUnitCounts": {
+        "PROTOSS_PYLON": 7,
+        "PROTOSS_INTERCEPTOR": 24,
+        "PROTOSS_PHOTONCANNON": 8,
+        "PROTOSS_CYBERNETICSCORE": 1,
+        "PROTOSS_PROBE": 23,
+        "PROTOSS_STARGATE": 1,
+        "PROTOSS_SHIELDBATTERY": 9,
+        "PROTOSS_ASSIMILATOR": 2,
+        "PROTOSS_CARRIER": 3,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_MOTHERSHIP": 1,
+        "PROTOSS_SENTRY": 1,
+        "PROTOSS_NEXUS": 1,
+        "PROTOSS_FLEETBEACON": 1,
+        "PROTOSS_FORGE": 1
+      },
+      "EnemyUnitCounts": {
+        "PROTOSS_STARGATE": 3,
+        "PROTOSS_PROBE": 18,
+        "PROTOSS_PYLON": 7,
+        "PROTOSS_ASSIMILATOR": 4,
+        "PROTOSS_NEXUS": 5,
+        "PROTOSS_VOIDRAY": 2,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_CYBERNETICSCORE": 1
+      },
+      "SelfBaseData": {
+        "BaseCount": 1,
+        "WorkerCount": 23,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 0,
+        "MinedGas": 0,
+        "MineralPatchCount": 4,
+        "MinedMinerals": 8985
+      },
+      "EnemyBaseData": {
+        "BaseCount": 5,
+        "WorkerCount": 18,
+        "OpenGeyserCount": 4,
+        "BuiltGeyserCount": 6,
+        "MinedGas": 9000,
+        "MineralPatchCount": 40,
+        "MinedMinerals": 54000
+      }
+    },
+    "16128": {
+      "BuildHistory": {
+        "0": "OneBaseCarriers"
+      },
+      "EnemyStrategyHistory": {
+        "2016": "ProtossFastExpand"
+      },
+      "ActiveEnemyStrategies": [],
+      "DetectedEnemyStrategies": [
+        "ProtossFastExpand"
+      ],
+      "SelfUnitCounts": {
+        "PROTOSS_PYLON": 8,
+        "PROTOSS_INTERCEPTOR": 24,
+        "PROTOSS_PHOTONCANNON": 8,
+        "PROTOSS_CYBERNETICSCORE": 1,
+        "PROTOSS_PROBE": 23,
+        "PROTOSS_STARGATE": 1,
+        "PROTOSS_SHIELDBATTERY": 9,
+        "PROTOSS_CARRIER": 4,
+        "PROTOSS_ASSIMILATOR": 2,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_MOTHERSHIP": 1,
+        "PROTOSS_SENTRY": 1,
+        "PROTOSS_NEXUS": 1,
+        "PROTOSS_FLEETBEACON": 1,
+        "PROTOSS_FORGE": 1
+      },
+      "EnemyUnitCounts": {
+        "PROTOSS_STARGATE": 3,
+        "PROTOSS_PYLON": 10,
+        "PROTOSS_PROBE": 23,
+        "PROTOSS_ASSIMILATOR": 6,
+        "PROTOSS_VOIDRAY": 4,
+        "PROTOSS_NEXUS": 5,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_CYBERNETICSCORE": 1
+      },
+      "SelfBaseData": {
+        "BaseCount": 1,
+        "WorkerCount": 23,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 0,
+        "MinedGas": 0,
+        "MineralPatchCount": 4,
+        "MinedMinerals": 9505
+      },
+      "EnemyBaseData": {
+        "BaseCount": 5,
+        "WorkerCount": 23,
+        "OpenGeyserCount": 4,
+        "BuiltGeyserCount": 6,
+        "MinedGas": 11474,
+        "MineralPatchCount": 40,
+        "MinedMinerals": 54000
+      }
+    },
+    "17472": {
+      "BuildHistory": {
+        "0": "OneBaseCarriers"
+      },
+      "EnemyStrategyHistory": {
+        "2016": "ProtossFastExpand"
+      },
+      "ActiveEnemyStrategies": [],
+      "DetectedEnemyStrategies": [
+        "ProtossFastExpand"
+      ],
+      "SelfUnitCounts": {
+        "PROTOSS_PYLON": 8,
+        "PROTOSS_INTERCEPTOR": 40,
+        "PROTOSS_PHOTONCANNON": 8,
+        "PROTOSS_CYBERNETICSCORE": 1,
+        "PROTOSS_PROBE": 23,
+        "PROTOSS_CARRIER": 5,
+        "PROTOSS_STARGATE": 1,
+        "PROTOSS_SHIELDBATTERY": 9,
+        "PROTOSS_ASSIMILATOR": 2,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_MOTHERSHIP": 1,
+        "PROTOSS_SENTRY": 1,
+        "PROTOSS_NEXUS": 1,
+        "PROTOSS_FLEETBEACON": 1,
+        "PROTOSS_FORGE": 1
+      },
+      "EnemyUnitCounts": {
+        "PROTOSS_VOIDRAY": 2,
+        "PROTOSS_PYLON": 10,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_PROBE": 8,
+        "PROTOSS_ASSIMILATOR": 6,
+        "PROTOSS_NEXUS": 4,
+        "PROTOSS_CYBERNETICSCORE": 1,
+        "PROTOSS_STARGATE": 3,
+        "PROTOSS_ORACLE": 1
+      },
+      "SelfBaseData": {
+        "BaseCount": 1,
+        "WorkerCount": 23,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 0,
+        "MinedGas": 0,
+        "MineralPatchCount": 4,
+        "MinedMinerals": 10040
+      },
+      "EnemyBaseData": {
+        "BaseCount": 4,
+        "WorkerCount": 8,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 6,
+        "MinedGas": 8024,
+        "MineralPatchCount": 32,
+        "MinedMinerals": 43200
+      }
+    },
+    "18816": {
+      "BuildHistory": {
+        "0": "OneBaseCarriers"
+      },
+      "EnemyStrategyHistory": {
+        "2016": "ProtossFastExpand"
+      },
+      "ActiveEnemyStrategies": [],
+      "DetectedEnemyStrategies": [
+        "ProtossFastExpand"
+      ],
+      "SelfUnitCounts": {
+        "PROTOSS_PYLON": 9,
+        "PROTOSS_INTERCEPTOR": 32,
+        "PROTOSS_PHOTONCANNON": 8,
+        "PROTOSS_CYBERNETICSCORE": 1,
+        "PROTOSS_PROBE": 23,
+        "PROTOSS_STARGATE": 1,
+        "PROTOSS_SHIELDBATTERY": 9,
+        "PROTOSS_CARRIER": 5,
+        "PROTOSS_ASSIMILATOR": 2,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_MOTHERSHIP": 1,
+        "PROTOSS_SENTRY": 1,
+        "PROTOSS_NEXUS": 1,
+        "PROTOSS_FLEETBEACON": 1,
+        "PROTOSS_FORGE": 1
+      },
+      "EnemyUnitCounts": {
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_VOIDRAY": 2,
+        "PROTOSS_NEXUS": 4,
+        "PROTOSS_ASSIMILATOR": 6,
+        "PROTOSS_PYLON": 9,
+        "PROTOSS_STARGATE": 3,
+        "PROTOSS_PROBE": 1,
+        "PROTOSS_CYBERNETICSCORE": 1
+      },
+      "SelfBaseData": {
+        "BaseCount": 1,
+        "WorkerCount": 23,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 0,
+        "MinedGas": 0,
+        "MineralPatchCount": 3,
+        "MinedMinerals": 10530
+      },
+      "EnemyBaseData": {
+        "BaseCount": 4,
+        "WorkerCount": 1,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 6,
+        "MinedGas": 12780,
+        "MineralPatchCount": 32,
+        "MinedMinerals": 43200
+      }
+    },
+    "20160": {
+      "BuildHistory": {
+        "0": "OneBaseCarriers"
+      },
+      "EnemyStrategyHistory": {
+        "2016": "ProtossFastExpand"
+      },
+      "ActiveEnemyStrategies": [],
+      "DetectedEnemyStrategies": [
+        "ProtossFastExpand"
+      ],
+      "SelfUnitCounts": {
+        "PROTOSS_PYLON": 9,
+        "PROTOSS_INTERCEPTOR": 40,
+        "PROTOSS_PHOTONCANNON": 8,
+        "PROTOSS_CYBERNETICSCORE": 1,
+        "PROTOSS_PROBE": 23,
+        "PROTOSS_CARRIER": 6,
+        "PROTOSS_STARGATE": 1,
+        "PROTOSS_SHIELDBATTERY": 9,
+        "PROTOSS_ASSIMILATOR": 2,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_MOTHERSHIP": 1,
+        "PROTOSS_SENTRY": 1,
+        "PROTOSS_NEXUS": 1,
+        "PROTOSS_FLEETBEACON": 1,
+        "PROTOSS_FORGE": 1
+      },
+      "EnemyUnitCounts": {
+        "PROTOSS_VOIDRAY": 2,
+        "PROTOSS_NEXUS": 3,
+        "PROTOSS_ASSIMILATOR": 3,
+        "PROTOSS_ORACLE": 1,
+        "PROTOSS_STARGATE": 1
+      },
+      "SelfBaseData": {
+        "BaseCount": 1,
+        "WorkerCount": 23,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 0,
+        "MinedGas": 0,
+        "MineralPatchCount": 0,
+        "MinedMinerals": 10800
+      },
+      "EnemyBaseData": {
+        "BaseCount": 3,
+        "WorkerCount": 0,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 4,
+        "MinedGas": 8280,
+        "MineralPatchCount": 24,
+        "MinedMinerals": 32400
+      }
+    },
+    "21504": {
+      "BuildHistory": {
+        "0": "OneBaseCarriers"
+      },
+      "EnemyStrategyHistory": {
+        "2016": "ProtossFastExpand"
+      },
+      "ActiveEnemyStrategies": [],
+      "DetectedEnemyStrategies": [
+        "ProtossFastExpand"
+      ],
+      "SelfUnitCounts": {
+        "PROTOSS_PYLON": 10,
+        "PROTOSS_INTERCEPTOR": 45,
+        "PROTOSS_PHOTONCANNON": 8,
+        "PROTOSS_CYBERNETICSCORE": 1,
+        "PROTOSS_PROBE": 23,
+        "PROTOSS_CARRIER": 8,
+        "PROTOSS_STARGATE": 1,
+        "PROTOSS_SHIELDBATTERY": 9,
+        "PROTOSS_ASSIMILATOR": 2,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_MOTHERSHIP": 1,
+        "PROTOSS_SENTRY": 1,
+        "PROTOSS_NEXUS": 1,
+        "PROTOSS_FLEETBEACON": 1,
+        "PROTOSS_FORGE": 1
+      },
+      "EnemyUnitCounts": {
+        "PROTOSS_NEXUS": 1,
+        "PROTOSS_ASSIMILATOR": 2
+      },
+      "SelfBaseData": {
+        "BaseCount": 1,
+        "WorkerCount": 23,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 0,
+        "MinedGas": 0,
+        "MineralPatchCount": 0,
+        "MinedMinerals": 10800
+      },
+      "EnemyBaseData": {
+        "BaseCount": 1,
+        "WorkerCount": 0,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 0,
+        "MinedGas": 0,
+        "MineralPatchCount": 8,
+        "MinedMinerals": 10800
+      }
+    },
+    "22848": {
+      "BuildHistory": {
+        "0": "OneBaseCarriers"
+      },
+      "EnemyStrategyHistory": {
+        "2016": "ProtossFastExpand"
+      },
+      "ActiveEnemyStrategies": [],
+      "DetectedEnemyStrategies": [
+        "ProtossFastExpand"
+      ],
+      "SelfUnitCounts": {
+        "PROTOSS_PYLON": 10,
+        "PROTOSS_PHOTONCANNON": 8,
+        "PROTOSS_CYBERNETICSCORE": 1,
+        "PROTOSS_PROBE": 23,
+        "PROTOSS_CARRIER": 8,
+        "PROTOSS_STARGATE": 1,
+        "PROTOSS_SHIELDBATTERY": 9,
+        "PROTOSS_ASSIMILATOR": 2,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_MOTHERSHIP": 1,
+        "PROTOSS_SENTRY": 1,
+        "PROTOSS_NEXUS": 1,
+        "PROTOSS_FLEETBEACON": 1,
+        "PROTOSS_FORGE": 1
+      },
+      "EnemyUnitCounts": {
+        "PROTOSS_ASSIMILATOR": 1,
+        "PROTOSS_NEXUS": 1
+      },
+      "SelfBaseData": {
+        "BaseCount": 1,
+        "WorkerCount": 23,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 0,
+        "MinedGas": 0,
+        "MineralPatchCount": 0,
+        "MinedMinerals": 10800
+      },
+      "EnemyBaseData": {
+        "BaseCount": 1,
+        "WorkerCount": 0,
+        "OpenGeyserCount": 1,
+        "BuiltGeyserCount": 1,
+        "MinedGas": 8,
+        "MineralPatchCount": 8,
+        "MinedMinerals": 10800
+      }
+    },
+    "24192": {
+      "BuildHistory": {
+        "0": "OneBaseCarriers"
+      },
+      "EnemyStrategyHistory": {
+        "2016": "ProtossFastExpand"
+      },
+      "ActiveEnemyStrategies": [],
+      "DetectedEnemyStrategies": [
+        "ProtossFastExpand"
+      ],
+      "SelfUnitCounts": {
+        "PROTOSS_PYLON": 10,
+        "PROTOSS_PHOTONCANNON": 8,
+        "PROTOSS_CYBERNETICSCORE": 1,
+        "PROTOSS_PROBE": 23,
+        "PROTOSS_CARRIER": 8,
+        "PROTOSS_STARGATE": 1,
+        "PROTOSS_SHIELDBATTERY": 9,
+        "PROTOSS_ASSIMILATOR": 2,
+        "PROTOSS_GATEWAY": 1,
+        "PROTOSS_MOTHERSHIP": 1,
+        "PROTOSS_INTERCEPTOR": 1,
+        "PROTOSS_SENTRY": 1,
+        "PROTOSS_NEXUS": 1,
+        "PROTOSS_FLEETBEACON": 1,
+        "PROTOSS_FORGE": 1
+      },
+      "EnemyUnitCounts": {
+        "PROTOSS_NEXUS": 1
+      },
+      "SelfBaseData": {
+        "BaseCount": 1,
+        "WorkerCount": 23,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 0,
+        "MinedGas": 0,
+        "MineralPatchCount": 0,
+        "MinedMinerals": 10800
+      },
+      "EnemyBaseData": {
+        "BaseCount": 1,
+        "WorkerCount": 0,
+        "OpenGeyserCount": 2,
+        "BuiltGeyserCount": 0,
+        "MinedGas": 0,
+        "MineralPatchCount": 8,
+        "MinedMinerals": 10800
+      }
+    }
+  }
+}

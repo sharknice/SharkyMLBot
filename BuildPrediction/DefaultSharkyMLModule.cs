@@ -1,4 +1,5 @@
 ﻿using BuildPrediction.Managers;
+using Sharky.Builds.BuildChoosing;
 using Sharky.DefaultBot;
 using Sharky.Managers;
 using SharkyMLDataManager;
@@ -13,7 +14,7 @@ namespace BuildPrediction
         public GameDataToModelInputConverter GameDataToModelInputConverter { get; set; }
         public BuildModelScoreService BuildModelScoreService { get; set; }
         public MLBuildManager MLBuildManager { get; set; }
-        public MLBuildDecisionService MLBuildDecisionService { get; set; }
+        public IBuildDecisionService MLBuildDecisionService { get; set; }
 
         public DefaultSharkyMLModule(DefaultSharkyBot defaultSharkyBot)
         {
