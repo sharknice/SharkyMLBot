@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Sharky\S2ClientProtocol\S2ClientProtocol.csproj" />
+    <ProjectReference Include="..\..\Sharky\Sharky\Sharky.csproj" />
+    <ProjectReference Include="..\BuildPrediction\BuildPrediction.csproj" />
+    <ProjectReference Include="..\SharkyMLBot\SharkyMLBot.csproj" />
+  </ItemGroup>
+
+</Project>
