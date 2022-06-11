@@ -86,13 +86,21 @@ namespace BuildPrediction
                 var convertedData = flatFrameDataConverter.GetFlatFrameData(group);
 
                 var trainingDataView = mlContext.Data.LoadFromEnumerable(convertedData);
-                if (convertedData.Count > 0)
+                if (convertedData.Count > 1 && convertedData.Count(g => g.Result == 1) > 0 && convertedData.Count(g => g.Result == 2) > 0)
                 {
-                    var trainedModel = MLModel1.RetrainPipeline(mlContext, trainingDataView);
-                    var modelPath = $"{directory}/{group.Key}.zip";
-                    System.IO.Directory.CreateDirectory(directory);
-                    mlContext.Model.Save(trainedModel, trainingDataView.Schema, modelPath);
-                    Console.WriteLine($"{modelPath}");
+                    try 
+                    {
+                        var trainedModel = MLModel1.RetrainPipeline(mlContext, trainingDataView);
+                        var modelPath = $"{directory}/{group.Key}.zip";
+                        Directory.CreateDirectory(directory);
+                        mlContext.Model.Save(trainedModel, trainingDataView.Schema, modelPath);
+                        Console.WriteLine($"{modelPath}");
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine($"Problem training model for {group.Key}");
+                        Console.WriteLine(e.Message);
+                    }
                 }
             }
         }

@@ -6,6 +6,7 @@ using SharkyMLBot;
 
 // this bot can be used to gather ML data
 // it repeatedly loops through the build list, playing each build 3 times before moving on to the next
+// Run this bot against the other training bot to run every build once against every build
 
 Console.WriteLine("Starting ML Training Bot 2");
 
@@ -16,7 +17,7 @@ var buildChoices = new ProtossBuildChoices(defaultSharkyBot);
 defaultSharkyBot.BuildChoices[Race.Protoss] = buildChoices.DefaultBuildChoices;
 
 var defaultSharkyMLModule = new DefaultSharkyMLModule(defaultSharkyBot);
-defaultSharkyMLModule.MLBuildDecisionService = new TrainingBuildDecisionService(defaultSharkyBot, buildChoices.DefaultBuildChoices.BuildSequences.Count()); // loops through the build list, tries each 3 times
+defaultSharkyMLModule.MLBuildDecisionService = new TrainingBuildDecisionService(defaultSharkyBot, buildChoices.DefaultBuildChoices.BuildSequences[Race.Protoss.ToString()].Count()); // loops through the build list, tries each 3 times
 defaultSharkyBot = defaultSharkyMLModule.ActivateMachineLearning(defaultSharkyBot);
 
 var bot = defaultSharkyBot.CreateBot(defaultSharkyBot.Managers, defaultSharkyBot.DebugService);
