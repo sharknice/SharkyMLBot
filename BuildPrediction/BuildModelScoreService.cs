@@ -5,40 +5,43 @@ namespace BuildPrediction
 {
     public class BuildModelScoreService
     {
-        public float GetScoreForBuildModel(List<ModelInput> inputModels, MLContext mlContext, string modelPath)
-        {
-            var mlModel = mlContext.Model.Load(modelPath, out var _);
-            var predictionEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
-
-            return GetInputModelsValue(inputModels, modelPath, predictionEngine);
-        }
-
-        float GetInputModelsValue(List<ModelInput> inputModels, string modelPath, PredictionEngine<ModelInput, ModelOutput> predictionEngine)
+        public float GetScoreForBuild(List<ModelInput> inputModels, MLContext mlContext, string buildPath)
         {
             var sequenceValue = 0f;
             var maxValue = 0f;
 
-            Console.Write($"{modelPath}: ");
+            Console.Write($"{buildPath}: ");
 
             foreach (var inputModel in inputModels)
             {
-                var result = predictionEngine.Predict(inputModel);
-
-                var score = 0f;
-                if (result.PredictedLabel == 1)
+                var modelPath = $"{buildPath}/{inputModel.Frame}.zip";
+                if (File.Exists(modelPath))
                 {
-                    score = result.Score.Max();
+                    var score = GetInputModelValue(inputModel, modelPath, mlContext);
+                    sequenceValue += score;
+                    maxValue += 1;
                 }
-                sequenceValue += score;
-                maxValue += 1;
-
-                Console.Write($"[{inputModel.Frame}, {result.PredictedLabel}, {score}] ");
             }
             Console.WriteLine();
 
             var overall = sequenceValue / maxValue;
             Console.WriteLine($"Score: {overall}");
             return overall;
+        }
+
+        float GetInputModelValue(ModelInput inputModel, string modelPath, MLContext mlContext)
+        {
+            var mlModel = mlContext.Model.Load(modelPath, out var _);
+            var predictionEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
+            var result = predictionEngine.Predict(inputModel);
+
+            var score = 0f;
+            if (result.PredictedLabel == 1)
+            {
+                score = result.Score.Max();
+            }
+            Console.Write($"[{inputModel.Frame}, {result.PredictedLabel}, {score}] ");
+            return score;
         }
     }
 }

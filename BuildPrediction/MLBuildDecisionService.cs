@@ -83,12 +83,12 @@ namespace BuildPrediction
             foreach (var buildSequence in buildSequences)
             {
                 var buildString = string.Join(" ", buildSequence);
-                var modelPath = $"{directory}/{buildString}.zip";
-                if (File.Exists(modelPath))
+                var modelPath = $"{directory}/{buildString}";
+                if (Directory.Exists(modelPath))
                 {
                     try
                     {
-                        var overall = BuildModelScoreService.GetScoreForBuildModel(inputModels, mlContext, modelPath);
+                        var overall = BuildModelScoreService.GetScoreForBuild(inputModels, mlContext, modelPath);
                         if (overall > 0 && overall > bestSequenceValue)
                         {
                             bestSequenceValue = overall;
