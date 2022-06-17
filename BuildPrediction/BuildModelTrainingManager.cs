@@ -53,7 +53,7 @@ namespace BuildPrediction
 
             var mlContext = new MLContext();
             var mlDataFileService = new MLDataFileService();
-            var buildString = string.Join(" ", game.Builds.Select(g => g.Value));
+            var buildString = string.Join(" ", game.PlannedBuildSequence.Select(g => g));
 
             var mlGameData = mlDataFileService.MLGameData.Where(g => g.Game.MyRace == game.MyRace && string.Join(" ", g.Game.PlannedBuildSequence.Select(g => g)) == buildString);
 
@@ -71,7 +71,7 @@ namespace BuildPrediction
         {
             foreach (var group in groups)
             {
-                var buildGroups = group.GroupBy(g => string.Join(" ", g.Game.Builds.Select(g => g.Value)));
+                var buildGroups = group.GroupBy(g => string.Join(" ", g.Game.PlannedBuildSequence.Select(g => g)));
                 SaveBuilds(stopwatch, mlContext, $"{directory}/{group.Key}", buildGroups);
             }
         }
