@@ -13,7 +13,7 @@ Data for each game is stored as json files in the 'data/ml' folder.  Models are 
 ## Build Decision
 The MLBuildDecisionService uses machine learning to determine which build will best counter the last game played against an opponent.
 
-Every build has it's own model and a prediction using that model is made against the data from the last game.  An overall score is given to each build based on the prediction and score of every frame.  The build with the highest score is chosen or it will fall back to the RecentBuildDecisionService if the thresholds aren't met. 
+Every build has it's own models for frame timings and a prediction using those models is made against the data from the last game.  An overall score is given to each build based on the prediction and score of every frame.  The build with the highest score is chosen or it will fall back to the RecentBuildDecisionService if the thresholds aren't met. 
 
 Data is gathered using the MLBuildManager and saved as json in data/ml at the end of every game.
 
