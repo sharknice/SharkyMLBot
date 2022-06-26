@@ -1,5 +1,6 @@
 ﻿using Microsoft.ML;
 using SC2APIProtocol;
+using Sharky;
 using Sharky.Builds.BuildChoosing;
 using Sharky.DefaultBot;
 using Sharky.EnemyPlayer;
@@ -55,7 +56,27 @@ namespace BuildPrediction
                     var lastGameMlData = MLDataFileService.MLGameData.FirstOrDefault(g => g.Game.DateTime == lastGame.DateTime && g.Game.EnemyId == lastGame.EnemyId);
                     if (lastGameMlData != null)
                     {
-                        var counter = GetBestCounterBuild(buildSequences.Where(b => !BuildMatcher.MatchesBuildSequence(lastGame, b)), lastGameMlData, map, myRace);
+                        var consecutiveLosses = new List<Game>();
+                        foreach (var game in enemyBot.Games.Where(g => g.MyRace == myRace && g.EnemySelectedRace == enemyRace))
+                        {
+                            if (game.Result == (int)Result.Defeat)
+                            {
+                                if (game.PlannedBuildSequence != null)
+                                {
+                                    Console.WriteLine($"Excluding: {string.Join(" ", game.PlannedBuildSequence)}");
+                                }
+                                else
+                                {
+                                    Console.WriteLine($"Excluding: {string.Join(" ", game.Builds)}");
+                                }
+                                consecutiveLosses.Add(game);
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        var counter = GetBestCounterBuild(buildSequences.Where(b => !consecutiveLosses.Any(l => BuildMatcher.MatchesBuildSequence(l, b))), lastGameMlData, map, myRace);
                         if (counter != null)
                         {
                             return counter;
