@@ -50,6 +50,13 @@ namespace BuildPrediction
                         Console.WriteLine($"choice: {string.Join(" ", sequence)}");
                         return sequence;
                     }
+                    else
+                    {
+                        if (lastGame.PlannedBuildSequence != null)
+                        {
+                            Console.WriteLine($"Planned Build Sequence from last game not in list: {string.Join(" ", lastGame.PlannedBuildSequence)}");
+                        }
+                    }
                 }
                 else
                 {
@@ -93,8 +100,8 @@ namespace BuildPrediction
         {
             if (gameData.Game == null) { return null; }
             var lastGame = gameData.Game;
+            var enemyDirectory = $"{BuildModelsDirectory}/{myRace}/EnemyId/{lastGame.EnemyId}";
             var directory = $"{BuildModelsDirectory}/{myRace}/Race/{lastGame.EnemyRace}";
-
             var inputModels = GameDataToModelInputConverter.GetModelInputs(gameData, mapName);
             var mlContext = new MLContext();
 
@@ -104,7 +111,11 @@ namespace BuildPrediction
             foreach (var buildSequence in buildSequences)
             {
                 var buildString = string.Join(" ", buildSequence);
-                var modelPath = $"{directory}/{buildString}";
+                var modelPath = $"{enemyDirectory}/{buildString}";
+                if (!Directory.Exists(modelPath))
+                {
+                    modelPath = $"{directory}/{buildString}";
+                }
                 if (Directory.Exists(modelPath))
                 {
                     try
