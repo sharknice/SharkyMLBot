@@ -89,7 +89,7 @@ namespace BuildPrediction
                 foreach (var frameGroup in dataByFrame)
                 {
                     var trainingDataView = mlContext.Data.LoadFromEnumerable(frameGroup);
-                    if (frameGroup.Count() > 1 && frameGroup.Count(g => g.Result == 1) > 0 && frameGroup.Count(g => g.Result == 2) > 0)
+                    if (frameGroup.Any(g => g.Result == 1) && frameGroup.Any(g => g.Result == 2))
                     {
                         try
                         {

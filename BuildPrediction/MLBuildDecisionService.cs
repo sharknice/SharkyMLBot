@@ -33,8 +33,6 @@ namespace BuildPrediction
 
         public override List<string> GetBestBuild(EnemyPlayer enemyBot, List<List<string>> buildSequences, string map, List<EnemyPlayer> enemyBots, Race enemyRace, Race myRace)
         {
-            List<string> debugMessage = new List<string>();
-            debugMessage.Add($"Choosing build against {enemyBot.Name} - {enemyBot.Id} on {map}");
             Console.WriteLine($"Choosing build against {enemyBot.Name} - {enemyBot.Id} on {map}");
 
             var lastGame = enemyBot.Games.Where(g => g.MyRace == myRace && g.EnemySelectedRace == enemyRace).FirstOrDefault();
