@@ -93,10 +93,10 @@ namespace BuildPrediction
                     {
                         try
                         {
-                            var trainedModel = MLModel1.RetrainPipeline(mlContext, trainingDataView);
-                            var modelPath = $"{directory}/{group.Key}/{frameGroup.Key}.zip";
-                            Directory.CreateDirectory($"{directory}/{group.Key}");
                             Directory.CreateDirectory(directory);
+                            Directory.CreateDirectory($"{directory}/{group.Key}");
+                            var modelPath = $"{directory}/{group.Key}/{frameGroup.Key}.zip";
+                            var trainedModel = MLModel1.RetrainPipeline(mlContext, trainingDataView);
                             mlContext.Model.Save(trainedModel, trainingDataView.Schema, modelPath);
                             Console.WriteLine($"{modelPath}");
                         }

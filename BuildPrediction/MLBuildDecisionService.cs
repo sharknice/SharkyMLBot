@@ -129,6 +129,7 @@ namespace BuildPrediction
                     {
                         Console.WriteLine($"Something is wrong with {modelPath}");
                         Console.WriteLine(e.Message);
+                        ChatService.TagException();
                     }
                 }
             }
@@ -136,6 +137,7 @@ namespace BuildPrediction
             if (bestSequenceValue > .5f)
             {
                 Console.WriteLine($"Best: {bestSequenceValue}, Build: {string.Join(" ", bestSequence)}");
+                ChatService.Tag("MLBuildChoice");
                 return bestSequence;
             }
 
