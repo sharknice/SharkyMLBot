@@ -46,8 +46,8 @@ namespace SharkyMLBot.Builds
             MacroData.DesiredUnitCounts[UnitTypes.PROTOSS_PROBE] = 23;
 
             Scouted = false;
-            WorkerScoutTask = (WorkerScoutTask)MicroTaskData.MicroTasks["WorkerScoutTask"];
-            ProxyScoutTask = (ProxyScoutTask)MicroTaskData.MicroTasks["ProxyScoutTask"];
+            WorkerScoutTask = (WorkerScoutTask)MicroTaskData[typeof(WorkerScoutTask).Name];
+            ProxyScoutTask = (ProxyScoutTask)MicroTaskData[typeof(ProxyScoutTask).Name];
         }
 
         void Opening(int frame)

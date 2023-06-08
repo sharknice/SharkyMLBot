@@ -29,8 +29,8 @@ namespace SharkyMLBot.Builds
             };
 
             Scouted = false;
-            WorkerScoutTask = (WorkerScoutTask)MicroTaskData.MicroTasks["WorkerScoutTask"];
-            ProxyScoutTask = (ProxyScoutTask)MicroTaskData.MicroTasks["ProxyScoutTask"];
+            WorkerScoutTask = (WorkerScoutTask)MicroTaskData[typeof(WorkerScoutTask).Name];
+            ProxyScoutTask = (ProxyScoutTask)MicroTaskData[typeof(ProxyScoutTask).Name];
         }
 
         public override void OnFrame(ResponseObservation observation)

@@ -44,11 +44,11 @@ namespace SharkyMLBot.Builds
 
             MacroData.DefensiveBuildingMaximumDistance = 5;
 
-            ForceFieldRampTask = (ForceFieldRampTask)MicroTaskData.MicroTasks["ForceFieldRampTask"];
+            ForceFieldRampTask = (ForceFieldRampTask)MicroTaskData[typeof(ForceFieldRampTask).Name];
 
             Scouted = false;
-            WorkerScoutTask = (WorkerScoutTask)MicroTaskData.MicroTasks["WorkerScoutTask"];
-            ProxyScoutTask = (ProxyScoutTask)MicroTaskData.MicroTasks["ProxyScoutTask"];
+            WorkerScoutTask = (WorkerScoutTask)MicroTaskData[typeof(WorkerScoutTask).Name];
+            ProxyScoutTask = (ProxyScoutTask)MicroTaskData[typeof(ProxyScoutTask).Name];
         }
 
         void Opening(int frame)
