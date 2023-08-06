@@ -15,12 +15,14 @@ namespace BuildPrediction
         MLDataFileService MLDataFileService;
         GameDataToModelInputConverter GameDataToModelInputConverter;
         BuildModelScoreService BuildModelScoreService;
+        TagService TagService;
 
         public MLBuildDecisionService(DefaultSharkyBot defaultSharkyBot, MLDataFileService mLDataFileService, GameDataToModelInputConverter gameDataToModelInputConverter, BuildModelTrainingManager buildModelTrainingManager, BuildModelScoreService buildModelScoreService, string buildModelsDirectory)
             : base(defaultSharkyBot)
         {
             MLDataFileService = mLDataFileService;
             GameDataToModelInputConverter = gameDataToModelInputConverter;
+            TagService = defaultSharkyBot.TagService;
 
             BuildModelsDirectory = buildModelsDirectory;
 
@@ -129,7 +131,7 @@ namespace BuildPrediction
                     {
                         Console.WriteLine($"Something is wrong with {modelPath}");
                         Console.WriteLine(e.Message);
-                        ChatService.TagException("model");
+                        TagService.TagException("model");
                     }
                 }
             }
@@ -137,7 +139,7 @@ namespace BuildPrediction
             if (bestSequenceValue > .5f)
             {
                 Console.WriteLine($"Best: {bestSequenceValue}, Build: {string.Join(" ", bestSequence)}");
-                ChatService.Tag("ml_build_choice");
+                TagService.Tag("ml_build_choice");
                 return bestSequence;
             }
 
