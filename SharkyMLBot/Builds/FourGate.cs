@@ -56,9 +56,9 @@ namespace SharkyMLBot.Builds
 
             if (MacroData.FoodUsed >= 14)
             {
-                if (MacroData.DesiredPylons < 1)
+                if (MacroData.ProtossMacroData.DesiredPylons < 1)
                 {
-                    MacroData.DesiredPylons = 1;
+                    MacroData.ProtossMacroData.DesiredPylons = 1;
                 }
             }
 
@@ -110,9 +110,9 @@ namespace SharkyMLBot.Builds
 
                 if (UnitCountService.Count(UnitTypes.PROTOSS_GATEWAY) >= 2)
                 {
-                    if (MacroData.DesiredPylons < 2)
+                    if (MacroData.ProtossMacroData.DesiredPylons < 2)
                     {
-                        MacroData.DesiredPylons = 2;
+                        MacroData.ProtossMacroData.DesiredPylons = 2;
                     }
                 }
             }
@@ -139,9 +139,9 @@ namespace SharkyMLBot.Builds
 
             if (UnitCountService.Completed(UnitTypes.PROTOSS_CYBERNETICSCORE) > 0)
             {
-                if (MacroData.DesiredPylons < 3)
+                if (MacroData.ProtossMacroData.DesiredPylons < 3)
                 {
-                    MacroData.DesiredPylons = 3;
+                    MacroData.ProtossMacroData.DesiredPylons = 3;
                 }
 
                 MacroData.DesiredUpgrades[Upgrades.WARPGATERESEARCH] = true;
@@ -155,9 +155,9 @@ namespace SharkyMLBot.Builds
                 {
                     if (UnitCountService.EquivalentTypeCompleted(UnitTypes.PROTOSS_GATEWAY) >= 4)
                     {
-                        if (MacroData.DesiredPylons < 5)
+                        if (MacroData.ProtossMacroData.DesiredPylons < 5)
                         {
-                            MacroData.DesiredPylons = 5;
+                            MacroData.ProtossMacroData.DesiredPylons = 5;
                         }
                     }
                 }

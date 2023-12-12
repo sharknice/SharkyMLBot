@@ -168,7 +168,7 @@ namespace SharkyMLBot.Builds
                         }
                         if (UnitCountService.Count(UnitTypes.PROTOSS_FLEETBEACON) > 0)
                         {
-                            MacroData.DesiredPylonsAtDefensivePoint = 3;
+                            MacroData.ProtossMacroData.DesiredPylonsAtDefensivePoint = 3;
                             MacroData.DefensiveBuildingMaximumDistance = 10;
 
                             if (MacroData.DesiredDefensiveBuildingsAtDefensivePoint[UnitTypes.PROTOSS_PHOTONCANNON] < 2)
